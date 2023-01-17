@@ -1,0 +1,5 @@
+creo variable valor como 0.
+
+hasta que valor es mayor que 10 {
+    incremento valor.
+}.

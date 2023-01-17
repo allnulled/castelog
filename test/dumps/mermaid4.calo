@@ -1,0 +1,83 @@
+importo api nativa.
+
+hago un hecho asíncrono donde {
+
+    creo esquema como asíncronamente un diagrama donde {
+
+        en un diagrama conceptual de izquierda a derecha.
+
+        defino conjunto de diagrama con nombre como "Grupo de las X" donde {
+            desde 1 hasta 20 {
+                defino nodo de diagrama con {
+                    nombre: "nodo_x_0" + index,
+                    texto: "Nodo X.0" + index
+                }.
+            }.
+        }.
+
+        defino conjunto de diagrama con nombre como "Grupo de las Y" donde {
+            desde 1 hasta 20 {
+                defino nodo de diagrama con {
+                    nombre: "nodo_y_0" + index,
+                    texto: "Nodo Y.0" + index
+                }.
+            }.
+        }.
+
+        defino conjunto de diagrama con nombre como "Grupo de las Z" donde {
+            desde 1 hasta 20 {
+                defino nodo de diagrama con {
+                    nombre: "nodo_z_0" + index,
+                    texto: "Nodo Z.0" + index
+                }.
+            }.
+        }.
+
+        defino conjunto de diagrama con nombre como "Grupo de las W" donde {
+            desde 1 hasta 20 {
+                defino nodo de diagrama con {
+                    nombre: "nodo_w_0" + index,
+                    texto: "Nodo W.0" + index
+                }.
+            }.
+        }.
+
+        defino relación de diagrama con { origen: "nodo_x_01", destino: "nodo_w_01", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_02", destino: "nodo_w_02", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_03", destino: "nodo_w_03", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_04", destino: "nodo_w_04", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_05", destino: "nodo_w_05", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_06", destino: "nodo_w_06", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_07", destino: "nodo_w_07", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_08", destino: "nodo_w_08", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_09", destino: "nodo_w_09", texto: "relación estrecha" }.
+
+        defino relación de diagrama con { origen: "nodo_x_01", destino: "nodo_y_01", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_02", destino: "nodo_y_02", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_03", destino: "nodo_y_03", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_04", destino: "nodo_y_04", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_05", destino: "nodo_y_05", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_06", destino: "nodo_y_06", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_07", destino: "nodo_y_07", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_08", destino: "nodo_y_08", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_09", destino: "nodo_y_09", texto: "relación estrecha" }.
+
+        defino relación de diagrama con { origen: "nodo_x_01", destino: "nodo_z_01", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_02", destino: "nodo_z_02", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_03", destino: "nodo_z_03", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_04", destino: "nodo_z_04", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_05", destino: "nodo_z_05", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_06", destino: "nodo_z_06", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_07", destino: "nodo_z_07", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_08", destino: "nodo_z_08", texto: "relación estrecha" }.
+        defino relación de diagrama con { origen: "nodo_x_09", destino: "nodo_z_09", texto: "relación estrecha" }.
+
+    }.
+    imprimo "Impresión de esquema:".
+    imprimo esquema.
+    imprimo "Fin de impresión de esquema!".
+    imprimo esquema.toMermaidCode().
+    escribo fichero con ruta __dirname + "/mermaid4.mmd" con contenido esquema.toMermaidCode() con codificación "utf8" usando sistema operativo.
+    ejecuto un comando de consola en serie consistente en "mmdc -i '" + __dirname + "/mermaid4.mmd' -o '" + __dirname + "/mermaid4.png'".
+
+} en errores imprimo error.

@@ -1,0 +1,5 @@
+Creo x como 0.
+Creo variable y como 1.
+Creo constante z como 2.
+Compruebo que "" + x + y + z es igual que "012".
+Compruebo que x + y + z es igual que 3.

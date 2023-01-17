@@ -1,0 +1,1 @@
+module.exports = "Esto es un texto de ejemplo.";

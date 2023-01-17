@@ -1,0 +1,20 @@
+Ejecutable por: /usr/bin/env node
+Ejecutable 1 por: calo ${__filename}
+Ejecutable 1 por: node ${__filename_js}
+Ejecutable 2 por: start ${__filename_html}
+Ejecutable como documento HTML5:
+<head>
+    <title>Todo en uno - Test de Sintaxis de Castelog</title>
+</head>
+<body>
+    <h1>Todo en uno - Test de Sintaxis de Castelog</h1>
+    <div id="app"></div>
+</body>.
+
+@POR-OK: Gramática de "Ejecutable por:"
+@POR-OK: Gramática de "Ejecutable N por:"
+@POR-OK: Gramática de "Este documento representa una aplicación HTML5"
+
+
+@POR-OK!
+Importo módulo es5 de ruta "fs" creando constante fs.

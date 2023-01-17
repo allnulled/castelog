@@ -1,0 +1,9 @@
+Importo módulo es5 de ruta "path" a constante path.
+Importo módulo es5 de ruta "os" a constante os.
+Importo módulo es5 de ruta "fs" a constante fs.
+Importo módulo es5 de ruta "pegjs" a constante pegjs.
+
+Imprimo 5 + 10 + "!".
+Imprimo "OKAY!".
+
+Exporto como módulo es5 "efe cero dos: ejecutado exitosamente.".

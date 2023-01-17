@@ -1,0 +1,5 @@
+imprimo "Para testear bases de datos: ".
+imprimo " ~$ node ~/Escritorio/Nuevo/crud-interface/test/examples/random.calo".
+
+desacoplo constantes [ ok1, ok2, ok3 ] a partir de [ 1, 2, 3].
+imprimo ok1 + ok2 + ok3.

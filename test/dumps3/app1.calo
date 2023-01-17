@@ -1,0 +1,69 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre app-1
+    con versión 0.0.1
+<head>
+    <title>App 1</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+creo estilos como {}.
+asigno estilos.rasgos como {}.
+asigno estilos.rasgos.para como {}.
+asigno estilos.rasgos.para.mensaje como <@
+    border: 2px dashed red;
+    text-decoration: underline;
+@> parametrizada con (estilos).
+
+hago una inserción de estilos en cascada llamado "estilos_generales" con (<@
+    .CastelogApp .Disposicion_flexible {}
+    .CastelogApp .Disposicion_cuadriculada {}
+    .mensaje {
+        <:= estilos.rasgos.para.mensaje :>
+    }
+@> parametrizada con (estilos)).
+
+creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+  <div class="PaginaDeInicio Component">
+    <span class="mensaje">Bienvenid@.</span>
+  </div>
+}.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <router-view></router-view>
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

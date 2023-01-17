@@ -1,0 +1,24 @@
+# Para Node.js:
+
+Creo x como una escritura de fichero
+    con ruta "./fichero.txt"
+    con codificación "utf8"
+    con contenido "{}"
+    usando sistema operativo.
+
+Creo x como una lectura de fichero
+    con ruta "./fichero.txt"
+    con codificación "utf8"
+    usando sistema operativo.
+
+# Para SimplestDB:
+
+Creo x como una escritura de fichero
+    con ruta "./fichero.txt"
+    con codificación "utf8"
+    con contenido "{}".
+
+Creo x como una lectura de fichero
+    con ruta "./fichero.txt"
+    con codificación "utf8".
+

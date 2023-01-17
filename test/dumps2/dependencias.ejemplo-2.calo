@@ -1,0 +1,61 @@
+hago un diagrama de dependencias donde {
+    defino dependencia de paquete llamada fs en ruta "fs" donde {
+        defino propiedad promises {
+            que se valida cuando {
+                compruebo que esto es tipo objeto.
+            }
+        }
+        defino método readFileSync {
+            que se valida cuando {
+                compruebo que esto es tipo función.
+            }
+            que permite modalidad por defecto {
+                donde {
+                    defino propiedad x {}
+                }
+            }
+            que permite modalidad una_cosa {
+                
+            }
+            que permite modalidad otra_cosa {
+                
+            }
+        }
+    }.
+    defino dependencia de paquete llamada path en ruta "path" donde {
+        defino método resolve {
+            que se valida cuando {
+                compruebo que esto es tipo función.
+            }
+            que permite modalidad por defecto {
+                donde {
+                    defino paso 1. organizar parámetros {
+                        donde al recibir {
+                            defino parámetro x (obligatorio)
+                            defino parámetro y (opcional)
+                            defino parámetro z
+                        }
+                        donde {
+                            defino paso 1.1. validar parámetro de entrada x {}
+                            defino paso 1.2. validar parámetro de entrada y {}
+                            defino paso 1.3. validar parámetro de entrada z {}
+                        }
+                        donde al retornar { 
+                            defino propiedad x {}
+                            defino propiedad y {}
+                            defino propiedad z {}
+                            defino método compute {}
+                        }
+                    }
+                    defino paso 2. validar parámetros {
+                        donde al recibir {}
+                        donde {}
+                        donde al retornar {}
+                    }
+                }
+            }
+        }
+    }.
+}.
+
+imprimo "OK!".

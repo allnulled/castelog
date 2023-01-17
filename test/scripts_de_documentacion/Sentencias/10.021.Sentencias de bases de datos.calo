@@ -1,0 +1,22 @@
+Importo API nativa.
+
+Selecciono
+    en modelo "animal" 
+    filtrando con una función con (animal) donde retorno animal.nombre no es tipo indefinido
+    ordenando por [ "nombre", "apellido", "edad" ]
+    agrupando por [ "edad" ]
+    paginando por [ 1, 20 ]
+    en base de datos "animales"
+    creando constante todos_los_animales_con_nombre.
+Inserto
+    en modelo "animal"
+    con valor { nombre: "Rata", apellido: "ratifolia", edad: 30 }
+    en base de datos "animales".
+Actualizo 
+    en modelo "animal"
+    de registro 1
+    con valor { es_primero: true }
+    en base de datos "animales".
+Elimino
+    en modelo "animal"
+    de registro 2.

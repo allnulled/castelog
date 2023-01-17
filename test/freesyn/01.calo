@@ -1,0 +1,116 @@
+importo api nativa.
+
+creo literatura como una función literaria donde {
+
+    Expresiones requeridas [
+        - Importo.
+        - Pongo.
+        - En constante.
+        - Apendizo.
+        - En.
+        - Itero.
+        - Como lista donde.
+        - Imprimo.
+        - Texto concatenado.
+        - Sumo.
+    ].
+
+    Defino expresión ( importo ) como <<< require(<%=()%>); >>>.
+
+    Defino expresión ( pongo ) como <<
+
+    >>.
+
+    Importo ( "fichero 1.lilo", "fichero 2.lilo" ).
+
+    Importo "fichero.lilo".
+    Importo "fichero2.lilo".
+    Importo "fichero3.lilo".
+
+    Pongo [] en constante (lista).
+    Apendizo <5> en ( lista ).
+    Itero ( lista ) como lista donde * {
+        Imprimo ( Texto concatenado ( "Hola" / argumentos { "0" } / ", ¿qué tal estás?")).
+    }.
+    Sumo (x, y, z) y lo pongo en (resultado).
+
+
+    Creo constante (x) como <1999>.
+
+    Desde <0> hasta <100> repito * {
+        Imagino que (x) es (index).
+        Imprimo (x).
+        Incremento { a: x / en: <10> }.
+    }.
+
+    Imagino que (llover) es <<
+        Creo xx como una clase con {}.
+        Creo instancia_de_xx como un nuevo xx().
+        Retorno instancia_de_xx.
+    >>.
+
+    Imagino que ( Carl salta { de : alegría } / { de: júbilo } ) es * {
+        Carl cambia ( estado de ánimo / { a: contento }).
+    }.
+
+    Carl salta { de: alegría }.
+
+    Siempre que ( Carl cambia ( estado de ánimo { a: contento } ) )  entonces * {
+        Imprimo "Carl está cambiando de estado de ánimo a contento... uuuuuuh.".
+        Karma cósmico cambia ( actitud / { a: agresiva } ).
+        Retorno <500>.
+    }.
+} a partir de {} con reductor como una función con (contexto, argumentos) donde {
+    imprimo contexto.accion + ": " + una reducción recursiva basada en contexto.argumentos a partir de ""  mediante una función con (salida, item, clave, reducir) donde {
+        en caso que item es tipo texto {
+            incremento salida en item textualizado.
+        }.
+        o si item es tipo lista {
+            incremento salida en "[".
+            desde 0 hasta item.length {
+                creo subitem como item[index].
+                si index no es igual que 0 {
+                    incremento salida en ",".
+                }.
+                incremento salida en "\n  - " + reducir("", subitem, index, reducir).
+            }.
+            incremento salida en "\n]".
+        }.
+        o si item es tipo objeto {
+            incremento salida en "{".
+            creo claves como un conjunto de claves del objeto item.
+            desde 0 hasta claves.length {
+                creo clave como claves[index].
+                creo valor como item[clave].
+                creo valor_final como reducir("", valor, clave, reducir).
+                si index no es igual que 0 {
+                    Incremento salida en ",".
+                }.
+                Incremento salida en clave.
+                Incremento salida en ":".
+                incremento salida en valor_final.
+            }.
+            incremento salida en "}".
+        }.
+        o si item es tipo función {
+            si item contiene clave "referencia" {
+                incremento salida en item.referencia.join(".").
+            } y si no {
+                incremento salida en "@Función".
+            }.
+        }.
+        o si no {
+            incremento salida en item.
+        }.
+        retorno salida.
+    }.
+} en errores {
+    imprimo error.
+}.
+
+
+hago un hecho asíncrono donde {
+    creo resultado2 como asíncronamente literatura().
+} en errores {
+    imprimo error.
+}.

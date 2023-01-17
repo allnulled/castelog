@@ -1,0 +1,176 @@
+asigno Castelog.variables.estilos_en_cascada_nativos_comunes como {}.
+
+asigno Castelog.variables.estilos_en_cascada_nativos_comunes.rasgos como {
+    para: {
+
+        espaciado_0: <@ padding: 0px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_1: <@ padding: 3px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_2: <@ padding: 6px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_3: <@ padding: 9px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_1: <@ margin: 3px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_2: <@ margin: 6px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_3: <@ margin: 9px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        bordeado: <@ border: 1px solid #333; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        bordeado_rallado: <@ border: 1px dashed #333; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_horizontal_0: <@
+            padding-left: 0px;
+            padding-right: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_1: <@
+            padding-left: 3px;
+            padding-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_2: <@
+            padding-left: 6px;
+            padding-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_3: <@
+            padding-left: 9px;
+            padding-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_1: <@
+            margin-left: 3px;
+            margin-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_2: <@
+            margin-left: 6px;
+            margin-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_3: <@
+            margin-left: 9px;
+            margin-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_vertical_0: <@
+            padding-top: 0px;
+            padding-bottom: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_1: <@
+            padding-top: 3px;
+            padding-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_2: <@
+            padding-top: 6px;
+            padding-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_3: <@
+            padding-top: 9px;
+            padding-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_1: <@
+            margin-top: 3px;
+            margin-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_2: <@
+            margin-top: 6px;
+            margin-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_3: <@
+            margin-top: 9px;
+            margin-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_izquierda_0: <@
+            padding-left: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_1: <@
+            padding-left: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_2: <@
+            padding-left: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_3: <@
+            padding-left: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_1: <@
+            margin-left: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_2: <@
+            margin-left: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_3: <@
+            margin-left: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_derecha_0: <@
+            padding-right: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_1: <@
+            padding-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_2: <@
+            padding-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_3: <@
+            padding-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_1: <@
+            margin-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_2: <@
+            margin-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_3: <@
+            margin-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_arriba_0: <@
+            padding-top: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_1: <@
+            padding-top: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_2: <@
+            padding-top: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_3: <@
+            padding-top: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_1: <@
+            margin-top: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_2: <@
+            margin-top: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_3: <@
+            margin-top: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_abajo_0: <@
+            padding-bottom: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_1: <@
+            padding-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_2: <@
+            padding-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_3: <@
+            padding-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_1: <@
+            margin-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_2: <@
+            margin-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_3: <@
+            margin-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        carta: <@
+            padding: 5px;
+            border: 1px solid #CCC;
+            border-radius: 4pt;
+            background-color: #EEE;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        carta_vacia: <@
+            padding: 5px;
+            border: 1px solid #CCC;
+            border-radius: 4pt;
+            background-color: white;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes })
+        
+    }
+}.

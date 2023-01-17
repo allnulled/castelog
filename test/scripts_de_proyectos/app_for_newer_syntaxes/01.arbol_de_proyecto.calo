@@ -1,0 +1,46 @@
+imprimo { a: 5, b: 10 } retornando tal como (tal.a + tal.b) * 10.
+
+
+
+
+creo proyecto1 como un patrón de árbol de proyecto desde directorio "./proyecto1" con clases {
+    EntidadDeEntorno en ["./src","./src/classes"] {
+        Error en ["./src/classes/error"] {
+            FrontendError en ["./src/classes/error/frontend"] {
+                LoginUserNotFoundError {}
+                LoginPasswordNotMatchedError {}
+                MissingProjectError {}
+            }
+            BackendError en ["./src/classes/error/backend"] {
+                LoginUserNotFoundError {}
+                LoginPasswordNotMatchedError {}
+                MissingProjectError {}
+                UserNotIdentifiedError {}
+                UserNotAuthorizedError {}
+            }
+        }
+        Notification en ["./src/classes/notifications"] {
+            ErrorNotification {}
+            GeneralNotification {}
+        }
+    }
+} con funciones en ["./src/functions"] { api start } con objetos en ["./src/objects"] {
+    Entorno {
+        clases: $clases,
+        variables: {},
+        metodos: {}
+    }.
+} que tiene {
+    su clases.EntidadDeEntorno.prototype.constructor como una función donde {}.
+    su clases.EntidadDeEntorno.prototype.toString como una función donde {}.
+    su clases.Error.prototype.name como "DefaultError".
+    su clases.Error.prototype.message como un módulo es5 importado de ruta "./Error.prototype.name".
+    su clases.FrontendError.prototype.name como un módulo es5 importado de ruta "./Error.prototype.name".
+    su clases.FrontendError.prototype.message como un módulo es5 importado de ruta "./FrontendError.prototype.message".
+    su funciones.main como una función donde {}.
+    su funciones.api como una función donde {}.
+    su objetos.Entorno.variables.x como una función donde {}.
+    su objetos.Entorno.variables.y como una función donde {}.
+    su objetos.Entorno.variables.z como una función donde {}.
+}.
+

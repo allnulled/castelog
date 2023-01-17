@@ -1,0 +1,9 @@
+Creo x como una lista.
+Apendizo 0 en lista x.
+Apendizo 1 en lista x.
+Apendizo 2 en lista x.
+Prependizo 0-1 en lista x.
+Prependizo 0-2 en lista x.
+Prependizo 0-3 en lista x.
+Compruebo que x.length es igual que 3.
+Compruebo que x[0] es igual que 0-3.

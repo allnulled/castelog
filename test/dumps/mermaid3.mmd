@@ -1,0 +1,48 @@
+graph LR;
+
+subgraph Grupo X:
+  NODO_1["NODO_1"];
+  NODO_2["NODO_2"];
+  NODO_3["NODO_3"];
+  NODO_7["NODO_7"];
+  NODO_8["NODO_8"];
+  NODO_9["NODO_9"];
+  NODO_0["NODO_0"];
+  NODO_1["NODO_1"];
+  NODO_2["NODO_2"];
+  NODO_7["NODO_7"];
+  NODO_8["NODO_8"];
+  NODO_9["NODO_9"];
+end
+NODO_4["NODO_CUATRO"];
+NODO_PROTOTIPO["Prototipo"];
+
+NODO_1 -- de padre --> NODO_PROTOTIPO
+NODO_2 -- de padre --> NODO_PROTOTIPO
+NODO_3 -- de padre --> NODO_PROTOTIPO
+NODO_4 -- de padre --> NODO_PROTOTIPO
+NODO_5 -- de padre --> NODO_PROTOTIPO
+NODO_6 -- de padre --> NODO_PROTOTIPO
+NODO_7 -- de padre --> NODO_PROTOTIPO
+NODO_8 -- de padre --> NODO_PROTOTIPO
+NODO_9 -- de padre --> NODO_PROTOTIPO
+NODO_10 -- de padre --> NODO_PROTOTIPO
+NODO_11 -- de padre --> NODO_PROTOTIPO
+NODO_12 -- de padre --> NODO_PROTOTIPO
+NODO_21 -- de padre --> NODO_PROTOTIPO
+NODO_4 -- de madre --> NODO_1
+NODO_5 -- de madre --> NODO_1
+NODO_6 -- de madre --> NODO_1
+NODO_7 -- de madre --> NODO_2
+NODO_8 -- de madre --> NODO_2
+NODO_9 -- de madre --> NODO_2
+NODO_10 -- de madre --> NODO_3
+NODO_11 -- de madre --> NODO_3
+NODO_12 -- de madre --> NODO_3
+
+classDef Normal fill:#444,stroke:#333,stroke-width:2px
+classDef Resaltado fill:#DDD,stroke:#333,stroke-width:2px
+class Normal NODO_1
+class Normal NODO_2
+class Normal NODO_3
+class Resaltado NODO_4

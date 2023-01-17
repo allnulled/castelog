@@ -1,0 +1,21 @@
+{
+    "name": "app-for-a-live-chat",
+    "version": "1.0.0",
+    "main": "./src/chat.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "socket.io": "*",
+        "socket.io-client": "*"
+    },
+    "devDependencies": {},
+    "mainConfigurations": {
+        "APP_PORT": 9909
+    },
+    "description": ""
+}

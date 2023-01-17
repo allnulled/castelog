@@ -1,0 +1,44 @@
+graph LR;
+
+Inicial["Castelog"]
+Lenguaje["Lenguaje"]
+Programa["Programa"]
+Conjunto_de_interfaces["Conjunto de interfaces"]
+Navegador["Navegador"]
+Nodejs["Node.js"]
+Sistema_operativo["Sistema operativo"]
+Sintaxis["Sintaxis"]
+Cualquier_programa_js["Cualquier programa JavaScript"]
+Lista_de_navegadores["Chrome, Firefox, Android, Opera, Safari, etc."]
+Node["Node"]
+JavaScript["JavaScript"]
+HTML["HTML"]
+API_nativa_de_castelog["API nativa de Castelog"]
+API_parser_de_castelog["API del parser de Castelog"]
+CLI_de_castelog["CLI de Castelog"]
+Otros_comandos["Otros comandos"]
+Compilaciones_personalizadas["Compilaciones personalizadas"]
+Lista_de_dependencias_api_nativa["Axios, EJS, Vue2, D3 y SimplestDB"]
+Navegador_o_nodejs["Navegador o Node.js"]
+
+Inicial  -- es un --> Lenguaje
+Inicial  -- es un --> Programa
+Inicial  -- es un --> Conjunto_de_interfaces
+Conjunto_de_interfaces -- como --> API_nativa_de_castelog
+API_nativa_de_castelog -- que intenta cargar --> Lista_de_dependencias_api_nativa
+Conjunto_de_interfaces -- como --> API_parser_de_castelog
+Conjunto_de_interfaces -- como --> CLI_de_castelog
+CLI_de_castelog -- usable desde --> Nodejs
+API_nativa_de_castelog -- usable desde --> Navegador_o_nodejs
+API_parser_de_castelog -- usable desde --> Navegador_o_nodejs
+Lenguaje -- compuesto por unas --> Sintaxis
+Programa -- que compila a --> JavaScript
+Programa -- que compila a --> HTML
+Programa -- que puede usar --> Otros_comandos
+Otros_comandos -- para --> Compilaciones_personalizadas
+JavaScript -- para --> Navegador
+JavaScript -- para --> Sistema_operativo
+JavaScript -- para --> Otros
+Sistema_operativo -- usando --> Node
+Navegador -- es decir --> Lista_de_navegadores
+Otros -- simplemente --> Cualquier_programa_js

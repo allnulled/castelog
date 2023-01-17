@@ -1,0 +1,7 @@
+Creo modo como "normal".
+Creo mensaje como "en modo normal".
+
+Compruebo que cuando modo es igual que "normal" entonces mensaje es igual que "en modo normal"
+    si no cuando modo es igual que "avanzado" entonces mensaje es igual que "en modo avanzado"
+    si no cuando modo es igual que "fácil" entonces mensaje es igual que "en modo fácil"
+    si no false lanzando "Modo y mensaje no están en sincronía". 

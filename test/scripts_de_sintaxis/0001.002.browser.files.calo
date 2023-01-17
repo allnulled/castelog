@@ -1,0 +1,46 @@
+Importo API nativa.
+
+Creo resultado como un hecho asíncrono donde {
+
+    # Los comentarios sí deben estar destacados.
+    [*
+    Mientras true {
+        @POR-DO: Opción 5 para decir algo gracioso. Por ejemplo.
+        Intento {
+            Creo opcion como asíncronamente una pregunta con mensaje "¿Qué opción del menú principal?"
+                + "\n  (0) Salir del programa"
+                + "\n  (1) Escribir en fichero"
+                + "\n  (2) Leer fichero"
+                + "\n  (3) Listar ficheros"
+                + "\n  (4) Evaluar código".
+            Si opcion es igual que "0" {
+                Retorno undefined.
+            }
+            Pero si opcion es igual que "1" {
+                Creo constante fichero como asíncronamente una pregunta con mensaje "¿Qué nombre de fichero quieres escribir?".
+                Creo constante contenido como asíncronamente una pregunta con mensaje "¿Qué contenido quieres poner en el fichero " + fichero + "?".
+                Escribo fichero con ruta fichero con contenido contenido con codificación "utf8".
+                Notifico con mensaje "Fichero escrito satisfactoriamente.".
+            }
+            Pero si opcion es igual que "2" {
+                Creo fichero como asíncronamente una pregunta con mensaje "¿Qué nombre de fichero quieres leer?".
+                Leo fichero con ruta fichero con codificación "utf8" creando constante contenido. 
+                Notifico con mensaje contenido.
+            }
+            Pero si opcion es igual que "3" {
+                Selecciono en modelo "fs" creando constante todosLosFicheros.
+                Notifico con mensaje todosLosFicheros textualizado.
+            }
+            Pero si opcion es igual que "4" {
+                Creo codigo como asíncronamente una pregunta con mensaje "¿Qué código quieres evaluar en vivo?".
+                Hago eval ( codigo ).
+            }.
+        }
+        En errores {
+            Hago console.error(error).
+            Notifico con mensaje "Hubo errores en la ejecución de algún comando: " + error.message.
+        }.
+    }.
+    #*]
+
+}.

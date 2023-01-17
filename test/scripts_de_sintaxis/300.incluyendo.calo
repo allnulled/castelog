@@ -1,0 +1,15 @@
+Creo objectoPorDefecto como {}.
+Creo listaPorDefecto como [].
+
+Creo x como una función (id, opciones, ...lo demás en otros) donde {
+    Compruebo que id es tipo texto.
+    Compruebo que opciones es tipo lista.
+    Creo resultado como { ...incluyo objectoPorDefecto, ...incluyo opciones }.
+    Creo lista como [ resultado, ...incluyo listaPorDefecto, ...incluyo otros ].
+    Retorno resultado.
+}.
+
+Creo variable y como 0.
+Un intento donde lanzo un nuevo Error("Un mensaje"); en errores asigno y como 1.
+
+Compruebo que y es igual que 1.

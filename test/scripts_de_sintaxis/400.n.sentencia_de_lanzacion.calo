@@ -1,0 +1,10 @@
+Creo variable x como 1.
+
+Intento {
+    Lanzo "un error".
+}
+En errores con error {
+    Asigno x como 2.
+}.
+
+Compruebo que x es igual que 2.

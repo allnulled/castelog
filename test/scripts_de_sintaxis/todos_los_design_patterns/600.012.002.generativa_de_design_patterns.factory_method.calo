@@ -1,0 +1,19 @@
+hago un test llamado "Test de un factory method design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { factory, classes } a partir de un factory method design pattern
+        con classes como {
+            propiedad FactoryPrototype como una clase con {
+                método constructor con (configuraciones) donde hago this extendido por configuraciones o {}.
+            }.
+            propiedad Factory1 como una clase que extiende de dp.classes.FactoryPrototype con {
+                método build con (parametros) donde retorno un nuevo dp.products.Product1() extendido por parametros también extendido por { tipo: "Product of type 1" }.
+            }.
+            propiedad Factory2 como una clase que extiende de dp.classes.FactoryPrototype con {
+                método build con (parametros) donde retorno un nuevo dp.products.Product2() extendido por parametros también extendido por { tipo: "Product of type 2" }.
+            }.
+        }.
+    creo product1 como factory("Factory 1", { x: "ok" }, { z: true }).
+    creo product2 como factory("Factory 2", { x: "ok" }, { z: true }).
+    compruebo que product1.tipo es igual que "Product of type 1".
+    compruebo que product2.tipo es igual que "Product of type 2".
+    imprimo "¡Test de un factory method design pattern pasado exitosamente!".
+}.

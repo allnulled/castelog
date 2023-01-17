@@ -1,0 +1,50 @@
+Conecto asíncronamente una base de datos configurada con {
+    propiedad user como "root".
+    propiedad password como "toor".
+    propiedad host como "localhost".
+    propiedad port como 3306.
+    propiedad database como "testing_rest_1".
+} creando conexion.
+
+creo Rest como asíncronamente un sistema rest configurado con {
+    adapter: "dexie"
+} donde {
+    agrego un servicio configurado con {
+        propiedad path como "".
+        propiedad name como "".
+        propiedad class como "".
+        propiedad creationScript como "".
+    }.
+    agrego un servicio configurado con {
+        propiedad path como "".
+        propiedad name como "".
+        propiedad class como "".
+        propiedad creationScript como "".
+    }.
+    agrego un servicio configurado con {
+        propiedad path como "".
+        propiedad name como "".
+        propiedad class como "".
+        propiedad creationScript como "".
+    }.
+    agrego una query configurada con {
+        propiedad path como "".
+        propiedad name como "".
+        propiedad class como "".
+        método query con (request, response, next, context) donde {
+            hago context.utils.respond(response, { data: "OK QUERY" }).
+        }.
+    }.
+    agrego un proceso configurado con {
+        propiedad path como "".
+        propiedad name como "".
+        propiedad class como "".
+        método process con (request, response, next, context) donde {
+            hago context.utils.respond(response, { data: "OK PROCESS" }).
+        }.
+    }.
+}.
+hago asíncronamente Rest.initialize().
+creo cliente como Rest.createClient().
+creo adapter como cliente.createCastelogAdapter().
+

@@ -1,0 +1,4 @@
+Creo msg como "Hola!".
+
+Compruebo que msg es igual que "Hola!".
+Compruebo que msg es igual que "Hola!" lanzando "La variable msg no es igual que 'Hola!'".

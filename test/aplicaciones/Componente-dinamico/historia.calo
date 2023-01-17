@@ -1,0 +1,163 @@
+voces
+personajes
+lugares
+momentos
+secciones y capitulos
+diálogos (de voces)
+diálogos (de personajes)
+eventos
+
+una historia donde {
+    defino voz con nombre "principal" con atributos {}.
+    defino voz con nombre "secundaria" con atributos {}.
+    defino personaje con nombre "Carlos" con atributos { jugable: true, protagonista: true }.
+    defino lugares {
+        pueblo: {
+            casa: {
+                $: { defecto: "calle" },
+                calle: {},
+                patio: {},
+                comedor: {},
+                "habitación": {}
+            },
+            calle cruces: {},
+            calle flan: {},
+            calle pista: {},
+            calle iglesia: {},
+            calle mayor: {},
+            calle parking iglesia: {},
+            calle tienda: {},
+            calle ayuntamiento: {},
+            calle bar principal: {},
+            calle bar abajo: {},
+            rumbo Masllorens: {},
+            rumbo Albinyana: {},
+            rumbo Masarbonés: {},
+            rumbo Roda: {},
+        }
+    }.
+    defino cosas {
+        puerta 1: {
+            en: el lugar de la "habitación" de la "casa" del "pueblo",
+            al: {
+                ir: una función donde hago personaje.Carlos.ir(al lugar del "comedor" de la "casa" del "pueblo" )
+            }
+        },
+        puerta 2: {
+            en: el lugar del "comedor" de la "casa" del "pueblo",
+            al: {
+                ir: una función donde hago personaje.Carlos.ir(al lugar de la "patio" de la "casa" del "pueblo" )
+            }
+        },
+        puerta 3: {
+            en: el lugar del "patio" de la "casa" del "pueblo",
+            al: {
+                ir: una función donde hago personaje.Carlos.ir(al lugar de la "calle" de la "casa" del "pueblo" )
+            }
+        },
+        final de calle 1: {
+            en: el lugar de la "calle" de la "casa" del "pueblo",
+            al: {
+                ir: una función donde hago personaje.Carlos.ir(al lugar de la "calle" de la "casa" del "pueblo" )
+            }
+        }
+    }
+    defino lugar del "bolsillo" con atributos {}.
+    defino lugar del "móvil" con atributos {}.
+    defino lugar del "ordenador" con atributos {}.
+
+    defino lugar del "pueblo" con atributos {}.
+    defino lugar de la "casa" del "pueblo" con atributos {}.
+    defino lugar de la "habitación" de la "casa" del "pueblo" con atributos {}.
+    defino lugar del "comedor" de la "casa" del "pueblo" con atributos {}.
+    defino lugar del "portal" de la "casa" del "pueblo" con atributos {}.
+    defino lugar de la "calle" de la "casa" del "pueblo" con atributos {}.
+    defino lugar de la "calle principal" del "pueblo" con atributos {}.
+    defino lugar de la "calle iglesia" del "pueblo" con atributos {}.
+    defino lugar de la "calle mayor" del "pueblo" con atributos {}.
+    defino lugar de la "calle colegios" del "pueblo" con atributos {}.
+    defino lugar de la "calle columpios altos" del "pueblo" con atributos {}.
+    defino lugar de la "calle columpios bajos" del "pueblo" con atributos {}.
+    defino lugar de la "calle fuente alta" del "pueblo" con atributos {}.
+    defino lugar de la "calle fuente baja" del "pueblo" con atributos {}.
+    defino lugar de la "calle cementerio" del "pueblo" con atributos {}.
+    defino lugar de la "calle muralla" del "pueblo" con atributos {}.
+    defino lugar de la "calle bar alto" del "pueblo" con atributos {}.
+    defino lugar de la "calle bar bajo" del "pueblo" con atributos {}.
+    defino lugar de la "calle rumbo Viña" del "pueblo" con atributos {}.
+    defino lugar de la "calle rumbo Mas Llorenç" del "pueblo" con atributos {}.
+    defino lugar de la "calle rumbo Roda" del "pueblo" con atributos {}.
+    defino lugar de la "calle rumbo Vendrell" del "pueblo" con atributos {}.
+    defino lugar de la "calle rumbo Masarbonés" del "pueblo" con atributos {}.
+    defino momento del "bautizo" con atributos {}.
+    inicio capítulo "1. Introducción" {
+        inicio sección "1. Situándome" {
+            dejo historia.situarse({ en: el lugar de la "habitación" de la "casa" del "pueblo" }).
+            dejo voz.principal.decir({ mensaje: "Bienvenidos a la historia de Calo." }).
+            dejo personaje.Carlos.aparecer().
+            dejo personaje.Carlos.decir({ mensaje: "Joder, no tengo un puto céntimo. Vuelvo a estar jodido." }).
+            dejo historia.mostrar_barras_de_estado().
+            dejo personaje.Carlos.decir({ mensaje: "Necesito unos calos. Creo que saldré a por colillas" }).
+            dejo historia.habilitar_acciones({
+                ir: true, 
+                decir: true, 
+                coger: true, 
+                encender: true, 
+                dejar: true, 
+                dar: true, 
+                apagar: true, 
+                comer: true, 
+                beber: true, 
+                usar: true, 
+                hablar: true, 
+                preguntarse: true, 
+                observar: true
+            }).
+            dejo historia.siguiente_seccion().
+        }.
+        inicio sección "2. Todavía en casa" {
+            # ....
+        }.
+        inicio sección "3. Fuera de casa" {
+
+        }.
+    }.
+    sección "2. Primera colilla" {
+        hago voz.principal.decir("Cuando Carlos conseguía una colilla, siempre se cercioraba de si se trataba de un cigarro o un porro.").
+        hago personaje.Carlos.decir("Madre mía, hoy hemos triunfado. Colillote.").
+        hago personaje.Carlos.coger(la "colilla" del "entorno").
+        hago personaje.Carlos.encender(la "colilla" del "bolsillo").
+    }.
+
+} con eventos para {
+    cuando el personaje "Carlos" se dispone a "ir" concretamente al momento del "bautizo" ocurre que {
+        hago historia.distribuir_colillas().
+    }.
+    cuando el personaje "Carlos" se dispone a "coger" concretamente el objeto de la "colilla" del "entorno" ocurre que {
+
+    }.
+    cuando el personaje "Carlos" se dispone a "ir" concretamente al lugar de la "habitación" de la "casa" del "pueblo" ocurre que {
+
+    }.
+    cuando el personaje "Carlos" se dispone a "ir" con (parametros) ocurre que {
+        @POR-HACER...
+    }.
+    cuando el personaje "Carlos" se dispone a "observar" concretamente el "cenicero" de la "calle bar bajo" del "pueblo" ocurre que {
+        si historia.seccion_actual es igual que "2. Primera colilla" {
+            hago historia.vaciar(el "cenicero" de la "calle bar bajo" del "pueblo").
+            hago historia.meter({
+                a: un nuevo Grupo_de_colillas(un número aleatorio desde 0 hasta 10),
+                en: el "cenicero" de la "calle bar bajo" del "pueblo"
+            }).
+        }.
+    }.
+    cuando el personaje "Carlos" se dispone a "mirar" concretamente el objeto del "móvil" del "bolsillo" ocurre que {
+        hago voz.principal.decir({ mensaje: "Carlos, mientras tanto, miró su móvil" }).
+    }.
+}.
+
+hago personaje.Carlos.ir(al lugar de la "habitación" del "pueblo").
+hago personaje.Carlos.observar(el "entorno").
+hago personaje.Carlos.usar(el "ordenador" de la "habitación" de la "casa" del "pueblo").
+hago personaje.Carlos.observar(el "cenicero" de la "calle bar bajo" del "pueblo").
+hago personaje.Carlos.mirar(el "móvil" del "bolsillo").

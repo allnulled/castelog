@@ -1,0 +1,14 @@
+si false {
+
+@Sección de notación para EcmaScript 6:
+importo módulo es6 de ruta "./un_fichero.js" creando constante MOD_01.
+# import "./un_fichero.js"
+
+@Sección de notación para EcmaScript 5:
+importo módulo es5 de ruta "./un_fichero.js" creando constante MOD_02.
+# require("./un_fichero.js");
+
+@Sección de notación para sistema de módulos de Castelog:
+importo módulo universal estándar de ruta "./un_fichero.js" creando constante MOD_03.
+
+}.

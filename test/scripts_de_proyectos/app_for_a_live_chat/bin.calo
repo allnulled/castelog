@@ -1,0 +1,47 @@
+este script funcionó con {}.
+ejecutable por /usr/bin/env node
+importo api nativa.
+importo módulo es5 de ruta __dirname + "/package.json" creando constante packageJson.
+creo configuraciones como {
+    propiedad id_de_usuario como "usuario_" + un texto aleatorio de 10 caracteres basado en [0,1,2,3,4,5,6,7,8,9].
+}.
+creo socket_chat_general como un cliente socket.io con opciones "ws://127.0.0.1:" + packageJson.mainConfigurations.APP_PORT con socket que {
+    en evento "connect" está usando una función asíncrona con (parametros, contexto) donde {
+        imprimo "conectado cliente".
+        creo variable mensaje_actual como "".
+        creo preguntar_para_usuario como una función asíncrona donde {
+            asigno nombre_de_usuario como asíncronamente una pregunta con mensaje "«Pregunta:»  ¿Qué nombre de usuario quieres usar?".
+            imprimo "configurando nombre de usuario: ".
+            imprimo nombre_de_usuario.
+            asigno id_de_usuario como nombre_de_usuario.
+            hago contexto.socket.emit("send_message", { message: mensaje_actual, user: id_de_usuario }).
+            retorno preguntar_para_mensaje().
+        } en errores imprimo error.
+        creo preguntar_para_mensaje como una función asíncrona donde {
+            asigno mensaje_actual como asíncronamente una pregunta con mensaje "" silenciosamente.
+            hago contexto.socket.emit("send_message", { message: mensaje_actual, user: id_de_usuario }).
+            hago preguntar_para_mensaje().
+        } en errores imprimo error.
+        hago asíncronamente preguntar_para_usuario().
+        hago contexto.socket.emit("send_message", { message: "¡Estoy en conexión!", user: id_de_usuario }).
+    } en errores imprimo error.
+    en evento "message_sent" está usando una función con (parametros, contexto) donde {
+        compruebo que parametros es tipo lista lanzando un nuevo Error("Mensaje enviado mal formado (1 / cliente)").
+        compruebo que parametros.length es mayor que 0 lanzando un nuevo Error("Mensaje enviado mal formado (2 / cliente)").
+        compruebo que parametros[0] es tipo objeto lanzando un nuevo Error("Mensaje enviado mal formado (3 / cliente)").
+        compruebo que parametros[0] contiene clave "message" lanzando un nuevo Error("Mensaje enviado mal formado (4 / cliente)").
+        compruebo que parametros[0] contiene clave "user" lanzando un nuevo Error("Mensaje enviado mal formado (5 / cliente)").
+        compruebo que parametros[0].message es tipo texto lanzando un nuevo Error("Mensaje enviado mal formado (6 / cliente)").
+        compruebo que parametros[0].user es tipo texto lanzando un nuevo Error("Mensaje enviado mal formado (7 / cliente)").
+        imprimo parametros[0].user + " dice: " + parametros[0].message.
+    } en errores imprimo error.
+    en evento "message_received" está usando una función con (parametros, contexto) donde {
+        imprimo "mensaje recibido".
+    } en errores imprimo error.
+    en evento "user_got_in" está usando una función con (parametros, contexto) donde {
+        imprimo "usuario entró".
+    } en errores imprimo error.
+    en evento "user_got_out" está usando una función con (parametros, contexto) donde {
+        imprimo "usuario se fue".
+    } en errores imprimo error.
+}.

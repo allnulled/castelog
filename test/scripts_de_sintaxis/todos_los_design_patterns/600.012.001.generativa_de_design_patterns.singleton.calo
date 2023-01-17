@@ -1,0 +1,11 @@
+hago un test llamado "Test de un singleton design pattern" para testeo testeo_de_dp donde {
+    creo obtener_conexion como una función donde retorno { tipo: "conexión única" }.
+    desacoplo constantes { getter como getConnection, value } a partir de un singleton design pattern llamado dp con setter como una lambda donde asigno dp.value como obtener_conexion().
+    creo conexion1 como getConnection().
+    creo conexion2 como getConnection().
+    creo conexion3 como getConnection().
+    compruebo que conexion1 es igual que conexion2.
+    compruebo que conexion2 es igual que conexion3.
+    compruebo que conexion3 es igual que value.
+    imprimo "¡Test de un singleton design pattern pasado exitosamente!".
+}.

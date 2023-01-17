@@ -1,0 +1,6 @@
+Creo variable x como 10.
+Creo variable y como 20.
+Creo variable z como x + y.
+Compruebo que cuando x es igual que 10
+    entonces z es igual que 30
+    si no z es igual que 20.

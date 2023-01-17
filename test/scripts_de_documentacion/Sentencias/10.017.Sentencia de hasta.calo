@@ -1,0 +1,5 @@
+Creo variable x como 0.
+Hasta que x es mayor que 10 {
+    Incremento x en 1.
+}.
+Compruebo que x es igual que 11.

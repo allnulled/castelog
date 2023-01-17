@@ -1,0 +1,240 @@
+importo api nativa.
+
+hago un hecho asíncrono donde {
+
+    creo esquema como asíncronamente un diagrama donde {
+
+        @Sección 0: Estrategias de diagrama
+        Defino estrategias de diagrama con [
+            ["generar.mermaid", { destino: "./esquema_final.mmd" }],
+            ["generar.json", { destino: "./esquema_final.json" }]
+        ].
+        
+        @Sección 1: Dirección del diagrama
+        En un diagrama conceptual de izquierda a derecha.
+        
+        @Sección 2: Clases de diagrama
+        Defino clase de diagrama con { nombre: "Normal", relleno: "#444", borde: "#333", grosor: "2px" }.
+        Defino clase de diagrama con { nombre: "Resaltado", relleno: "#DDD", borde: "#333", grosor: "2px" }.
+        
+        @Sección 3: Clasificaciones de diagrama
+        Defino clasificación de diagrama con { nombre: "Normal", nodos: ["NODO_1","NODO_2","NODO_3"] }.
+        Defino clasificación de diagrama con { nombre: "Resaltado", nodos: ["NODO_4"] }.
+        
+        @Sección 4: Conjuntos de diagrama
+        Defino conjunto de diagrama con nombre como "Grupo X" donde {
+            Defino nodo de diagrama con { nombre: "NODO_1" }.
+            Defino nodo de diagrama con { nombre: "NODO_2" }.
+            Defino nodo de diagrama con { nombre: "NODO_3" }.
+            Defino nodo de diagrama con { nombre: "NODO_7" }.
+            Defino nodo de diagrama con { nombre: "NODO_8" }.
+            Defino nodo de diagrama con { nombre: "NODO_9" }.
+            Desde 0 hasta 3 {
+                Defino nodo de diagrama con { nombre: "NODO_" + index }.
+            }.
+            Desde 7 hasta 10 {
+                Defino nodo de diagrama con { nombre: "NODO_" + index }.
+            }.
+        }.
+        
+        @Sección 5: Nodos de diagrama
+        Defino nodo de diagrama con { nombre: "NODO_4", texto: "NODO_CUATRO" }.
+        Defino nodo de diagrama con { nombre: "NODO_PROTOTIPO", texto: "Prototipo" }.
+        
+        @Sección 6: Relaciones de diagrama
+        Defino relación de diagrama con { origen: "NODO_1", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_2", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_3", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_4", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_5", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_6", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_7", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_8", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_9", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_10", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_11", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_12", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_21", destino: "NODO_PROTOTIPO", texto: "de padre" }.
+        Defino relación de diagrama con { origen: "NODO_4", destino: "NODO_1", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_5", destino: "NODO_1", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_6", destino: "NODO_1", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_7", destino: "NODO_2", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_8", destino: "NODO_2", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_9", destino: "NODO_2", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_10", destino: "NODO_3", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_11", destino: "NODO_3", texto: "de madre" }.
+        Defino relación de diagrama con { origen: "NODO_12", destino: "NODO_3", texto: "de madre" }.
+
+    }.
+    imprimo "Impresión de esquema:".
+    imprimo esquema.
+    imprimo "Fin de impresión de esquema!".
+    imprimo esquema.toMermaidCode().
+    escribo fichero con ruta __dirname + "/mermaid3.mmd" con contenido esquema.toMermaidCode() con codificación "utf8" usando sistema operativo.
+
+} en errores imprimo error.
+
+[*
+un esquema abstracto donde {
+    defino nodo "A"
+}.
+
+Castelog.metodos.un_esquema({
+    nodos: [{
+
+    }],
+    relaciones: [{
+
+    }],
+    clases: [{
+
+    }],
+    clasificaciones: [{
+
+    }],
+    eventos: {
+        nodo: {
+            entrar: una función,
+            salir: una función
+        },
+        relacion: {
+            entrar: una función,
+            salir: una función
+        },
+        clase: {
+            entrar: una función,
+            salir: una función
+        },
+        clasificar: {
+            entrar: una función,
+            salir: una función
+        },
+        esquema: {
+            entrar: una función,
+            salir: una función
+        }
+    },
+    estrategia: ""
+});
+
+defino nodo de diagrama con {
+    nombre: "A",
+    forma: "rectángulo",
+    clases: "fa:fa-car",
+    texto: "Transporte",
+    diagrama: diagrama_para_mermaid
+}.
+
+defino relación de diagrama con {
+    nodos: [
+        ["A","D"],
+        ["B","D"],
+        ["C","D"]
+    ]
+    linea: "sin flecha",
+    texto: "Transporte",
+    diagrama: diagrama_para_mermaid
+}.
+
+defino clase de diagrama con {
+    nombre: "PERMITIDO",
+    relleno: "#8E8",
+    borde: "#8E8",
+    ancho: "2px",
+    otros: "",
+    diagrama: diagrama_para_mermaid
+}.
+
+clasifico nodos de diagrama con {
+    nodos: ["A","B","C"],
+    clases: "PERMITIDO"
+}.
+
+defino eventos como {
+    nodo: {
+        entrar: una función,
+        salir: una función
+    },
+    relacion: {
+        entrar: una función,
+        salir: una función
+    },
+    clase: {
+        entrar: una función,
+        salir: una función
+    },
+    clasificar: {
+        entrar: una función,
+        salir: una función
+    },
+    esquema: {
+        entrar: una función,
+        salir: una función
+    }
+}.
+
+en un diagrama de mermaid con (diagrama_para_mermaid) donde {
+
+    en un gráfico de izquierda a derecha usando diagrama diagrama_para_mermaid.
+
+    defino nodo A
+        con forma de
+            rectángulo
+            rectángulo redondeado
+            rectángulo incidido
+            círculo
+            rombo
+        con clases "fa:fa-car"
+        con texto "Transporte"
+        usando diagrama diagrama_para_mermaid.
+
+    defino nodo B
+        con forma ""
+        con clases "fa:fa-address-card"
+        con texto "Identificación"
+        usando diagrama diagrama_para_mermaid.
+
+    defino nodo C
+        con forma ""
+        con clases "fa:fa-bank"
+        con texto "Dinero"
+        usando diagrama diagrama_para_mermaid.
+
+    defino nodo D
+        con forma ""
+        con clases "fa:fa-Negocio"
+        con texto "Diamond"
+        usando diagrama diagrama_para_mermaid.
+
+    defino relación
+        con entre nodos A y B
+        con línea
+            sin flecha
+            normal
+            de puntos
+            gruesa
+        con texto "Tal o cual"
+        usando diagrama diagrama_para_mermaid.
+
+    defino clase
+        con nombre como "VERDE"
+        con color de relleno como "#CCC"
+        con color de borde como "#F33"
+        con ancho de borde como "3px"
+        usando diagrama diagrama_para_mermaid.
+
+    desde 0 hasta 10 {
+        defino clase 
+            con nombre "ROJO"
+            con color de relleno como "#CCC"
+            con color de borde como "#33F"
+            con ancho de borde como "3px"
+            usando diagrama diagrama_para_mermaid.
+    
+    }.
+
+    aplico clase VERDE a nodos A,B,C.
+
+
+}.
+*]

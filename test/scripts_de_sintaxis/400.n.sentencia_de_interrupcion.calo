@@ -1,0 +1,14 @@
+Creo variable valor como 1.
+
+En proceso iterar_sobre_valores donde mientras valor es menor que 10 {
+    Incremento valor.
+    Si valor es igual que 2 interrumpo proceso iterar_sobre_valores.
+}.
+
+Asigno valor como 1.
+
+En proceso iterar_sobre_valores donde mientras valor es menor que 10 {
+    Incremento valor.
+    Si valor no es igual que 8 continúo proceso iterar_sobre_valores y si no interrumpo proceso.
+}.
+

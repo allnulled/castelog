@@ -1,0 +1,118 @@
+Empaquetable con:
+  ./nativa.js
+  ./estilos.js
+  ./componentes.api.js
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre trash
+    con versión 0.0.1
+<head>
+    <title></title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+@Sección de nuevas sintaxis:
+
+hago un componente vue2 con nombre "ComponenteX" con plantilla {
+  <div>
+    <ControlParaEntrada tipo="texto" enunciado="Nombre:" :gestor="this" propiedad="internal_nombre" :valor-inicial="internal_nombre" />
+    <ControlParaEntrada tipo="texto" enunciado="Apellido:" :gestor="this" propiedad="internal_apellidos" :valor-inicial="internal_apellidos" />
+    <ControlParaBoton v-on:click.native="() => $comunicaciones.resolver_comunicacion(internal_value)">Resolvemos</ControlParaBoton>
+  </div>
+} con lógica {
+  retorno {
+    props: {
+      nombre: {
+        type: String,
+        default: una función donde retorno ""
+      },
+      apellidos: {
+        type: String,
+        default: una función donde retorno ""
+      }
+    },
+    data: una función donde {
+      retorno {
+        internal_nombre: this.nombre,
+        internal_apellidos: this.apellidos
+      }.
+    },
+    computed: {
+      internal_value: una función donde retorno [this.internal_nombre, this.internal_apellidos]
+    }
+  }.
+}.
+
+hago un componente vue2 con nombre "BotonParaAbrirDialogo" con plantilla {
+  <div>
+    <ControlParaBoton v-on:click.native="emitir_evento">Abrir diálogo.</ControlParaBoton>
+    <pre v-if="ultima_respuesta">{{ ultima_respuesta[1] }}, {{ ultima_respuesta[0] }}</pre>
+  </div>
+} con lógica {
+  retorno {
+    data: una función donde {
+      retorno {
+        ultima_respuesta: ["", ""]
+      }.
+    },
+    methods: {
+      emitir_evento: una función asíncrona donde {
+        asigno this.ultima_respuesta como asíncronamente una comunicación de entrada de usuario con componente como "ComponenteX" con atributos como {
+          style: "border: 1px solid blue;",
+          nombre: this.ultima_respuesta[0],
+          apellidos: this.ultima_respuesta[1]
+        } con eventos como {}.
+      }
+    }
+  }.
+}.
+
+creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+  <div class="PaginaDeInicio Component">
+    <BotonParaAbrirDialogo />
+  </div>
+} con lógica {
+    retorno {
+        data: una función donde {
+            retorno {}.
+        }
+    }.
+}.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <router-view></router-view>
+    <PuertoDeComunicaciones />
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

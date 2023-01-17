@@ -1,0 +1,12 @@
+Importo API nativa.
+
+Creo o1 como {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+}.
+
+Itero como objeto o1 creando prop donde {
+    Notifico con mensaje prop + ": " + typeof( o1[ prop ] ).
+}.

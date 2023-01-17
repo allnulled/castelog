@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de diagrama de Gantt</title>
+    <style>
+        .diagrama_de_gantt_de_castelog {
+            font-size: 12px;
+            font-family: Roboto;
+        }
+        .diagrama_de_gantt_de_castelog .celda_de_presentacion_de_tareas {
+            width: 100%;
+            vertical-align: top;
+        }
+        .diagrama_de_gantt_de_castelog .celda_de_presentacion_de_agentes {
+            width: 1%;
+            vertical-align: top;
+        }
+        .diagrama_de_gantt_de_castelog table {
+            width: 100%;
+            border: 1px solid #333;
+        }
+        .diagrama_de_gantt_de_castelog table .celda_de_orden_de_agente {
+            width: 1%;
+        }
+        .diagrama_de_gantt_de_castelog table .celda_de_nombre_de_agente {
+            width: 100%;
+        }
+        .diagrama_de_gantt_de_castelog table {
+            white-space: nowrap;
+        }
+        .diagrama_de_gantt_de_castelog .celda_de_momento {
+            width: 1%;
+        }
+        .diagrama_de_gantt_de_castelog .fila_de_franja_temporal > td {
+            vertical-align: top;
+        }
+        .diagrama_de_gantt_de_castelog .fila_de_franja_temporal > td {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagrama_de_gantt_de_castelog">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="celda_de_presentacion celda_de_presentacion_de_tareas">
+                        <table class="tabla_de_tareas">
+                            <tbody>
+                                <tr class="fila_de_agentes">
+                                    <td class="celda_de_agente"></td>
+                                    <td class="celda_de_agente">Agente uno</td>
+                                    <td class="celda_de_agente">Agente dos</td>
+                                    <td class="celda_de_agente">Agente tres</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="fila_de_franja_temporal">
+                                    <td class="celda_de_momento">2022/11/17 16:00:00</td>
+                                    <td class="celda_de_tarea">Tarea uno</td>
+                                    <td class="celda_de_tarea">Tarea dos</td>
+                                    <td class="celda_de_tarea">Tarea tres</td>
+                                </tr>
+                                <tr class="fila_de_franja_temporal">
+                                    <td class="celda_de_momento">2022/11/17 16:00:00</td>
+                                    <td class="celda_de_tarea">Tarea uno</td>
+                                    <td class="celda_de_tarea">Tarea dos</td>
+                                    <td class="celda_de_tarea">Tarea tres</td>
+                                </tr>
+                                <tr class="fila_de_franja_temporal">
+                                    <td class="celda_de_momento">2022/11/17 16:00:00</td>
+                                    <td class="celda_de_tarea">Tarea uno</td>
+                                    <td class="celda_de_tarea">Tarea dos</td>
+                                    <td class="celda_de_tarea">Tarea tres</td>
+                                </tr>
+                                <tr class="fila_de_franja_temporal">
+                                    <td class="celda_de_momento">2022/11/17 16:00:00</td>
+                                    <td class="celda_de_tarea">Tarea uno</td>
+                                    <td class="celda_de_tarea">Tarea dos</td>
+                                    <td class="celda_de_tarea">Tarea tres</td>
+                                </tr>
+                                <tr class="fila_de_franja_temporal">
+                                    <td class="celda_de_momento">2022/11/17 16:00:00</td>
+                                    <td class="celda_de_tarea">Tarea uno</td>
+                                    <td class="celda_de_tarea">Tarea dos</td>
+                                    <td class="celda_de_tarea">Tarea tres</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="celda_de_presentacion celda_de_presentacion_de_agentes">
+                        <table class="tabla_de_agentes">
+                            <tbody>
+                                <tr>
+                                    <td class="celda_de_orden_de_agente">1.</td>
+                                    <td class="celda_de_nombre_de_agente">Agente uno</td>
+                                    <td class="celda_de_color_de_agente">#F88</td>
+                                </tr>
+                                <tr>
+                                    <td class="celda_de_orden_de_agente">2.</td>
+                                    <td class="celda_de_nombre_de_agente">Agente dos</td>
+                                    <td class="celda_de_color_de_agente">#888</td>
+                                </tr>
+                                <tr>
+                                    <td class="celda_de_orden_de_agente">3.</td>
+                                    <td class="celda_de_nombre_de_agente">Agente tres</td>
+                                    <td class="celda_de_color_de_agente">#333</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

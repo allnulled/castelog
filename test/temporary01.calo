@@ -1,0 +1,132 @@
+importo api nativa.
+hago process.chdir("/home/carlos/Escritorio/Nuevo/Castelog/castelog-core/test/scripts_de_sintaxis/").
+escribo fichero con ruta "601.001.generativa_de_un_singleton_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_singleton_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_factory_method_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_factory_method_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_abstract_factory_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_abstract_factory_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_decorator_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_decorator_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_proxy_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_proxy_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_command_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_command_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_prototype_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_prototype_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_builder_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_builder_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_observer_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_observer_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_iterator_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_iterator_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_interpreter_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_interpreter_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_bridge_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_bridge_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_adapter_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_adapter_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_composite_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_composite_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_facade_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_facade_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_flyweight_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_flyweight_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_chain_of_responsability_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_chain_of_responsability_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_mediator_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_mediator_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_memento_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_memento_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_strategy_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_strategy_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_state_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_state_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_template_method_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_template_method_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_visitor_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_visitor_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_progressive_composition_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_progressive_composition_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_progressive_decoration_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_progressive_decoration_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.
+escribo fichero con ruta "601.001.generativa_de_un_hooks_design_pattern.calo" con contenido un código en texto donde {
+hago un test llamado 'Test de un_hooks_design_pattern' donde {
+    @POR-COMPLETAR:
+}.
+} con codificación "utf8" usando sistema operativo.

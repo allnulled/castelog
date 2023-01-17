@@ -1,0 +1,3 @@
+Compruebo que ([ 1,2,3 ] filtrado con (item) donde {
+    Retorno item es igual que 2.
+}).length es igual que 1 lanzando "Error de 100.n.apendice_de_filtrado.clg".

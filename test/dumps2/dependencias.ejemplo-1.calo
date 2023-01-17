@@ -1,0 +1,421 @@
+dependencias.
+
+
+
+dependencies.packages.find.one(una función con (item) donde retorno item.name es igual que "fs").promises
+dependencies.classes.find.one([["name", "=", "path"]]).join
+dependencies.functions.find.one([["name", "=", "ok"]]).
+dependencies.objects.find.one([["name", "=", "done"]]).
+dependencies.to.project("./dist")
+
+Subsentencias_de_dependencia_comunes =
+
+Subsentencia_llamado
+Subsentencia_en_ruta
+Subsentencia_con_el_cual
+Subsentencia_que_se_valida
+Subsentencia_que_tiene
+Subsentencia_que_se_codifica
+Subsentencia_que_se_testea
+Subsentencia_que_exporta
+Subsentencia_que_se_describe_como
+Subsentencia_que_se_asigna_a
+Subsentencia_que_se_crea_como
+Subsentencia_que_en_errores
+Subsentencia_que_equivale_a
+
+Subsentencias_de_dependencia_funcionales =
+
+Subsentencia_que_permite_modalidad
+Subsentencia_que_es_asincrono
+Subsentencia_que_recibe
+Subsentencia_que_usa
+Subsentencia_que_consiste_en
+Subsentencia_que_retorna
+
+Subsentencias_de_dependencia_composicionales =
+
+Subsentencia_compuesto_por
+Subsentencia_construido_cuando
+Subsentencia_que_adjunta_estilos
+
+Subsentencias_de_dependencia_de_conjuntos_primarios = 
+
+Subsentencia_de_dependencia_de_parametro
+Subsentencia_de_dependencia_de_paquete
+Subsentencia_de_dependencia_de_clase
+Subsentencia_de_dependencia_de_hecho
+Subsentencia_de_dependencia_de_funcion
+Subsentencia_de_dependencia_de_fabrica
+Subsentencia_de_dependencia_de_objeto
+Subsentencia_de_dependencia_de_propiedad
+Subsentencia_de_dependencia_de_metodo
+Subsentencia_de_dependencia_de_paso
+
+
+
+defino dependencia de paquete {
+    llamada fs
+    en ruta "fs"
+    con el cual {
+        desacoplo constantes { promises } a partir de esto.
+    }
+    que se valida cuando {
+        compruebo que esto es tipo objeto.
+        compruebo que esto.promises es tipo objeto.
+        compruebo que esto.promises.readFile es tipo función.
+        compruebo que esto.promises.writeFile es tipo función.
+    }
+    que tiene {
+        propiedad promises {
+            llamada fs_promises
+            que se valida cuando {
+                compruebo que esto es tipo objeto.
+                compruebo que esto.readFile es tipo función.
+                compruebo que esto.writeFile es tipo función.
+            }
+            que tiene {
+                método readFile {
+                    llamado fs_promise_read_file
+                    que se valida cuando {
+                        compruebo que esto es tipo función.
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+paquete {
+    llamada
+    en ruta
+    con el cual
+    -------------------@propiedades_de_funcion
+    que permite modalidad por defecto {
+        que es asíncrono
+        que recibe {
+            parámetro obligatorio { rec }
+            parámetro opcional { rec }
+        }
+        que usa {
+            paquete 
+            clase
+            hecho
+            función
+            fábrica
+            objeto
+        }
+        que consiste en {
+            paso { rec }
+        }
+        que retorna {
+            propiedad
+            método
+            variable
+            constante
+        }
+    }
+    -------------------
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+clase {
+    llamada
+    en ruta
+    con la cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+hecho {
+    llamada
+    en ruta
+    con la cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+función {
+    llamada
+    en ruta
+    con la cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+fábrica {
+    llamada
+    en ruta
+    con la cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+variable o constante {
+    llamado
+    en ruta
+    con el cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+propiedad {
+    llamada
+    en ruta
+    con la cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+método {
+    llamada
+    en ruta
+    con el cual
+    @propiedades_de_funcion
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+componente UI {
+    llamada
+    en ruta
+    con el cual
+    @propiedades_de_funcion
+    -------------------@propiedades_de_componente_UI
+    compuesto por un componente UI tipo X con {
+        parámetro a como b.
+        parámetro textual c como d.
+    } compuesto por {
+        un componente UI tipo Z con {
+            parámetro d como e.
+            parámetro e como f.
+        } compuesto por {
+            un texto con "Hola, ¿qué tal estás, {{ usuario.nombre }}?".
+            un componente UI tipo div con {
+                parámetro textual class como "ok."
+            } compuesto por {
+                un texto con "{{ respuesta }}".
+            }.
+        }.
+    }.
+    construído con {
+        método data donde retorno {}.
+        propiedad watch como {}.
+        método mounted donde {}.
+    }
+    -------------------
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+aplicación UI {
+    llamada
+    en ruta
+    con el cual
+    @propiedades_de_funcion
+    @propiedades_de_componente_UI
+    -------------------@propiedades_de_aplicacion_UI
+    con rutas como [{
+        path: "/home",
+        alias: "/",
+        component: PaginaDeNoseque
+    }]
+    con traducciones como {
+
+    }
+    -------------------
+    que tiene {
+        propiedad { rec } 
+        método { rec }
+    }
+    que se codifica
+    que se testea
+    que se exporta
+    que en errores
+    que equivale a
+    que se describe como
+    que se asigna a
+    que se crea como constante / variable
+}
+
+creo diagrama como un diagrama de dependencias configurado con {
+        eventos: {
+            al_empezar: una función,
+            al_definir_paquete: una función,
+            al_definir_clase: una función,
+            al_definir_proceso: una función,
+            al_terminar: una función
+        }
+    } donde {
+        defino dependencia de paquete llamado fs en ruta "fs".
+        defino dependencia de paquete llamado path en ruta "path".
+        defino dependencia de paquete llamado http en ruta "http".
+        defino dependencia de paquete llamado os en ruta "os".
+        defino dependencia de función llamada X en ruta "./lib/x.js".
+        defino dependencia de función llamada Y en ruta "./lib/y.js".
+        defino dependencia de objeto llamado API_nativa en ruta "./lib/api-nativa.js" que permite modalidad por defecto {
+            con la cual { compruebo que API_nativa es tipo objeto. }.
+            que tiene propiedad alguna_cosa con la cual { compruebo que esto es tipo objeto. }.
+            que tiene propiedad alguna_otra_cosa con la cual { compruebo que esto es tipo objeto. }.
+            que tiene propiedad decir con el cual { compruebo que decir("hola") es igual que "adiós". }.
+            que tiene propiedad decir.mensaje_por_defecto con la cual { compruebo que esto es tipo objeto. }.
+            que se testea como { compruebo que API_nativa.cargar() es tipo función. }.
+            que recibe texto con el cual { compruebo que texto es tipo texto. }.
+            que recibe longitud con la cual { si longitud es tipo indefinido asigno longitud como 2 después compruebo que longitud es tipo número normal. }.
+            que recibe relleno con el cual { si relleno es tipo indefinido asigno relleno como "0" después compruebo que relleno es tipo texto. }.
+            que usa paquetes fs, path, http, os.
+            que usa clases UtilidadesGenerales.
+            que usa funciones obtener_configuraciones.
+            que consiste en {
+                paso 1 llamado "La preparación de los argumentos"
+                    que recibe texto de tipo String (obligatorio).
+                    que recibe longitud de tipo Integer (opcional).
+                    que recibe relleno de tipo String (opcional).
+                    que se describe como "".
+                    que se codifica como {
+                        creo variable salida como "" + texto.
+                    }.
+                    que retorna salida con la cual { compruebo que salida es tipo objeto. }.
+                paso 2 llamado "La iteración prependizante"
+                    que recibe texto de tipo String
+                    que recibe longitud de tipo Integer
+                    que recibe relleno de tipo String
+                    que se describe como ""
+                    que se codifica como {
+                        mientras salida.length es menor que longitud {
+                            incremento salida en relleno.
+                        }.
+                    }
+                    que se testea como {}
+                    que retorna salida con la cual { si salida es tipo indefinido asigno salida como {} después compruebo que salida es tipo objeto. }.
+            }
+            que retorna salida de tipo String descrita como "".
+            que se testea como {
+
+            }
+        } que permite modalidad getter {
+            que retorna salida
+                con la cual { compruebo que salida es tipo objeto. }
+                que tiene propiedad app con la cual { compruebo que salida.app es tipo texto. }
+                que tiene propiedad version con la cual { compruebo que salida.version es tipo texto. }
+                que tiene propiedad version.split(una nueva RegExp("\\.", "g").length con la cual { compruebo que esto es igual que 3. }
+                que tiene propiedad autor con la cual { compruebo que salida.autor es tipo objeto. }
+                que tiene propiedad autor.url con la cual { compruebo que salida.autor.url es tipo texto. }
+                que tiene propiedad autor.name con la cual { compruebo que salida.autor.name es tipo texto. }
+                que tiene propiedad autor.telephone con la cual { compruebo que salida.autor.telephone es tipo texto. }.
+            que retorna mensaje
+                con el cual { compruebo que mensaje es tipo texto. }
+                que tiene propiedad length con la cual { compruebo que mensaje.length es tipo número normal. }
+        }.
+        defino dependencia de clase llamada UtilildadesGenerales en ruta "./utils/index.js" con {
+            método estático padStart que equivale a función X.
+            método estático padEnd que equivale a función Y.
+            método estático fromDate que se describe como "Lo mismo que padStart pero apendizando en lugar de prependizando".
+            método estático toDate que se describe como "Lo mismo que padStart pero apendizando en lugar de prependizando".
+        }.
+
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

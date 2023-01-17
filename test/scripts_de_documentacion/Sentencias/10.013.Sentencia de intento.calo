@@ -1,0 +1,7 @@
+Creo variable x como 0.
+Intento {
+    Incremento x en 2.
+} En errores {
+    Incremento x en 1.
+}.
+Compruebo que x es igual que 2.

@@ -1,0 +1,40 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre plain
+    con versión 0.0.1
+<head>
+    <title>Aplicación plana en HTML5</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+creo configuraciones como {
+    usuario: "compare"
+}.
+
+creo estilos como {
+    rasgos: {
+        para: {
+            mensaje: <@
+                color: red;
+            @> parametrizada con ({})
+        }
+    }
+}.
+
+hago una inserción de estilos en cascada llamado "estilos generales" con (<@
+    .mensaje {
+        <:= config.rasgos.para.mensaje :>
+        text-decoration: underline;
+    }
+@> parametrizada con (estilos)).
+
+hago una inserción de elemento del dom en nodo "#app" con (un elemento html con (<@
+    <div class="mensaje">¿Qué tal, <:= config.usuario :>?</div>
+@> parametrizada con (configuraciones))).

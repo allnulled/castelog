@@ -1,0 +1,24 @@
+importo api nativa.
+
+hago un hecho asíncrono donde {
+
+    creo esquema como asíncronamente un diagrama temporal donde {
+
+        defino agentes de diagrama temporal con [{ nombre: "Persona 1" }, { nombre: "Persona 2" }, { nombre: "Persona 3" }, { nombre: "Persona 4" }, { nombre: "Persona 5" }].
+        defino conjunto de diagrama temporal con {
+            nombre: "Conjunto 001",
+            inicio: "2022-11-18-08-00-00",
+            fin: { durante: "2d" }
+        } donde {
+            defino tareas de diagrama temporal con [{
+                nombre: "", agentes: "Persona 1, Persona 2", inicio: "2022.11.18.06.00.00"
+            }, {
+                nombre: "", agentes: "Persona 1, Persona 2, Persona 3", inicio: "2022-11-17+05-00-00.000", fin: { desde: "Tarea 001", durante: "2d" }
+            }].
+        }.
+
+    }.
+    escribo fichero con ruta __dirname + "/mermaid4.mmd" con contenido esquema.toHtmlCode() con codificación "utf8" usando sistema operativo.
+    ejecuto un comando de consola en serie consistente en "mmdc -i '" + __dirname + "/mermaid4.mmd' -o '" + __dirname + "/mermaid4.png'".
+
+} en errores imprimo error.

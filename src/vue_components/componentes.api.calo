@@ -1,0 +1,2414 @@
+asigno Castelog.variables.tema_de_estilos_en_cascada_nativos como {}.
+asigno Castelog.variables.estilos_en_cascada_nativos_comunes como {}.
+asigno Castelog.variables.estilos_en_cascada_nativos_comunes.rasgos como {
+    para: {
+
+        espaciado_0: <@ padding: 0px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_1: <@ padding: 3px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_2: <@ padding: 6px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_3: <@ padding: 9px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_1: <@ margin: 3px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_2: <@ margin: 6px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_3: <@ margin: 9px; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        bordeado: <@ border: 1px solid #333; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        bordeado_rallado: <@ border: 1px dashed #333; @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_horizontal_0: <@
+            padding-left: 0px;
+            padding-right: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_1: <@
+            padding-left: 3px;
+            padding-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_2: <@
+            padding-left: 6px;
+            padding-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_horizontal_3: <@
+            padding-left: 9px;
+            padding-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_1: <@
+            margin-left: 3px;
+            margin-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_2: <@
+            margin-left: 6px;
+            margin-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_horizontal_3: <@
+            margin-left: 9px;
+            margin-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_vertical_0: <@
+            padding-top: 0px;
+            padding-bottom: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_1: <@
+            padding-top: 3px;
+            padding-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_2: <@
+            padding-top: 6px;
+            padding-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_vertical_3: <@
+            padding-top: 9px;
+            padding-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_1: <@
+            margin-top: 3px;
+            margin-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_2: <@
+            margin-top: 6px;
+            margin-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_vertical_3: <@
+            margin-top: 9px;
+            margin-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_izquierda_0: <@
+            padding-left: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_1: <@
+            padding-left: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_2: <@
+            padding-left: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_izquierda_3: <@
+            padding-left: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_1: <@
+            margin-left: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_2: <@
+            margin-left: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_izquierda_3: <@
+            margin-left: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_derecha_0: <@
+            padding-right: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_1: <@
+            padding-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_2: <@
+            padding-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_derecha_3: <@
+            padding-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_1: <@
+            margin-right: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_2: <@
+            margin-right: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_derecha_3: <@
+            margin-right: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_arriba_0: <@
+            padding-top: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_1: <@
+            padding-top: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_2: <@
+            padding-top: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_arriba_3: <@
+            padding-top: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_1: <@
+            margin-top: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_2: <@
+            margin-top: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_arriba_3: <@
+            margin-top: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        espaciado_abajo_0: <@
+            padding-bottom: 0px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_1: <@
+            padding-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_2: <@
+            padding-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        espaciado_abajo_3: <@
+            padding-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_1: <@
+            margin-bottom: 3px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_2: <@
+            margin-bottom: 6px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        marginado_abajo_3: <@
+            margin-bottom: 9px;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+
+        carta: <@
+            padding: 5px;
+            border: 1px solid #CCC;
+            border-radius: 4pt;
+            background-color: #EEE;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes }),
+        carta_vacia: <@
+            padding: 5px;
+            border: 1px solid #CCC;
+            border-radius: 4pt;
+            background-color: white;
+        @> parametrizada con ({ estilos: Castelog.variables.estilos_en_cascada_nativos_comunes })
+        
+    }
+}.
+
+si jQuery no es tipo indefinido {
+    asigno jQuery.fn.debugging como una función con (first, second) donde {
+        imprimo "[jQuery][DEBUG][SCOPE]".
+        imprimo this.
+        imprimo "[jQuery][DEBUG][PARAMETER 1]".
+        imprimo first.
+        imprimo "[jQuery][DEBUG][PARAMETER 2]".
+        imprimo second.
+        retorno this.
+    }.
+}.
+
+asigno Castelog.metodos.propagar_cambios_desde_watcher como una función con (nuevoValor, callback o en su defecto false) donde {
+    si (this.gestor no es tipo indefinido) y (this.propiedad es tipo texto) y (this.gestor contiene clave this.propiedad) {
+        asigno this.gestor[this.propiedad] como nuevoValor.
+    }.
+    si callback es tipo función hago callback(this, nuevoValor).
+    hago this.$forceUpdate(true).
+}.
+
+si window no es tipo indefinido {
+
+    hago un componente vue2 con nombre "Imagen" con plantilla {
+        <img class="Imagen" :src="fuente" />
+    } con lógica {
+        retorno {
+            props: {
+                fuente: {
+                    type: String,
+                    required: true
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "GaleriaDeImagenes" con plantilla {
+        <div class="GaleriaDeImagenes">
+            <DisposicionLineal>
+                <Item>
+                    <ControlParaBoton v-on:click.native="() => seleccionar_imagen_anterior()">«</ControlParaBoton>
+                </Item>
+                <Item style="flex-grow: 1; text-align: center;">{{ internal_imagen_seleccionada in imagenes ? imagenes[internal_imagen_seleccionada] : "Ninguna." }}</Item>
+                <Item>
+                    <ControlParaBoton v-on:click.native="() => seleccionar_imagen_siguiente()">»</ControlParaBoton>
+                </Item>
+            </DisposicionLineal>
+            <div v-for="(imagen, imagenIndex) in internal_imagenes" v-bind:key="'galeria-de-imagenes-' + uuid + '-imagen-' + imagenIndex">
+                <template v-if="internal_imagen_seleccionada === imagenIndex">
+                    <Imagen :fuente="imagen" style="max-width: 100%;" />
+                </template>
+            </div>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                imagenes: {
+                    type: Array,
+                    default: una función donde retorno []
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_imagen_seleccionada: 0-1,
+                    internal_imagenes: this.imagenes
+                }.
+            },
+            methods: {
+                establecer_imagenes: una función con (imagenes) donde {
+                    asigno this.internal_imagenes como imagenes.
+                    hago this.$forceUpdate(true).
+                },
+                seleccionar_imagen_anterior: una función con () donde {
+                    imprimo "OK!!".
+                    decremento this.internal_imagen_seleccionada.
+                    hago this.$forceUpdate(true).
+                },
+                seleccionar_imagen_siguiente: una función con () donde {
+                    imprimo "OK!".
+                    incremento this.internal_imagen_seleccionada.
+                    hago this.$forceUpdate(true).
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "SoloProyector" con plantilla {
+        <div class="SoloProyector">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "SoloTelevision" con plantilla {
+        <div class="SoloTelevision">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "SoloOrdenador" con plantilla {
+        <div class="SoloOrdenador">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "SoloTablet" con plantilla {
+        <div class="SoloTablet">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "SoloMovil" con plantilla {
+        <div class="SoloMovil">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "SoloReloj" con plantilla {
+        <div class="SoloReloj">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "Paragrafo" con plantilla {
+        <p class="Paragrafo"><slot></slot></p>
+    }.
+
+    hago un componente vue2 con nombre "Pestanyas" con plantilla {
+        <div class="Pestanyas">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "BotonDePestanya" con plantilla {
+        <div class="BotonDePestanya" :data-identificador-de-grupo="grupo" :data-identificador-de-pestanya="identificador">
+            <div class="Pestanya" v-on:click="internal_al_clicar">
+                <slot></slot>
+            </div>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                identificador: {
+                    type: String,
+                    required: true
+                },
+                grupo: {
+                    type: String,
+                    required: true
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_al_clicar: una lambda donde {
+                        creo jThis como un elemento jquery con ( this.$el ).
+                        creo jPestanyaDestino como jThis
+                            .closest(".BotonDePestanya").
+                        creo jPestanyasDeGrupo como jThis
+                            .closest(".Pestanyas")
+                            .find(".BotonDePestanya")
+                            .filter(una lambda con (index, elemento) donde {
+                                retorno elemento.getAttribute("data-identificador-de-grupo") es igual que this.grupo.
+                            })
+                            .removeClass("seleccionado").
+                        creo jPanelDestino como jThis
+                            .closest(".Pestanyas")
+                            .find(".PanelDePestanya")
+                            .filter(una lambda con (index, elemento) donde {
+                                retorno elemento.getAttribute("data-identificador-de-grupo") es igual que this.grupo.
+                            })
+                            .removeClass("seleccionado")
+                            .filter(una lambda con (index, elemento) donde {
+                                retorno elemento.getAttribute("data-identificador-de-pestanya") es igual que this.identificador.
+                            })
+                            .addClass("seleccionado").
+                        hago jPestanyaDestino.addClass("seleccionado").
+                    }
+                }.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "PanelDePestanya" con plantilla {
+        <div class="PanelDePestanya"
+        :data-identificador-de-grupo="grupo"
+        :data-identificador-de-pestanya="identificador">
+            <slot></slot>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                identificador: {
+                    type: String,
+                    required: true
+                },
+                grupo: {
+                    type: String,
+                    required: true
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia1" con plantilla {
+        <h1 class="TituloDeImportancia1">
+            <slot></slot>
+        </h1>
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia2" con plantilla {
+        <h2 class="TituloDeImportancia2">
+            <slot></slot>
+        </h2>
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia3" con plantilla {
+        <h3 class="TituloDeImportancia3">
+            <slot></slot>
+        </h3>
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia4" con plantilla {
+        <h4 class="TituloDeImportancia4">
+            <slot></slot>
+        </h4>
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia5" con plantilla {
+        <h5 class="TituloDeImportancia5">
+            <slot></slot>
+        </h5>
+    }.
+
+    hago un componente vue2 con nombre "TituloDeImportancia6" con plantilla {
+        <h6 class="TituloDeImportancia6">
+            <slot></slot>
+        </h6>
+    }.
+
+    hago un componente vue2 con nombre "Texto" con plantilla {
+        <div class="Texto"><slot></slot></div>
+    }.
+
+    hago un componente vue2 con nombre "ControlParaBoton" con plantilla {
+        <button class="ControlParaBoton">
+            <slot></slot>
+        </button>
+    }.
+
+    hago un componente vue2 con nombre "ControlParaDia" con plantilla {
+        <ControlParaMomento ref="control_proxificado" :valor-inicial="valorInicial" modo="solo dia" :gestor="gestor" :propiedad="propiedad"></ControlParaMomento>
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno un formateo de fecha a texto a partir de un nuevo Date()
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaHora" con plantilla {
+        <ControlParaMomento ref="control_proxificado" :valor-inicial="valorInicial" modo="solo hora" :gestor="gestor" :propiedad="propiedad"></ControlParaMomento>
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno un formateo de fecha a texto a partir de un nuevo Date()
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaMomento" con plantilla {
+        <div class="ControlParaMomento carta Control">
+            <input class="PuntoDeControl" type="hidden" v-model="internal_value" />
+            <template v-if="(modo === 'solo dia') || (modo === 'normal')">
+                <DisposicionCuadricular v-if="internal_value_date" class="cuadricula_para_panel_de_control_de_anyo_a_dia">
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Año:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_anyo_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_anyo_anterior"> « </ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getFullYear(), 4, "0") }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_anyo_siguiente"> » </ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Mes:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_mes_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_mes_anterior"> « </ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha no_contraer_texto">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getMonth() + 1, 2, "0") }} | {{ $Castelog.metodos.un_nombre_de_mes(internal_value_date.getMonth()) }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_mes_siguiente"> » </ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2 no_contraer_texto">Día:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_dia_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_dia_anterior"> « </ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getDate(), 2, "0") }} | {{ $Castelog.metodos.un_dia_de_la_semana(internal_value_date.getDay()) }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_dia_siguiente"> » </ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                </DisposicionCuadricular>
+                <div class="carta_vacia marginado_vertical_1">
+                    <EtiquetaDeControl class="importancia_2">Calendario:</EtiquetaDeControl>
+                    <Calendario ref="calendario" :al-cambiar-fecha="seleccionar_fecha"></Calendario>
+                </div>
+            </template>
+            <template v-if="(modo === 'solo hora') || (modo === 'normal')">
+                <DisposicionCuadricular v-if="internal_value_date" class="cuadricula_para_panel_de_control_de_hora_a_milisegundo">
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Hora:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_hora_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_hora_siguiente"><div class="girado_de_izquierda_a_arriba"> « </div></ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getHours(), 2, "0") }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_hora_anterior"><div class="girado_de_derecha_a_abajo"> » </div></ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Minuto:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_minuto_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_minuto_siguiente"><div class="girado_de_izquierda_a_arriba"> « </div></ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getMinutes(), 2, "0") }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_minuto_anterior"><div class="girado_de_derecha_a_abajo"> » </div></ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Segundo:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_segundo_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_segundo_siguiente"><div class="girado_de_izquierda_a_arriba"> « </div></ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getSeconds(), 2, "0") }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_segundo_anterior"><div class="girado_de_derecha_a_abajo"> » </div></ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                    <DisposicionLineal class="disposicion_vertical">
+                        <EtiquetaDeControl class="importancia_2">Milisegundo:</EtiquetaDeControl>
+                        <DisposicionLineal class="contenedor_de_parte_de_fecha contenedor_de_milisegundo_de_fecha">
+                            <ControlParaBoton v-on:click.native="ir_a_milisegundo_siguiente"><div class="girado_de_izquierda_a_arriba"> « </div></ControlParaBoton>
+                            <Capa class="caja_de_parte_de_fecha">{{ $Castelog.metodos.un_relleno_de_texto(internal_value_date.getMilliseconds(), 3, "0") }}</Capa>
+                            <ControlParaBoton v-on:click.native="ir_a_milisegundo_anterior"><div class="girado_de_derecha_a_abajo"> » </div></ControlParaBoton>
+                        </DisposicionLineal>
+                    </DisposicionLineal>
+                </DisposicionCuadricular>
+            </template>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                modo: {
+                    type: String,
+                    default: una función donde retorno "normal"
+                },
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno un formateo de fecha a texto a partir de un nuevo Date()
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                intento {
+                    compruebo que this.valorInicial es tipo texto.
+                    compruebo que this.valorInicial.length es mayor que 2.
+                } en errores {
+                    imprimo "Required property «valor-inicial» in component «ControlParaMomento» to be a string and with a length greater than 2 in order to «ControlParaMomento.data»".
+                    lanzo error.
+                }.
+                creo fecha como un formateo de texto a fecha a partir de this.valorInicial.
+                retorno {
+                    internal_value: this.valorInicial,
+                    internal_value_date: fecha
+                }.
+            },
+            watch: {
+                internal_value_date: una función (nuevoValor) donde {
+                    asigno this.internal_value como un formateo de fecha a texto a partir de nuevoValor.
+                    si this.$refs.calendario no es tipo indefinido {
+                        hago this.$refs.calendario.seleccionar_dia(nuevoValor).
+                    }.
+                    si this.$refs.reloj no es tipo indefinido {
+                        hago this.$refs.reloj.seleccionar_hora(nuevoValor).
+                    }.
+                    hago this.$forceUpdate(true).
+                },
+                internal_value: una función (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                get_value: una función donde {
+                    retorno this.internal_value.
+                },
+                seleccionar_fecha: una función (valor) donde {
+                    asigno this.internal_value_date como valor.
+                },
+                ir_a_dia_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setDate(fechaTemporal.getDate() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_mes_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMonth(fechaTemporal.getMonth() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_anyo_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setFullYear(fechaTemporal.getFullYear() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_dia_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setDate(fechaTemporal.getDate() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_mes_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMonth(fechaTemporal.getMonth() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_anyo_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setFullYear(fechaTemporal.getFullYear() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_dia_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setDate(fechaTemporal.getDate() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_dia_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setDate(fechaTemporal.getDate() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_hora_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setHours(fechaTemporal.getHours() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_hora_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setHours(fechaTemporal.getHours() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_minuto_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMinutes(fechaTemporal.getMinutes() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_minuto_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMinutes(fechaTemporal.getMinutes() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_segundo_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setSeconds(fechaTemporal.getSeconds() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_segundo_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setSeconds(fechaTemporal.getSeconds() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_milisegundo_anterior: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMilliseconds(fechaTemporal.getMilliseconds() - 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                },
+                ir_a_milisegundo_siguiente: una función donde {
+                    creo fechaTemporal como un nuevo Date(this.internal_value_date).
+                    hago fechaTemporal.setMilliseconds(fechaTemporal.getMilliseconds() + 1).
+                    asigno this.internal_value_date como fechaTemporal.
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "Calendario" con plantilla {
+        <div class="Calendario">
+            <div class="contenedor_de_calendario">
+                <table v-if="internal_dias">
+                    <tr v-for="(fila, filaIndex) in internal_dias" v-bind:key="'calendario-' + uuid + '-fila-' + filaIndex">
+                        <td v-for="(celda, celdaIndex) in fila" v-bind:key="'calendario-' + uuid + '-fila-' + filaIndex + '-celda-' + celdaIndex" :class="{seleccionado:internal_value_date.getDate() === celda.dia}">
+                            <div class="contenedor_de_dia_de_calendario" v-on:click="seleccionar_dia(celda, 1, { fila: filaIndex, celda: celdaIndex })">
+                                <span class="dia_de_calendario" v-if="celda.dia">{{ celda.dia }}</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno un formateo de fecha a texto a partir de un nuevo Date()
+                },
+                alCambiarFecha: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                creo fecha_inicial como un formateo de texto a fecha a partir de this.valorInicial.
+                retorno {
+                    internal_dias: this.computar_dias_de_mes(fecha_inicial),
+                    internal_value: this.valorInicial,
+                    internal_value_date: fecha_inicial
+                }.
+            },
+            methods: {
+                seleccionar_dia: una función (dia, con_propagacion o en su defecto false) donde {
+                    si dia es instancia de Date {
+                        creo nueva_fecha como un nuevo Date(dia).
+                        asigno this.internal_value_date como nueva_fecha.
+                        si con_propagacion hago this.alCambiarFecha(nueva_fecha, this).
+                        hago this.$forceUpdate(true).
+                        retorno 1.
+                    }.
+                    si dia es tipo objeto {
+                        si dia.dia no es tipo número normal lanzo un nuevo Error("Required parameter «dia.dia» to be number in order to «Calendario.seleccionar_dia»").
+                        creo nueva_fecha como un nuevo Date(this.internal_value_date).
+                        hago nueva_fecha.setDate(dia.dia).
+                        asigno this.internal_value_date como nueva_fecha.
+                        si con_propagacion hago this.alCambiarFecha(nueva_fecha, this).
+                        hago this.$forceUpdate(true).
+                        retorno 2.
+                    }.
+                    lanzo un nuevo Error("Required parameter «dia» to be an instance of Date or an object in order to «Calendario.seleccionar_dia»").
+                },
+                computar_dias_de_mes: una función con (fecha) donde {
+                    creo fecha2 como un nuevo Date(fecha).
+                    creo dias_de_mes como [[]].
+                    hago fecha2.setDate(1).
+                    mientras fecha2.getDay() no es igual que 1 {
+                        hago fecha2.setDate(fecha2.getDate()-1).
+                    }.
+                    mientras fecha2.getMonth() no es igual que fecha.getMonth() {
+                        hago dias_de_mes[0].push({}).
+                        hago fecha2.setDate(fecha2.getDate()+1).
+                    }.
+                    mientras fecha2.getMonth() es igual que fecha.getMonth() {
+                        hago dias_de_mes[dias_de_mes.length - 1].push({ dia: fecha2.getDate() }).
+                        creo es_domingo como fecha2.getDay() es igual que 0.
+                        si es_domingo hago dias_de_mes.push([]).
+                        hago fecha2.setDate(fecha2.getDate()+1).
+                    }.
+                    mientras fecha2.getDay() no es igual que 1 {
+                        hago dias_de_mes[dias_de_mes.length - 1].push({ }).
+                        hago fecha2.setDate(fecha2.getDate()+1).
+                    }.
+                    retorno dias_de_mes.
+                }
+            },
+            watch: {
+                internal_value_date: una función (nuevoValor) donde {
+                    asigno this.internal_value como un formateo de fecha a texto a partir de nuevoValor.
+                },
+                internal_value: una función (nuevoValor) donde {
+                    creo fecha como un formateo de texto a fecha a partir de nuevoValor.
+                    asigno this.internal_dias como this.computar_dias_de_mes(fecha).
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaPlazoTemporal" con plantilla {
+        <div class="ControlParaPlazoTemporal carta_vacia Control">
+            <input class="PuntoDeControl" type="hidden" v-model="internal_value" />
+            <ControlParaEntrada
+                tipo="momento"
+                :gestor="this"
+                propiedad="internal_value_start"
+                enunciado="Desde:"
+                modo="normal"
+                :valor-inicial="internal_value_start"
+                :expandible="true"
+            />
+            <ControlParaEntrada
+                tipo="momento"
+                :gestor="this"
+                propiedad="internal_value_end"
+                enunciado="Hasta"
+                modo="normal"
+                :valor-inicial="internal_value_start"
+                :expandible="true"
+            />
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                modo: {
+                    type: String,
+                    default: una función donde retorno "normal"
+                },
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno un formateo de fecha a texto a partir de un nuevo Date()
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                desacoplo constantes [ start, end ] a partir de this.valorInicial.split("&").
+                retorno {
+                    internal_value: this.valorInicial,
+                    internal_value_start: start,
+                    internal_value_end: end
+                }.
+            },
+            watch: {
+                internal_value_start: una función (nuevoValor) donde {
+                    desacoplo constantes [ start, end ] a partir de this.internal_value.split("&").
+                    asigno this.internal_value como nuevoValor + ' & ' + end.
+                },
+                internal_value_end: una función (nuevoValor) donde {
+                    desacoplo constantes [ start, end ] a partir de this.internal_value.split("&").
+                    asigno this.internal_value como start + ' & ' + nuevoValor.
+                },
+                internal_value: una función (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaPuntoMultidimensional" con plantilla {
+        <div class="ControlParaPuntoMultidimensional Control">
+            <input class="PuntoDeControl" type="hidden" v-model="internal_value" />
+            <div class="carta_vacia">
+                <template v-for="(dimension, dimensionIndex) in dimensiones">
+                    <DisposicionLineal style="flow-direction: column;" v-bind:key="'control-para-punto-multidimensional-' + uuid + '-dimension-' + dimensionIndex">
+                        <Item style="flex-grow: 1;">
+                            <ControlParaEntrada
+                                :tipo="tipoDeEntradas"
+                                :gestor="internal_value"
+                                propiedad="dimensionIndex"
+                                :enunciado="'Dimensión ' + (dimensionIndex+1) + ':'"
+                                :valor-inicial="internal_value[dimensionIndex]"
+                                :al-cambiar="fabrica_para_propagar_cambios_en_dimension(dimensionIndex)"
+                            />
+                        </Item>
+                        <Item style="flex-grow: auto;" v-if="dimensionable">
+                            <ControlParaBoton v-on:click.native="() => internal_value.splice(dimensionIndex, 1)">Quitar</ControlParaBoton>
+                        </Item>
+                    </DisposicionLineal>
+                </template>
+                <template v-if="dimensionable">
+                    <ControlParaBoton v-on:click.native="() => internal_value.push(0)">Añadir dimensión</ControlParaBoton>
+                </template>
+            </div>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                dimensiones: {
+                    type: Number,
+                    default: una función donde retorno 3
+                },
+                dimensionable: {
+                    type: Boolean,
+                    default: una función donde retorno false
+                },
+                valorInicial: {
+                    type: Array,
+                    default: una función donde retorno [0,0,0]
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                },
+                tipoDeEntradas: {
+                    type: String,
+                    default: una función donde retorno "numero"
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            methods: {
+                fabrica_para_propagar_cambios_en_dimension: una función con (dimensionIndex) donde {
+                    retorno una lambda con (componente, valor) donde {
+                        creo variable nuevo_valor como [] concatenado por this.internal_value.
+                        asigno nuevo_valor[dimensionIndex] como valor.
+                        asigno this.internal_value como nuevo_valor.
+                        hago this.$forceUpdate(true).
+                    }.
+                }
+            },
+            mounted: una función donde {
+                
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaLista" con plantilla {
+        <div class="ControlParaLista Control">
+            <input class="PuntoDeControl" type="hidden" v-model="internal_value" />
+            Lista...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaObjeto" con plantilla {
+        <div class="ControlParaObjeto Control">
+            <input class="PuntoDeControl" type="hidden" v-model="internal_value" />
+            Objeto...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaEntrada" con plantilla {
+        <div class="ControlParaEntrada Control">
+            <EtiquetaDeControl v-if="enunciado">
+                <DisposicionLineal style="flex-direction: row;">
+                    <Item style="flex-grow: 1; align-self: flex-end;">
+                        <span>{{ enunciado }} </span>
+                        <span v-if="['fichero'].indexOf(tipo) === -1">
+                            <template v-if="['texto', 'texto largo', 'contrasenya'].indexOf(tipo) !== -1">
+                                ({{ internal_value.length }} caracteres)
+                            </template>
+                            <template v-else-if="internal_value">
+                                ({{ internal_value }})
+                            </template>
+                            <template v-else></template>
+                        </span>
+                    </Item>
+                    <Item style="flex-grow: 0;" v-if="expandible">
+                        <ControlParaBoton class="boton_de_expandir_control" v-on:click.native="expandir_o_contraer">{{ esta_expandido ? "Contraer" : "Expandir" }}</ControlParaBoton>
+                    </Item>
+                </DisposicionLineal>
+            </EtiquetaDeControl>
+            <template v-if="tipo === 'fichero'">
+                <ControlParaFichero ref="control" :class="{ oculto: !esta_expandido }" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+            </template>
+            <template v-else>
+                <template v-if="esta_expandido">
+                    <ControlParaTexto ref="control" v-if="tipo === 'texto'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaTextoLargo ref="control" v-else-if="tipo === 'texto largo'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaNumero ref="control" v-else-if="tipo === 'numero'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaDia ref="control" v-else-if="tipo === 'dia'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaHora ref="control" v-else-if="tipo === 'hora'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaMomento ref="control" v-else-if="tipo === 'momento'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaPlazoTemporal ref="control" v-else-if="tipo === 'plazo temporal'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaPuntoMultidimensional ref="control" v-else-if="tipo === 'punto bidimensional'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" :tipo-de-entradas="tipoDeEntradas" :dimensiones="2" />
+                    <ControlParaPuntoMultidimensional ref="control" v-else-if="tipo === 'punto multidimensional'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" :tipo-de-entradas="tipoDeEntradas" />
+                    <ControlParaContrasenya ref="control" v-else-if="tipo === 'contrasenya'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaColor ref="control" v-else-if="tipo === 'color'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaGrupoDeOpciones ref="control" v-else-if="tipo === 'grupo de opciones'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaOpcion ref="control" v-else-if="tipo === 'opcion'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaSelectorAvanzado ref="control" v-else-if="tipo === 'selectorAvanzado'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaTags ref="control" v-else-if="tipo === 'tags'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaLista ref="control" v-else-if="tipo === 'lista'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaObjeto ref="control" v-else-if="tipo === 'objeto'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaEnvio ref="control" v-else-if="tipo === 'envio'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <ControlParaReset ref="control" v-else-if="tipo === 'reset'" :valor-inicial="internal_value" :gestor="this" propiedad="internal_value" />
+                    <Capa v-else-if="tipo === 'color'" :valor-inicial="internal_value">
+                        <Texto>No se identificó el tipo de control especificado, en este caso: {{ tipo }}.</Texto>
+                    </Capa>
+                </template>
+            </template>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                enunciado: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                tipo: {
+                    type: String,
+                    default: una función donde retorno "texto"
+                },
+                valorInicial: {
+                    type: [String,Array,Object,Boolean,Function,Number],
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno "internal_value"
+                },
+                expandible: {
+                    type: Boolean,
+                    default: una función donde retorno true
+                },
+                atributos: {
+                    type: Object,
+                    default: una función donde retorno {}
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                },
+                tipoDeEntradas: {
+                    type: String,
+                    default: una función donde retorno "numero"
+                }
+            },
+            data: una función donde {
+                retorno {
+                    esta_expandido: (no this.expandible) o false,
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                expandir_o_contraer: una función donde {
+                    asigno this.esta_expandido como no this.esta_expandido.
+                    hago this.$forceUpdate(true).
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaTextoLargo" con plantilla {
+        <textarea class="ControlParaTextoLargo Control PuntoDeControl" v-model="internal_value"></textarea>
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: [String,Number],
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaTexto" con plantilla {
+        <input class="ControlParaTexto Control PuntoDeControl" type="text" v-model="internal_value" :key="'control_para_texto_' + uuid" />
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                valorInicial: {
+                    type: [String,Number],
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaNumero" con plantilla {
+        <input class="ControlParaNumero Control PuntoDeControl" type="number" v-model="internal_value" />
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: [String, Number],
+                    default: una función donde retorno 0
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaBooleano" con plantilla {
+        <input class="ControlParaBooleano Control PuntoDeControl" type="checkbox" v-model="internal_value" />
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                },
+                valorEnLista: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                modo: "booleano" # pero también: "item de lista"
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    si this.modo es igual que "booleano" {
+                        hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                    } pero si this.modo es igual que "item de lista" {
+                        si (this.gestor no es tipo indefinido) y (this.propiedad es tipo texto) {
+                            creo seleccionados_actuales como this.gestor[this.propiedad].
+                            creo posicion_en_lista como seleccionados_actuales.indexOf(this.valorEnLista).
+                            si posicion_en_lista es igual que 0 - 1 {
+                                hago seleccionados_actuales.push(this.valorEnLista).
+                            } y si no {
+                                hago seleccionados_actuales.splice(position_en_lista, 1).
+                            }.
+                        }.
+                        si callback es tipo función hago callback(this, nuevoValor).
+                        hago this.$forceUpdate(true).
+                    }.
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaSelectorSimple" con plantilla {
+        <select class="ControlParaSelectorSimple Control PuntoDeControl" v-model="internal_value">
+            <slot></slot>
+        </select>
+    } con lógica {
+        retorno {
+            props: {
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaFichero" con plantilla {
+        <div class="ControlParaFichero Control">
+            <input ref="entrada_de_fichero" class="PuntoDeControl" type="file" v-on:change="propaga_cambio" />
+            <img ref="salida_de_imagen" class="imagen_de_fichero" alt="No hay imagen cargada."></img>
+        </div>
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: undefined
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                propaga_cambio: una función con (evento) donde {
+                    creo elemento como evento.target.
+                    creo ficheros como elemento.files.
+                    si FileReader y ficheros y ficheros.length {
+                        desacoplo constantes [ fichero ] a partir de ficheros.
+                        creo lector como un nuevo FileReader().
+                        asigno lector.onload como una lambda donde {
+                            imprimo lector.
+                            asigno this.$refs.salida_de_imagen.src como lector.result.
+                            asigno this.internal_value como {
+                                ruta: fichero,
+                                contenido: lector.result
+                            }.
+                        }.
+                        hago lector.readAsDataURL(fichero).
+                    }.
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaEnvio" con plantilla {
+        <ControlParaBoton :al-clicar="() => enviar_formulario()">
+            <slot></slot>
+        </ControlParaBoton>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            },
+            methods: {
+                enviar_formulario: una función donde {
+                    retorno jQuery(this.$el).closest("form").submit().
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaReset" con plantilla {
+        <ControlParaBoton :al-clicar="() => resetear_formulario()">
+            <slot></slot>
+        </ControlParaBoton>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            },
+            methods: {
+                enviar_formulario: una función donde {
+                    retorno jQuery(this.$el).closest("form").reset().
+                }
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaColor" con plantilla {
+        <input class="ControlParaColor Control PuntoDeControl" type="color" v-model="internal_value" :key="'control_para_color_' + uuid" />
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaContrasenya" con plantilla {
+        <input class="ControlParaContrasenya Control PuntoDeControl" type="password" v-model="internal_value" :key="'control_para_contrasenya_' + uuid" />
+    } con lógica {
+        retorno {
+            props: {
+                uuid: {
+                    type: String,
+                    default: una función donde retorno un texto aleatorio de 10 caracteres
+                },
+                valorInicial: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                gestor: {
+                    type: [Object,Array,Function],
+                    default: una función donde retorno {}
+                },
+                propiedad: {
+                    type: String,
+                    default: una función donde retorno ""
+                },
+                alCambiar: {
+                    type: Function,
+                    default: una función
+                }
+            },
+            data: una función donde {
+                retorno {
+                    internal_value: this.valorInicial
+                }.
+            },
+            watch: {
+                internal_value: una función con (nuevoValor) donde {
+                    hago Castelog.metodos.propagar_cambios_desde_watcher.call(this, nuevoValor, this.alCambiar).
+                }
+            },
+            methods: {
+                
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaGrupoDeOpciones" con plantilla {
+        <div class="ControlParaGrupoDeOpciones">
+            ControlParaGrupoDeOpciones...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaOpcion" con plantilla {
+        <div class="ControlParaOpcion">
+            ControlParaOpcion...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaTags" con plantilla {
+        <div class="ControlParaTags">
+            ControlParaTags...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "ControlParaSelectorAvanzado" con plantilla {
+        <div class="ControlParaSelectorAvanzado">
+            ControlParaSelectorAvanzado...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    hago un componente vue2 con nombre "EtiquetaDeControl" con plantilla {
+        <label class="EtiquetaDeControl">
+            <slot></slot>
+        </label>
+    }.
+
+    hago un componente vue2 con nombre "DisposicionLineal" con plantilla {
+        <div class="DisposicionLineal">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "DisposicionCuadricular" con plantilla {
+        <div class="DisposicionCuadricular">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "Item" con plantilla {
+        <div class="Item">
+            <slot></slot>
+        </div>
+    }.
+
+    hago un componente vue2 con nombre "Capa" con plantilla {
+        <div class="Capa">
+            <slot></slot>
+        </div>
+    }.
+
+    creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+    <div class="PaginaDeInicio Component">
+        <TituloDeImportancia1>Componentes de la API Nativa de Castelog</TituloDeImportancia1>
+        <TituloDeImportancia2>Componentes de la API Nativa de Castelog</TituloDeImportancia2>
+        <TituloDeImportancia3>Componentes de la API Nativa de Castelog</TituloDeImportancia3>
+        <TituloDeImportancia4>Componentes de la API Nativa de Castelog</TituloDeImportancia4>
+        <TituloDeImportancia5>Componentes de la API Nativa de Castelog</TituloDeImportancia5>
+        <TituloDeImportancia6>Componentes de la API Nativa de Castelog</TituloDeImportancia6>
+        <Item>Column:</Item>
+        <DisposicionLineal style="flex-direction: column;" class="bordeado">
+            <Item>1</Item>
+            <Item>2</Item>
+            <Item>3</Item>
+        </DisposicionLineal>
+        <Item>Row:</Item>
+        <DisposicionLineal style="flex-direction: row;" class="bordeado">
+            <Item style="flex-grow: 0;">1</Item>
+            <Item style="flex-grow: 1;">2</Item>
+            <Item style="flex-grow: 0;">3</Item>
+        </DisposicionLineal>
+        <Item>Row:</Item>
+        <DisposicionLineal style="flex-direction: row;" class="bordeado">
+            <Item style="flex-grow: 1;">1</Item>
+            <Item style="flex-grow: 2;">2</Item>
+            <Item style="flex-grow: 3;">3</Item>
+            <Item style="flex-grow: 4;">4</Item>
+            <Item style="flex-grow: 5;">5</Item>
+            <Item style="flex-grow: 6;">6</Item>
+        </DisposicionLineal>
+        <DisposicionCuadricular style="grid-template-columns: auto auto 1fr auto auto;">
+            <Item>
+                <ControlParaBoton> «« </ControlParaBoton>
+            </Item>
+            <Item>
+                <ControlParaBoton> « </ControlParaBoton>
+            </Item>
+            <Item style="text-align: center;">Texto...</Item>
+            <Item>
+                <ControlParaBoton> » </ControlParaBoton>
+            </Item>
+            <Item>
+                <ControlParaBoton> »» </ControlParaBoton>
+            </Item>
+            <Item>
+                <ControlParaBoton> «« </ControlParaBoton>
+            </Item>
+            <Item>
+                <ControlParaBoton> « </ControlParaBoton>
+            </Item>
+            <Item style="text-align: center;">Texto...</Item>
+            <Item>
+                <ControlParaBoton> » </ControlParaBoton>
+            </Item>
+            <Item>
+                <ControlParaBoton> »» </ControlParaBoton>
+            </Item>
+        </DisposicionCuadricular>
+        <Pestanyas>
+            <BotonDePestanya grupo="uno" identificador="x" class="seleccionado">x</BotonDePestanya>
+            <BotonDePestanya grupo="uno" identificador="y">y</BotonDePestanya>
+            <BotonDePestanya grupo="uno" identificador="z">z</BotonDePestanya>
+            <PanelDePestanya grupo="uno" identificador="x" class="seleccionado">
+                <ChivatoDeVista />
+                <LineaHorizontal />
+                <Capa>
+                    <ControlParaEntrada
+                        tipo="texto"
+                        enunciado="Nombre completo:"
+                        relleno="Pepito de los Palotes Vázquez"
+                        :gestor="this"
+                        propiedad="nombre_de_x"
+                        valor-inicial=""
+                    />
+                    <ControlParaEntrada
+                        tipo="texto"
+                        enunciado="Ciudad:"
+                        relleno="Alarcón de Pozuelo"
+                        :gestor="this"
+                        propiedad="ciudad_de_x"
+                        valor-inicial=""
+                    />
+                    <ControlParaEntrada
+                        tipo="texto largo"
+                        enunciado="Descripción:"
+                        :gestor="this"
+                        propiedad="descripcion"
+                        valor-inicial=""
+                    />
+                </Capa>
+            </PanelDePestanya>
+            <PanelDePestanya grupo="uno" identificador="y">
+                <ChivatoDeVista />
+                <div>Este es el panel y</div>
+            </PanelDePestanya>
+            <PanelDePestanya grupo="uno" identificador="z">
+                <ChivatoDeVista />
+                <div>Este es el panel z</div>
+            </PanelDePestanya>
+        </Pestanyas>
+        <GaleriaDeImagenes :imagenes="['./img/0.png','./img/1.png','./img/2.png','./img/3.png','./img/4.png','./img/5.png','./img/6.png','./img/7.png','./img/8.png','./img/9.png','./img/10.png']" />
+        <ControlParaEntrada tipo="texto" enunciado="Texto:" />
+        <ControlParaEntrada tipo="texto largo" enunciado="Texto largo:" />
+        <ControlParaEntrada tipo="numero" enunciado="Numero:" />
+        <ControlParaEntrada tipo="dia" enunciado="Selecciona el día:" :valor-inicial="$Castelog.metodos.un_formateo_de_fecha(new Date(), 'YYYY/MM/DD HH:mm:ss.xxx', 'un formateo de fecha a texto')" />
+        <ControlParaEntrada tipo="hora" enunciado="Selecciona la hora:" :valor-inicial="$Castelog.metodos.un_formateo_de_fecha(new Date(), 'YYYY/MM/DD HH:mm:ss.xxx', 'un formateo de fecha a texto')" />
+        <ControlParaEntrada tipo="momento" enunciado="Selecciona el día y la hora:" :valor-inicial="$Castelog.metodos.un_formateo_de_fecha(new Date(), 'YYYY/MM/DD HH:mm:ss.xxx', 'un formateo de fecha a texto')" />
+        <ControlParaEntrada tipo="plazo temporal" enunciado="Plazo temporal:" :valor-inicial="$Castelog.metodos.un_formateo_de_fecha(new Date()) + ' & ' + $Castelog.metodos.un_formateo_de_fecha(new Date())" />
+        <ControlParaEntrada tipo="punto bidimensional" enunciado="Punto bidimensional:" :valor-inicial="[0,0]" />
+        <ControlParaEntrada tipo="punto multidimensional" enunciado="Punto multidimensional:" :valor-inicial="[0,0,0]" />
+        <ControlParaEntrada tipo="contrasenya" enunciado="Contrasenya:" />
+        <ControlParaEntrada tipo="color" enunciado="Color:" />
+        <ControlParaEntrada tipo="fichero" enunciado="Fichero:" />
+        <ControlParaEntrada tipo="grupo de opciones" enunciado="Grupo de opciones:" />
+        <ControlParaEntrada tipo="opcion" enunciado="Opcion:" />
+        <ControlParaEntrada tipo="tags" enunciado="Tags:" />
+        <ControlParaEntrada tipo="lista" enunciado="Lista:" />
+        <ControlParaEntrada tipo="objeto" enunciado="Objeto:" />
+        <ControlParaEntrada tipo="selector avanzado" enunciado="Selector avanzado:" />
+        <ControlParaEntrada tipo="envio" enunciado="Envio:" />
+        <ControlParaEntrada tipo="reset" enunciado="Reset:" />
+    </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {
+                    nombre_de_x: "",
+                    ciudad_de_x: ""
+                }.
+            }
+        }.
+    }.
+
+    creo ChivatoDeVista como un componente vue2 con nombre "ChivatoDeVista" con plantilla {
+        <div>
+            <SoloReloj>
+                <div>Vista de reloj:</div>
+            </SoloReloj>
+            <SoloMovil>
+                <div>Vista de movil:</div>
+            </SoloMovil>
+            <SoloTablet>
+                <div>Vista de tablet:</div>
+            </SoloTablet>
+            <SoloOrdenador>
+                <div>Vista de ordenador:</div>
+            </SoloOrdenador>
+            <SoloTelevision>
+                <div>Vista de television:</div>
+            </SoloTelevision>
+            <SoloProyector>
+                <div>Vista de proyector:</div>
+            </SoloProyector>
+        </div>
+    }.
+
+    creo LineaHorizontal como un componente vue2 con nombre "LineaHorizontal" con plantilla {
+        <div class="LineaHorizontal"></div>
+    }.
+
+    creo Carta como un componente vue2 con nombre "Carta" con plantilla {
+        <div class="Carta">
+            Carta...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo Sonido como un componente vue2 con nombre "Sonido" con plantilla {
+        <div class="Sonido">
+            Sonido...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo ReproductorDeSonido como un componente vue2 con nombre "ReproductorDeSonido" con plantilla {
+        <div class="ReproductorDeSonido">
+            ReproductorDeSonido...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo Video como un componente vue2 con nombre "Video" con plantilla {
+        <div class="Video">
+            Video...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo ReproductorDeVideo como un componente vue2 con nombre "ReproductorDeVideo" con plantilla {
+        <div class="ReproductorDeVideo">
+            ReproductorDeVideo...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo VideoDeYoutube como un componente vue2 con nombre "VideoDeYoutube" con plantilla {
+        <div class="VideoDeYoutube">
+            VideoDeYoutube...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo Tabla como un componente vue2 con nombre "Tabla" con plantilla {
+        <div class="Tabla">
+            Tabla...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo Fila como un componente vue2 con nombre "Fila" con plantilla {
+        <div class="Fila">
+            Fila...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo Celda como un componente vue2 con nombre "Celda" con plantilla {
+        <div class="Celda">
+            Celda...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo GestorDeDatosDeTabla como un componente vue2 con nombre "GestorDeDatosDeTabla" con plantilla {
+        <div class="GestorDeDatosDeTabla">
+            GestorDeDatosDeTabla...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo GestorDeDatosDeFila como un componente vue2 con nombre "GestorDeDatosDeFila" con plantilla {
+        <div class="GestorDeDatosDeFila">
+            GestorDeDatosDeFila...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo BuscadorDeDatos como un componente vue2 con nombre "BuscadorDeDatos" con plantilla {
+        <div class="BuscadorDeDatos">
+            BuscadorDeDatos...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo ListadorDeDatos como un componente vue2 con nombre "ListadorDeDatos" con plantilla {
+        <div class="ListadorDeDatos">
+            ListadorDeDatos...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+    creo PaginadorDeDatos como un componente vue2 con nombre "PaginadorDeDatos" con plantilla {
+        <div class="PaginadorDeDatos">
+            PaginadorDeDatos...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    creo IndiceDePagina como un componente vue2 con nombre "IndiceDePagina" con plantilla {
+        <div class="IndiceDePagina">
+            IndiceDePagina...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    creo PuertoDeDialogos como un componente vue2 con nombre "PuertoDeDialogos" con plantilla {
+        <div class="PuertoDeDialogos">
+            <div class="contenedor_de_puerto_de_dialogo" v-for="(dialogo, dialogoIndex) in dialogos" v-bind:key="'puerto-de-dialogo-' + dialogoIndex">
+                <div class="capa_de_puerto_de_dialogo">
+                    <component :is="dialogo.componente" v-bind="dialogo.atributos" v-on="dialogo.eventos"></component>
+                </div>
+            </div>
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {
+                    dialogos: []
+                }.
+            },
+            mounted: una función donde {
+                asigno this.$dialogos como this.
+                asigno Vue.prototype.$dialogos como this.
+            },
+            methods: {
+                abrir_dialogo: una función donde {},
+                cerrar_dialogo: una función donde {}
+            }
+        }.
+    }.
+
+    creo PuertoDeNotificaciones como un componente vue2 con nombre "PuertoDeNotificaciones" con plantilla {
+        <div class="PuertoDeNotificaciones">
+        <div class="contenedor_de_puerto_de_notificacion" v-for="(notificacion, notificacionIndex) in notificaciones" v-bind:key="'puerto-de-notificacion-' + notificacionIndex">
+            <div class="capa_de_puerto_de_notificacion" v-if="(typeof notificacion === 'object') && (typeof notificacion.component === 'string')">
+            <component :is="notificacion.componente" v-bind="notificacion.atributos" v-on="notificacion.eventos"></component>
+            </div>
+            <div class="capa_de_puerto_de_notificacion" v-else>
+                <div class="cabecera_de_notificacion">Notificación:</div>
+                <div class="cuerpo_de_notificacion">{{ dialogo }}</div>
+                <div class="pie_de_notificacion">
+                    <ControlParaBoton :al-clicar="() => notificacion.resolver_notificacion('ok')">Aceptar</ControlParaBoton>
+                </div>
+            </div>
+        </div>
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {
+                    notificaciones: []
+                }.
+            },
+            methods: {
+                notificar: una función con (datos) donde {
+                    apendizo {
+                        tipo: datos.tipo o "info",
+                        titulo: datos.tipo o "Nota informativa",
+                        mensaje: datos.mensaje,
+                        detalles: datos.detalles
+                    } en this.notificaciones.
+                },
+                notificar_error: una función con (error) donde {
+                    apendizo {
+                        tipo: "error",
+                        titulo: error.name,
+                        mensaje: error.message,
+                        detalles: error.stack
+                    } en this.notificaciones.
+                }
+            },
+            mounted: una función donde {
+                asigno this.$notificaciones como this.
+                asigno Vue.prototype.$notificaciones como this.
+            }
+        }.
+    }.
+    creo Hipervinculo como un componente vue2 con nombre "Hipervinculo" con plantilla {
+        <a class="Hipervinculo"><slot></slot></a>
+    }.
+    creo Icono como un componente vue2 con nombre "Icono" con plantilla {
+        <div class="Icono">
+            Icono...
+        </div>
+    } con lógica {
+        retorno {
+            data: una función donde {
+                retorno {}.
+            }
+        }.
+    }.
+
+    creo PuertoDeComunicaciones como un componente vue2 con nombre "PuertoDeComunicaciones" con plantilla {
+    <div class="PuertoDeComunicaciones">
+        <div class="contenedor_de_puerto_de_comunicaciones" v-if="identificador_de_componente && atributos_de_componente && eventos_de_componente" v-bind:key="'puerto_de_comunicacion_' + identificador_de_comunicacion">
+        <component :is="identificador_de_componente" v-bind="atributos_de_componente" v-on="eventos_de_componente" v-bind:key="'componente_de_puerto_de_comunicacion_' + identificador_de_comunicacion"/>
+        </div>
+    </div>
+    } con lógica {
+    retorno {
+        data: una función donde {
+        retorno {
+            identificador_de_comunicacion: un texto aleatorio de 10 caracteres,
+            identificador_de_componente: undefined,
+            atributos_de_componente: undefined,
+            eventos_de_componente: undefined,
+            promesa_de_comunicacion: undefined,
+            promesa_exitosa: undefined,
+            promesa_fallida: undefined
+        }.
+        },
+        methods: {
+        resolver_comunicacion: una función con (datos) donde {
+            si this.promesa_exitosa no es tipo función {
+            imprimo "No hay ninguna comunicación activa en este momento para «Vue.prototype.$comunicaciones.fracasar_comunicacion».".
+            retorno this.promesa_de_comunicacion.
+            }.
+            hago this.promesa_exitosa(datos).
+            asigno this.promesa_exitosa como undefined.
+            asigno this.promesa_fallida como undefined.
+            asigno this.identificador_de_componente como undefined.
+            asigno this.atributos_de_componente como undefined.
+            asigno this.eventos_de_componente como undefined.
+            retorno this.promesa_de_comunicacion.
+        },
+        fracasar_comunicacion: una función con (error) donde {
+            si this.promesa_exitosa no es tipo función {
+            imprimo "No hay ninguna comunicación activa en este momento para «Vue.prototype.$comunicaciones.fracasar_comunicacion».".
+            retorno this.promesa_de_comunicacion.
+            }.
+            si this.promesa_fallida no es tipo función retorno this.promesa_de_comunicacion.
+            hago this.promesa_fallida(error).
+            asigno this.promesa_exitosa como undefined.
+            asigno this.promesa_fallida como undefined.
+            asigno this.identificador_de_componente como undefined.
+            asigno this.atributos_de_componente como undefined.
+            asigno this.eventos_de_componente como undefined.
+            asigno this.identificador_de_comunicacion como undefined.
+            retorno this.promesa_de_comunicacion.
+        },
+        una_entrada_de_usuario: una función con (componente, atributos o en su defecto {}, eventos o en su defecto {}) donde {
+            si this.promesa_exitosa es tipo función {
+            imprimo "Ya hay una comunicación activa en este momento para «Vue.prototype.$comunicaciones.una_entrada_de_usuario» y se ha ignorado la comunicación mediante el componente «" + componente + "»".
+            retorno this.promesa_de_comunicacion.
+            }.
+            asigno this.identificador_de_comunicacion como un texto aleatorio de 10 caracteres.
+            asigno this.promesa_de_comunicacion como una promesa con (ok, fail) donde {
+            asigno this.promesa_exitosa como ok.
+            asigno this.promesa_fallida como fail.
+            }.
+            asigno this.atributos_de_componente como atributos.
+            asigno this.eventos_de_componente como eventos.
+            asigno this.identificador_de_componente como componente.
+            retorno this.promesa_de_comunicacion.
+        },
+        una_salida_a_usuario: una función con (componente, atributos o en su defecto {}, eventos o en su defecto {}) donde {
+            si this.promesa_exitosa es tipo función {
+            imprimo "Hay una comunicación activa en este momento para «Vue.prototype.$comunicaciones.una_salida_a_usuario» y se ha ignorado la comunicación mediante el componente «" + componente + "»".
+            retorno this.promesa_de_comunicacion.
+            }.
+            asigno this.identificador_de_comunicacion como un texto aleatorio de 10 caracteres.
+            asigno this.atributos_de_componente como atributos.
+            asigno this.eventos_de_componente como eventos.
+            asigno this.identificador_de_componente como componente.
+            retorno this.promesa_de_comunicacion.
+        }
+        },
+        mounted: una función donde {
+        asigno Vue.prototype.$comunicaciones como this.
+        }
+    }.
+    }.
+
+    asigno Vue.prototype.$Castelog como Castelog.
+    asigno Vue.prototype.$window como window.
+
+    creo tema como {
+
+    }.
+
+    creo estilos_finales como {} extendido por {
+        estilos: Castelog.variables.estilos_en_cascada_nativos_comunes
+    } también extendido por {
+        tema: Castelog.variables.tema_de_estilos_en_cascada_nativos
+    }.
+
+    hago una inserción de estilos en cascada llamado "estilos generales" con (<@
+        body {
+            margin: 0;
+            padding: 2px;
+            font-family: Roboto;
+            font-size: 12px;
+        }
+        input, button, textarea, select {
+            font-family: Roboto;
+            font-size: 12px;
+            <:= config.estilos.rasgos.para.espaciado_2 :>
+            min-width: 28px;
+            border: 1px solid #333;
+            background-color: #CCC;
+            border-radius: 4pt;
+            width: auto;
+        }
+        button {
+            cursor: pointer;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .DisposicionLineal {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .DisposicionCuadricular > .Item {
+            <:= config.estilos.rasgos.para.bordeado_rallado :>
+        }
+        .DisposicionLineal > .Item {
+            align-self: center;
+            justify-content: center;
+        }
+        .DisposicionCuadricular {
+            display: grid;
+        }
+        .BotonDePestanya {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .BotonDePestanya > .Pestanya {
+            <:= config.estilos.rasgos.para.espaciado_2 :>
+            border: 1px solid #333;
+            border-bottom: 0px solid #333;
+            border-top-left-radius: 2pt;
+            border-top-right-radius: 2pt;
+            background-color: #CCC;
+        }
+        .BotonDePestanya.seleccionado > .Pestanya {
+            background-color: #FFF;
+        }
+        .PanelDePestanya {
+            <:= config.estilos.rasgos.para.espaciado_2 :>
+            display: none;
+            border: 1px solid #333;
+            border-bottom-left-radius: 2pt;
+            border-bottom-right-radius: 2pt;
+        }
+        .PanelDePestanya.seleccionado {
+            display: block;
+        }
+        .LineaHorizontal {
+            border-top: 1px solid #333;
+        }
+        select.PuntoDeControl,
+        textarea.PuntoDeControl,
+        input.PuntoDeControl {
+            width: 100%;
+        }
+        textarea.PuntoDeControl {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .bordeado {
+            <:= config.estilos.rasgos.para.bordeado :>
+        }
+        .bordeado_rallado {
+            <:= config.estilos.rasgos.para.bordeado_rallado :>
+        }
+        .caja_de_parte_de_fecha {
+            <:= config.estilos.rasgos.para.espaciado_2 :>
+            flex-grow: 1;
+            text-align: center;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+        .contenedor_de_parte_de_fecha {
+            align-items: center;
+            justify-content: start;
+            margin: 2px;
+            padding: 2px;
+            border-radius: 2pt;
+        }
+        .contenedor_de_anyo_de_fecha { flex-grow: 0.5; }
+        .contenedor_de_mes_de_fecha { flex-grow: 0.5; }
+        .contenedor_de_dia_de_fecha { flex-grow: 0.5; }
+        .contenedor_de_dia_semanal_de_fecha { flex-grow: 0.5; }
+        .SoloReloj { display: none; }
+        .SoloMovil { display: none; }
+        .SoloTablet { display: none; }
+        .SoloOrdenador { display: none; }
+        .SoloTelevision { display: none; }
+        .SoloProyector { display: none; }
+        @media only screen and (min-width: 0px) and (max-width: 200px) {
+            .SoloReloj { display: block; }
+            .SoloMovil { display: none; }
+            .SoloTablet { display: none; }
+            .SoloOrdenador { display: none; }
+            .SoloTelevision { display: none; }
+            .SoloProyector { display: none; }
+        }
+        @media only screen and (min-width: 200px) and (max-width: 400px) {
+            .SoloReloj { display: none; }
+            .SoloMovil { display: block; }
+            .SoloTablet { display: none; }
+            .SoloOrdenador { display: none; }
+            .SoloTelevision { display: none; }
+            .SoloProyector { display: none; }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 600px) {
+            .SoloReloj { display: none; }
+            .SoloMovil { display: none; }
+            .SoloTablet { display: block; }
+            .SoloOrdenador { display: none; }
+            .SoloTelevision { display: none; }
+            .SoloProyector { display: none; }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+            .SoloReloj { display: none; }
+            .SoloMovil { display: none; }
+            .SoloTablet { display: none; }
+            .SoloOrdenador { display: block; }
+            .SoloTelevision { display: none; }
+            .SoloProyector { display: none; }
+        }
+        @media only screen and (min-width: 800px) and (max-width: 1000px) {
+            .SoloReloj { display: none; }
+            .SoloMovil { display: none; }
+            .SoloTablet { display: none; }
+            .SoloOrdenador { display: none; }
+            .SoloTelevision { display: block; }
+            .SoloProyector { display: none; }
+        }
+        @media only screen and (min-width: 1000px) {
+            .SoloReloj { display: none; }
+            .SoloMovil { display: none; }
+            .SoloTablet { display: none; }
+            .SoloOrdenador { display: none; }
+            .SoloTelevision { display: none; }
+            .SoloProyector { display: block; }
+        }
+        .no_contraer_texto {
+            white-space: nowrap;
+        }
+        .disposicion_vertical {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .EtiquetaDeControl {
+            display: block;
+            <:= config.estilos.rasgos.para.espaciado_2 :>
+            padding-bottom: 0px;
+            padding-left: 2px;
+            border-bottom: 1px solid #CCC;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-transform: none;
+        }
+        .cuadricula_para_panel_de_control_de_hora_a_milisegundo,
+        .cuadricula_para_panel_de_control_de_anyo_a_dia {
+            grid-gap: 4px;
+        }
+        .cuadricula_para_panel_de_control_de_hora_a_milisegundo > div,
+        .cuadricula_para_panel_de_control_de_anyo_a_dia > div {
+            <:= config.estilos.rasgos.para.carta_vacia :>
+        }
+        .cuadricula_para_panel_de_control_de_hora_a_milisegundo {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+        }
+        @media only screen and (min-width: 0px) and (max-width: 200px) {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        @media only screen and (min-width: 200px) and (max-width: 400px)  {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 600px)  {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px)  {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        @media only screen and (min-width: 800px) and (max-width: 1000px)  {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        @media only screen and (min-width: 1000px)  {
+            .cuadricula_para_panel_de_control_de_anyo_a_dia {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+            }
+            .cuadricula_para_panel_de_control_de_hora_a_milisegundo {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+        .contenedor_de_parte_de_fecha > button {
+            width: 40px;
+        }
+        .Calendario { display: block; text-align: center; }
+        .Calendario > .contenedor_de_calendario { display: inline-block; }
+        .Calendario > .contenedor_de_calendario > table {}
+        .Calendario > .contenedor_de_calendario > table > tr {}
+        .Calendario > .contenedor_de_calendario > table > tr > td {
+            background-color: #CCC;
+            color: black;
+            border: 1px solid #000;
+            border-radius: 4pt;
+            text-align: center;
+            cursor: pointer;
+        }
+        .Calendario > .contenedor_de_calendario > table > tr > td.seleccionado {
+            background-color: #333;
+            color: white;
+            border: 1px solid #000;
+        }
+        .Calendario > .contenedor_de_calendario > table > tr > td > .contenedor_de_dia_de_calendario {
+            padding: 5px;
+            font-size: 10px;
+        }
+        .Calendario > .contenedor_de_calendario > table > tr > td > .contenedor_de_dia_de_calendario > .dia_de_calendario { }
+        .contenedor_de_hora_de_fecha {
+            flex-direction: column;
+        }
+        .contenedor_de_minuto_de_fecha {
+            flex-direction: column;
+        }
+        .contenedor_de_segundo_de_fecha {
+            flex-direction: column;
+        }
+        .contenedor_de_milisegundo_de_fecha {
+            flex-direction: column;
+        }
+        .girado_de_derecha_a_abajo {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+        .girado_de_izquierda_a_arriba {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+        @media only screen and (min-width: 800px) and (max-width: 1000px)  {
+            .contenedor_de_hora_de_fecha,
+            .contenedor_de_minuto_de_fecha,
+            .contenedor_de_segundo_de_fecha,
+            .contenedor_de_milisegundo_de_fecha {
+                flex-direction: row-reverse;
+            }
+            .girado_de_derecha_a_abajo {
+                transform: rotate(180deg);
+            }
+            .girado_de_izquierda_a_arriba {
+                transform: rotate(180deg);
+            }
+        }
+        @media only screen and (min-width: 1000px)  {
+            .contenedor_de_hora_de_fecha,
+            .contenedor_de_minuto_de_fecha,
+            .contenedor_de_segundo_de_fecha,
+            .contenedor_de_milisegundo_de_fecha {
+                flex-direction: row;
+            }
+            .girado_de_derecha_a_abajo {
+                transform: rotate(0deg);
+            }
+            .girado_de_izquierda_a_arriba {
+                transform: rotate(0deg);
+            }
+        }
+        .importancia_2 {
+            color: #444;
+            text-transform: uppercase;
+            font-size: 8px;
+        }
+        .boton_de_expandir_control {
+            padding: 5px;
+            font-size: 9px;
+            margin-bottom: 2px;
+        }
+        .contenedor_de_comunicaciones {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255,0.5);
+        }
+        .panel_de_comunicaciones {
+            
+        }
+        .ControlParaColor {
+            padding: 0;
+        }
+        <:
+            itero como objeto config.estilos.rasgos.para creando constante prop donde { :>
+                .<:=prop:> {
+                    <:=config.estilos.rasgos.para[prop]:>
+                }
+                <:
+            }.
+        :>
+        .imagen_de_fichero {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0 0 4px black;
+        }
+        .oculto {
+            display: none;
+        }
+    @> parametrizada con (estilos_finales)).
+
+}.

@@ -1,0 +1,17 @@
+
+
+# Persistencia » Base de datos » Sentencias
+
+[*
+Creo x como un hecho asíncrono donde {
+    Notifico con mensaje "Hola, usuario, esto es una notificación".
+    Confirmo asíncronamente con mensaje "Esto, en cambio, es una confirmación" creando constante confirmo1.
+    Pregunto asíncronamente con mensaje "Y esto, es una pregunta:" creando constante pregunta1.
+    Notifico con mensaje un objeto con {
+        Propiedad confirmacion como confirmo1.
+        Propiedad pregunta como pregunta1.
+    } textualizado.
+}.then(una función (data) donde {
+    Imprimo "OK los diálogos de usuario!".
+}).
+*]

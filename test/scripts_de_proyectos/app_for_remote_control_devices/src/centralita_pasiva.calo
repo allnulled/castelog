@@ -1,0 +1,8 @@
+importo api nativa.
+
+creo centralita como una centralita pasiva de control remoto configurado con {
+    "nativo.configuraciones.fichero": "remote_control_settings.json",
+    "nativo.configuraciones.claves.fichero": "remote_control_keys.json"
+}.
+
+hago centralita.start().

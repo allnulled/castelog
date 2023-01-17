@@ -1,0 +1,57 @@
+importo api nativa.
+
+# Persistencia » Base de datos » Sentencias
+
+Creo resultado como una selección
+    en modelo "fichero"
+    filtrando por []
+    ordenando por []
+    agrupando por ["etapa"]
+    paginando por { pagina: 1, items: 5 }
+    en base de datos "por_defecto"
+    usando adaptador Castelog.variables.SimplestDB.
+
+Creo id_1 como una inserción
+    en modelo "fichero"
+    con valor {}
+    en base de datos "por_defecto".
+
+Creo item_1_modificado como una actualización
+    en modelo "fichero"
+    con registro id_1
+    con valor { nombre: "y" }
+    en base de datos "por_defecto".
+
+Creo item_eliminado como una eliminación
+    en modelo "fichero"
+    con registro id_1
+    en base de datos "por_defecto".
+
+# Persistencia » Base de datos » Generativas
+
+Selecciono
+    en modelo "fichero"
+    filtrando por []
+    ordenando por []
+    agrupando por ["etapa"]
+    paginando por { pagina: 1, items: 20 }
+    en base de datos "por_defecto"
+    creando constante resultado_2.
+
+Inserto
+    en modelo "fichero"
+    con valor { ruta: "/root.js", contenido: "alert('Hi!')" }
+    en base de datos "por_defecto"
+    creando constante rootId.
+
+Actualizo
+    en modelo "fichero"
+    con registro rootId
+    con valor { nombre: "x" }
+    en base de datos "por_defecto".
+
+Elimino
+    en modelo "fichero"
+    con registro rootId
+    en base de datos "por_defecto".
+

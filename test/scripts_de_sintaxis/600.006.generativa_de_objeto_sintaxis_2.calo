@@ -1,0 +1,15 @@
+Creo x como un objeto con {
+    Propiedad name como "ComponenteVariopinto".
+    Propiedad data como una función donde retorno un objeto con {
+        Propiedad url_para_datos como "http://www.example.com".
+    }.
+    Propiedad methods como un objeto con {
+        Propiedad refrescar_datos como una función asíncrona donde {
+            Hago this.$cliente.get(this.url_data_datos).
+        }.
+        Propiedad cargar_componente como una función asíncrona donde {
+            Hago asíncronamente this.refrescar_datos().
+        }.
+        Propiedad "como_string" como "un string".
+    }.
+}.

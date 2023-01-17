@@ -1,0 +1,11 @@
+importo api nativa.
+
+creo entrada como {
+    "1": "ok!",
+    "2": "reok!",
+    "3": "okokok!!"
+}.
+imprimo ([1,2,3] reducido desde {} donde {
+    asigno output[item] como entrada[item].
+    retorno output.
+}) textualizado.

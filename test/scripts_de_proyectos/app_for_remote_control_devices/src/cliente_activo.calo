@@ -1,0 +1,8 @@
+importo api nativa.
+
+creo activo como un cliente activo de control remoto configurado con {
+    "nativo.configuraciones.fichero": "remote_control_settings.json",
+    "nativo.comandos.fichero": "comando.js"
+}.
+
+hago activo.start().

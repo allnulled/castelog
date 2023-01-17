@@ -1,0 +1,8 @@
+Creo mensaje como "un mensaje diferente".
+
+Compruebo que mensaje no es igual que "un mensaje típico".
+Compruebo que mensaje no es tipo número.
+Compruebo que mensaje no es tipo objeto.
+Compruebo que mensaje no es tipo lista.
+Compruebo que mensaje no es tipo indefinido.
+Compruebo que mensaje no es tipo función.

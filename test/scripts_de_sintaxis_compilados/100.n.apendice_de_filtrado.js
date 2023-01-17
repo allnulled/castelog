@@ -1,0 +1,1 @@
+if(!((([1, 2, 3]).filter(function(item) {return (item === 2);})).length === 1)) throw "Error de 100.n.apendice_de_filtrado.clg"

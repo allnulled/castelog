@@ -1,0 +1,90 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre app-por-defecto
+    con versión 0.0.1
+<head>
+    <title>Componente dinámico</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+creo ComponenteDinamico como un componente vue2 con nombre "Compo" con plantilla {
+    <div>Compo</div>
+}.
+
+creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+    <div>PaginaDeInicio</div>
+}.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <router-view></router-view>
+    <button v-on:click="cambiar">Cambiar</button>
+    <template v-if="internal_activation">
+        <component :is="internal_component" v-bind="internal_attributes" v-on="internal_events" />
+    </template>
+    <:= un componente vue2 con nombre "ComponenteVolatil1" con atributos {
+        
+    } con eventos {
+        
+    } con plantilla {
+        <div class="ComponenteVolatil Componente">
+            <h3>Componente volátil</h3>
+        </div>
+    } con lógica {
+        
+    } :>
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        internal_activation: true,
+        internal_component: "Compo",
+        internal_attributes: {
+            "style": "border: 1px solid #333;",
+            "click.native": this.cambiar
+        },
+        internal_events: {
+            "click": this.cambiar
+        }
+      }.
+    }.
+    propiedad methods como {
+        cambiar: una función donde {
+            asigno this.internal_activation como false.
+            hago setTimeout(una lambda donde {
+                hago un componente vue2 con nombre "Compo" con plantilla {
+                    <div>Compo pero 2</div>
+                }.
+                asigno this.internal_component como "Compo".
+                asigno this.internal_activation como true.
+                hago this.$forceUpdate(true).
+            }, 1000).
+        }
+    }.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

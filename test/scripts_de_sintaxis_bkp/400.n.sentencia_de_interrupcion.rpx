@@ -1,0 +1,14 @@
+Creo variable valor como "1".
+
+En proceso «iterar sobre valores», mientras valor es igual que "1" {
+    Incremento valor.
+    Si valor es igual que 2, interrumpo proceso «iterar sobre valores».
+}.
+
+Asigno valor como "1".
+
+En proceso «iterar sobre valores», mientras valor es igual que "1" {
+    Incremento valor.
+    Si valor no es igual que 2, continúo proceso «iterar sobre valores».
+}.
+

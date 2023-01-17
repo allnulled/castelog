@@ -1,0 +1,4 @@
+Importo API nativa.
+
+Creo elemento como un elemento html con ("<a class='ejemplo'>Esto es un ejemplo de elemento HTML</a>").
+Hago document.body.appendChild(elemento).

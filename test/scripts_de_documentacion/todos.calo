@@ -1,0 +1,301 @@
+Importo api nativa.
+
+Creo tiempoInicial como una nueva Date().
+
+@SECCIÓN Generativa
+
+# En el siguiente apartado se procede a testear las sintaxis de generativas.
+Creo gs como {}.
+
+@SECCIÓN Generativa_array
+
+Asigno gs.array como {}.
+Asigno gs.array.var1 como una lista.
+Asigno gs.array.var2 como una lista con [0, 1, 2].
+Asigno gs.array.var3 como [0, 1, 2].
+Asigno gs.array.var4 como [].
+Compruebo que gs.array.var1 es tipo lista.
+Compruebo que gs.array.var2 es tipo lista.
+Compruebo que gs.array.var3 es tipo lista.
+Compruebo que gs.array.var4 es tipo lista.
+
+Imprimo "Test de generativas OK.".
+
+@SECCIÓN Generativa_clase
+
+Asigno gs.clase como {}.
+Asigno gs.clase.var1 como una clase.
+Asigno gs.clase.var2 como una clase que extiende de gs.clase.var1.
+Asigno gs.clase.var3 como una clase que extiende de gs.clase.var2 con {
+    Propiedad estática estatica1 donde retorno 500.
+    Propiedad dinamica2 donde retorno 600.
+    Método estático estatico3 donde retorno 700.
+    Método dinamico4 donde retorno 800.
+}.
+Asigno gs.clase.var4 como un nuevo gs.clase.var1().
+Asigno gs.clase.var5 como un nuevo gs.clase.var2().
+Asigno gs.clase.var6 como un nuevo gs.clase.var3().
+
+Compruebo que gs.clase.var1 es tipo función.
+Compruebo que gs.clase.var2 es tipo función.
+Compruebo que gs.clase.var3 es tipo función.
+Compruebo que gs.clase.var3.estatica1 es igual que 500.
+Compruebo que gs.clase.var3.estatico3() es igual que 700.
+Compruebo que gs.clase.var4 es instancia de gs.clase.var1.
+Compruebo que gs.clase.var5 es instancia de gs.clase.var1.
+Compruebo que gs.clase.var5 es instancia de gs.clase.var2.
+Compruebo que gs.clase.var6 es instancia de gs.clase.var1.
+Compruebo que gs.clase.var6 es instancia de gs.clase.var2.
+Compruebo que gs.clase.var6 es instancia de gs.clase.var3.
+Compruebo que gs.clase.var6.dinamica2 es igual que 600.
+Compruebo que gs.clase.var6.dinamico4() es igual que 800.
+
+Imprimo "Test de generativa de clase OK.".
+
+@SECCIÓN Generativa_con_operaciones
+
+Imprimo "Test de generativa con operaciones OK.".
+
+@SECCIÓN Generativa_cuando
+
+Asigno gs.cuando como {}.
+Asigno gs.cuando.var1 como cuando false entonces 0
+    si no cuando true entonces 1
+    si no 2.
+
+Compruebo que gs.cuando.var1 es igual que 1.
+
+Imprimo "Test de generativa de cuando OK.".
+
+@SECCIÓN Generativa_de_bases_de_datos
+
+Inserto en modelo "x" con valor { nombre: "Castelog", tipo: "Lenguaje de programación" } en base de datos "x".
+Selecciono en modelo "x" en base de datos "x" creando constante xs.
+Itero como objeto xs creando constante clave donde actualizo en modelo "x" de registro xs[clave].id con valor { modificado: "1" } en base de datos "x".
+Itero como objeto xs creando constante clave donde elimino en modelo "x" de registro xs[clave].id en base de datos "x".
+Selecciono en modelo "x" en base de datos "x" creando constante xs2.
+
+Compruebo que (un conjunto de claves del objeto xs).length no es igual que 0.
+Compruebo que (un conjunto de claves del objeto xs2).length es igual que 0.
+
+Imprimo "Test de generativa de bases de datos OK.".
+
+@SECCIÓN Generativa_de_cacheo
+
+Asigno gs.cacheo como {}.
+Cacheo con clave "cacheo 1" con valor 800 refrescado si estoy en navegador asignando gs.cacheo.var1.
+
+Compruebo que gs.cacheo.var1 es igual que 900.
+
+Imprimo "Test de cacheo OK.".
+
+@SECCIÓN Generativa_de_componente_vue2
+
+@SECCIÓN Generativa_de_confirmacion
+
+@SECCIÓN Generativa_de_deteccion_de_entorno
+
+Asigno gs.deteccionDeEntorno como {}.
+Si estoy en navegador asigno gs.deteccionDeEntorno.var1 como 1
+pero si estoy en sistema asigno gs.deteccionDeEntorno.var1 como 2.
+
+Compruebo que gs.deteccionDeEntorno.var1 es igual que 2.
+
+Imprimo "Test de generativa de detección de entorno OK.".
+
+@SECCIÓN Generativa_de_elemento_html
+
+@SECCIÓN Generativa_de_notificacion
+
+Notifico con mensaje "  (*) Notificación 1.".
+Hago una notificación "  (*) Notificación 2.".
+
+Imprimo "Test de generativa de detección de notificación OK.".
+
+@SECCIÓN Generativa_de_peticion_http
+
+@SECCIÓN Generativa_de_plantilla
+
+@SECCIÓN Generativa_de_plantilla_1
+
+@SECCIÓN Generativa_de_plantilla_2
+
+@SECCIÓN Generativa_de_pregunta
+
+@SECCIÓN Generativa_de_sistema_de_ficheros
+
+@SECCIÓN Generativa_de_sistema_de_ficheros_una_escritura
+
+@SECCIÓN Generativa_de_sistema_de_ficheros_una_lectura
+
+@SECCIÓN Generativa_en_plantilla
+
+@SECCIÓN Generativa_entre_parentesis
+
+@SECCIÓN Generativa_espera
+
+@SECCIÓN Generativa_funcion
+
+@SECCIÓN Generativa_hecho
+
+@SECCIÓN Generativa_nueva
+
+@SECCIÓN Generativa_numero
+
+@SECCIÓN Generativa_objeto
+
+@SECCIÓN Generativa_promesa
+
+@SECCIÓN Generativa_simple
+
+@SECCIÓN Generativa_sin_operaciones
+
+@SECCIÓN Generativa_texto
+
+@SECCIÓN Generativa_texto_1
+
+@SECCIÓN Generativa_texto_2
+
+@SECCIÓN Generativa_texto_3
+
+@SECCIÓN Generativa_un_comando_de_consola
+
+@SECCIÓN Generativa_un_conjunto_de_claves_del_objeto
+
+@SECCIÓN Generativa_un_conjunto_de_valores_del_objeto
+
+@SECCIÓN Generativa_un_servidor_http
+
+@SECCIÓN Generativa_un_servidor_http_o_https
+
+@SECCIÓN Generativa_un_servidor_https
+
+@SECCIÓN Generativa_un_socket_io_cliente
+
+@SECCIÓN Generativa_un_socket_io_servidor
+
+@SECCIÓN Generativa_un_socket_io_servidor_o_cliente
+
+@SECCIÓN Generativa_una_actualizacion_de_base_de_datos
+
+@SECCIÓN Generativa_una_compilacion_estandar_de_parametros_de_consola
+
+@SECCIÓN Generativa_una_eliminacion_de_base_de_datos
+
+@SECCIÓN Generativa_una_exportacion_de_modulo_universal_estandar
+
+@SECCIÓN Generativa_una_insercion_de_base_de_datos
+
+@SECCIÓN Generativa_una_seleccion_de_base_de_datos
+
+@SECCIÓN Generativa_variable_llamable
+
+
+@SECCIÓN Sentencia
+
+# En el siguiente apartado se procede a testear las sintaxis de sentencia.
+
+@SECCIÓN Sentencia_Actualizacion
+
+@SECCIÓN Sentencia_Asignacion
+
+@SECCIÓN Sentencia_completa_1
+
+@SECCIÓN Sentencia_completa_2
+
+@SECCIÓN Sentencia_completa_de_por_si
+
+@SECCIÓN Sentencia_Comprobacion
+
+@SECCIÓN Sentencia_Creacion
+
+@SECCIÓN Sentencia_de_cacheacion
+
+@SECCIÓN Sentencia_de_confirmacion
+
+@SECCIÓN Sentencia_de_documento_html5
+
+@SECCIÓN Sentencia_de_escriboficheracion
+
+@SECCIÓN Sentencia_de_leoficheracion
+
+@SECCIÓN Sentencia_de_notificacion
+
+@SECCIÓN Sentencia_de_preguntacion
+
+@SECCIÓN Sentencia_de_programa_inicial
+
+@SECCIÓN Sentencia_Desdeacion
+
+@SECCIÓN Sentencia_Documentacion
+
+@SECCIÓN Sentencia_Eliminacion
+
+@SECCIÓN Sentencia_Eliminopropiedadcion
+
+@SECCIÓN Sentencia_Enprocesacion
+
+@SECCIÓN Sentencia_Exportacion
+
+@SECCIÓN Sentencia_Exportacion_1
+
+@SECCIÓN Sentencia_Exportacion_2
+
+@SECCIÓN Sentencia_Hagoacion
+
+@SECCIÓN Sentencia_Importacion
+
+@SECCIÓN Sentencia_Importacion_api_nativa
+
+@SECCIÓN Sentencia_Impresion
+
+@SECCIÓN Sentencia_Impresion_1
+
+@SECCIÓN Sentencia_Impresion_2
+
+@SECCIÓN Sentencia_incompleta
+
+@SECCIÓN Sentencia_Incrementacion
+
+@SECCIÓN Sentencia_Insercion
+
+@SECCIÓN Sentencia_Intentacion
+
+@SECCIÓN Sentencia_Interrumpcion
+
+@SECCIÓN Sentencia_Iteracion
+
+@SECCIÓN Sentencia_Lanzacion
+
+@SECCIÓN Sentencia_Mientrasacion
+
+@SECCIÓN Sentencia_Pendizacion
+
+@SECCIÓN Sentencia_Retornacion
+
+@SECCIÓN Sentencia_Seccionacion
+
+@SECCIÓN Sentencia_Seleccion
+
+@SECCIÓN Sentencia_Si_1
+
+@SECCIÓN Sentencia_Si_2
+
+@SECCIÓN Sentencia_Si_3
+
+@SECCIÓN Sentencia_Siacion
+
+@SECCIÓN Sentencias_de_bases_de_datos
+
+@SECCIÓN Sentencias_de_cacheo
+
+@SECCIÓN Sentencias_de_dialogo_de_usuario
+
+@SECCIÓN Sentencias_de_sistema_de_ficheros
+
+@SECCIÓN Sentencias_en_plantilla
+
+Creo tiempoFinal como una nueva Date().
+Creo tiempoTotal como (tiempoFinal - tiempoInicial) / 1000.
+
+Imprimo "Tests de documentación pasados correctamente en: " + tiempoTotal + " segundos.".

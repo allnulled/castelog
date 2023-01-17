@@ -1,0 +1,21 @@
+Creo Paisaje como una clase donde {
+    Método constructor con (objetos o en su defecto []) donde {
+        Itero como lista objetos creando objeto donde {
+            Apendizo objeto en lista this.objetos.
+        }.
+    }.
+}.
+Creo paisajeUno como un nuevo Paisaje([ "árbol", "sol", "mar", "montaña", "nubes" ]).
+Creo paisajeDos como un nuevo Paisaje([ "edificios", "calles", "personas", "sol", "nubes" ]).
+
+Compruebo que paisajeUno.objetos contiene valor "árbol".
+Compruebo que paisajeUno.objetos contiene valor "sol".
+Compruebo que paisajeUno.objetos contiene valor "mar".
+Compruebo que paisajeUno.objetos contiene valor "montaña".
+Compruebo que paisajeUno.objetos contiene valor "nubes".
+
+Compruebo que paisajeDos.objetos contiene valor "edificios".
+Compruebo que paisajeDos.objetos contiene valor "calles".
+Compruebo que paisajeDos.objetos contiene valor "personas".
+Compruebo que paisajeDos.objetos contiene valor "sol".
+Compruebo que paisajeDos.objetos contiene valor "nubes".

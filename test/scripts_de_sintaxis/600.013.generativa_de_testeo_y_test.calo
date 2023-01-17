@@ -1,0 +1,52 @@
+@Sección: demo estándar rápida:
+creo testeo_de_otras_cosas como un testeo llamado "Testeo de varias cosas" que en menos de 5 segundos pase los tests [
+    "Test de otra cosa 1",
+    "Test de otra cosa 2",
+    "Test de otra cosa 3"
+].
+
+hago un hecho asíncrono donde {
+    hago asíncronamente un test llamado "Test de otra cosa 1" para testeo testeo_de_otras_cosas donde {
+        compruebo que true es igual que true.
+    }.
+    hago asíncronamente un test llamado "Test de otra cosa 2" para testeo testeo_de_otras_cosas donde {
+        compruebo que true es igual que true.
+    }.
+    hago asíncronamente un test llamado "Test de otra cosa 3" para testeo testeo_de_otras_cosas donde {
+        compruebo que true es igual que true.
+    }.
+}.
+
+@Sección: demo de pasar múltiples tests + asociados a un testeo + asíncronamente en serie + versión expandida 
+creo testeo_de_varias_cosas como un testeo llamado "Testeo de varias cosas" que en menos de 5 segundos pase los tests [
+    "Test de cosa 1",
+    "Test de cosa 2",
+    "Test de cosa 3"
+] en éxito {
+    imprimo "testeo pasado".
+} en errores {
+    imprimo "error en el testeo de varias cosas".
+}.
+hago un hecho asíncrono donde {
+    hago asíncronamente un test llamado "Test de cosa 1" para testeo testeo_de_varias_cosas donde {
+        compruebo que true es igual que true.
+    } en éxito {
+        imprimo "test de cosa 1 pasado exitosamente".
+    } en errores {
+        imprimo "error en el test de cosa 1".
+    }.
+    hago asíncronamente un test llamado "Test de cosa 2" para testeo testeo_de_varias_cosas donde {
+        compruebo que true es igual que true.
+    } en éxito {
+        imprimo "test de cosa 2 pasado exitosamente".
+    } en errores {
+        imprimo "error en el test de cosa 2".
+    }.
+    hago asíncronamente un test llamado "Test de cosa 3" para testeo testeo_de_varias_cosas donde {
+        compruebo que true es igual que true.
+    } en éxito {
+        imprimo "test de cosa 3 pasado exitosamente".
+    } en errores {
+        imprimo "error en el test de cosa 3".
+    }.
+}.

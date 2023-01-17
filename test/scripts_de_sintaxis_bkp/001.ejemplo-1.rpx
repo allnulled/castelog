@@ -1,0 +1,3 @@
+Creo fs como require("fs").
+
+Hago fs.writeFileSync("test/dumps/fichero.txt", "Hola!!!", "utf8").

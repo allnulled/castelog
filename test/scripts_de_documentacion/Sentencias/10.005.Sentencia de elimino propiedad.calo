@@ -1,0 +1,3 @@
+Creo x como { nombre: "Castelog" }.
+Elimino propiedad x.nombre.
+Compruebo que x.nombre es tipo indefinido.

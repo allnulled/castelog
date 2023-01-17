@@ -1,0 +1,3 @@
+importo api nativa.
+creo fecha_en_texto como un formateo de fecha a texto a partir de un nuevo Date().
+imprimo un formateo de texto a fecha a partir de fecha_en_texto.

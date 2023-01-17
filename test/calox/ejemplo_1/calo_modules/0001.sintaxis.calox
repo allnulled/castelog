@@ -1,0 +1,17 @@
+defino sintaxis de tipo Sentencia con nombre como Sentencia_de_analizo_sistema con sintaxis como {
+    Sentencia_de_analizo_sistema = _* ( "analizo sistema" / "Analizo sistema" )
+    parametros:Subsentencia_con_parametros_2
+        { return `await Castelog.metodos.analizo_sistema(${parametros});` }
+    Subsentencia_con_parametros_2 = _* "con parámetros como" _+
+    generativa:Generativa
+        { return generativa }
+} con prescript como {
+    Castelog.metodos.analizo_sistema = function() {
+        try {
+            console.log("JEI!");
+        } catch(error) {
+            console.log("Error al analizar el sistema: " + error);
+            console.log(error);
+        }
+    };
+}.

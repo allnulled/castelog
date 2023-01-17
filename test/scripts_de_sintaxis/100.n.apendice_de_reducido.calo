@@ -1,0 +1,2 @@
+Imprimo 6 es igual que [ 1,2,3 ] reducido desde 0 con (output, item) donde retorno output + item.
+Compruebo que 10 es igual que [1,9] reducido desde 0 con (output, item) donde retorno output + item.

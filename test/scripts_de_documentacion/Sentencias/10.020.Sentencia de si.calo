@@ -1,0 +1,19 @@
+# Sin paréntesis:
+
+Creo x como 2.
+Creo r como 0.
+Si x es igual que 0 asigno r como 1;
+Pero si x es igual que 1 asigno r como 2;
+Pero si x es igual que 2 asigno r como 3;
+Y si no asigno r como 4.
+Compruebo que r es igual que 3.
+
+# Con paréntesis:
+
+Creo w como 2.
+Creo rr como 0.
+Si w es igual que 0 { Asigno rr como 1. }
+Pero si w es igual que 1 { Asigno rr como 2. }
+Pero si w es igual que 2 { Asigno rr como 3. }
+Y si no { Asigno rr como 4. }.
+Compruebo que rr es igual que 3.

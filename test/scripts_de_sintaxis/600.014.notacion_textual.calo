@@ -1,0 +1,26 @@
+creo teste_de_dp como un testeo llamado iniciotexto testeo de generativa de design pattern oktexto que en menos de inicionúmero cinco oknúmero segundos pase los tests iniciolista
+    ítem iniciotexto Test de una cosa oktexto oksentencia
+    ítem iniciotexto Test de otra cosa oktexto oksentencia
+oklista oksentencia
+
+hago un test llamado iniciotexto Test de una cosa oktexto para testeo testeo_de_dp donde iniciobloque
+    desacoplo constantes iniciobloque getter coma setter coma value okbloque a partir de un singleton design pattern
+        con getter como cuando dp punto value es tipo indefinido entonces dp punto setter si no dp punto value
+        con setter como una lambda con iniciogrupo
+          valor o en su defecto 500
+        okgrupo donde iniciobloque
+            asigno dp punto value como valor oksentencia
+        okbloque
+        con value como indefinido oksentencia
+    compruebo que true es igual que true oksentencia
+    imprimo iniciotexto test de una cosa pasado exitosamente oktexto oksentencia okbloque oksentencia
+
+hago un test llamado iniciotexto Test de otra cosa oktexto para testeo testeo_de_dp donde iniciobloque
+    creo clase_uno como una clase con iniciobloque
+        propiedad dato donde retorno un objeto oksentencia
+        método constructor con iniciogrupo parametros okgrupo iniciobloque
+            hago this extendido por parametros oksentencia
+        okbloque oksentencia
+    okbloque oksentencia
+    compruebo que 1 es igual que 1 oksentencia
+    imprimo iniciotexto test de otra cosa pasado exitosamente oktexto oksentencia okbloque oksentencia

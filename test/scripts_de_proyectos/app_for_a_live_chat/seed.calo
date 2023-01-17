@@ -1,0 +1,41 @@
+importo api nativa.
+creo packageContents como {
+    name: "app-for-a-live-chat",
+    main: "./src/chat.js",
+    dependencies: {
+        "socket.io": "*",
+        "socket.io-client": "*"
+    },
+    mainConfigurations: {
+        APP_PORT: 9909
+    }
+}.
+creo codigo_para_server como una lectura de fichero con ruta __dirname + "/server.js" con codificación "utf8" usando sistema operativo.
+creo codigo_para_app_bin como una lectura de fichero con ruta __dirname + "/bin.js" con codificación "utf8" usando sistema operativo.
+creo codigo_para_app_html5 como un código en html5 con {
+    <html>
+        <head>
+            <title>T. | No se sabe</title>
+        </head>
+        <body>
+            <h1>T.</h1>
+        </body>
+    </html>
+}.
+exporto como módulo es5 un hecho asíncrono donde {
+    @SECCIÓN 1.*. Proyecto.
+    inicio asíncronamente proyecto NPM desde directorio __dirname con packageContents.
+    @SECCIÓN 2.*. Instalaciones.
+    ejecuto comando de consola "npm i" desde directorio __dirname.
+    @SECCIÓN 3.*. Código fuente.
+    reseteo asíncronamente directorio __dirname + "/app".
+    escribo fichero con ruta __dirname + "/server.js" con contenido codigo_para_server usando sistema operativo.
+    escribo fichero con ruta __dirname + "/app/app.html" con contenido codigo_para_app_html5 usando sistema operativo.
+    escribo fichero con ruta __dirname + "/bin.js" con contenido codigo_para_app_bin usando sistema operativo.
+    @SECCIÓN 3.*. Ejecución.
+    ignoro que {
+        ejecuto comando paralelo de consola ["node", ["./server.js"]] desde directorio __dirname.
+        ejecuto comando en serie de consola "node bin.js" desde directorio __dirname.
+    }.
+    imprimo "Proyecto generado exitosamente".
+} en errores imprimo error después lanzo error.

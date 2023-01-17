@@ -1,0 +1,52 @@
+Importo API nativa.
+
+# RED:SERVIDORES
+
+[*]
+Creo resultado como un hecho asíncrono donde {
+
+    Creo despliegue como asíncronamente una red de servidores http rest automáticos en ruta __dirname donde {
+
+        Establezco configuración con { "directorioBase" : "./testeos_de_gramatica" }.
+        
+        Instalo un servidor en "./identificacion" configurado con {
+            Propiedad SERVER_ID como "Identificacion".
+            Propiedad SERVER_PORT como 9950.
+            Propiedad ADMINISTRATOR_USER como "superadmin".
+            Propiedad ADMINISTRATOR_PASSWORD como "superadmin.123456".
+        }.
+        Instalo un servidor en "./productos" configurado con { SERVER_ID: "Productos", SERVER_PORT: 9950 }.
+        Instalo un servidor en "./carritos" configurado con { SERVER_ID: "Carritos", SERVER_PORT: 9950 }.
+        
+        Inicio servidores [ ["Identificacion"], ["Productos"], ["Carritos"] ].
+
+        Agrego un proyecto llamado "Identificacion" en servidor ["Identificacion"] autentificado por sí mismo configurado con {
+            Propiedad administrator_name como "auth_admin".
+            Propiedad administrator_password como "auth_admin".
+            Propiedad administrator_email como "auth_admin@email.com".
+        }.
+        Agrego un proyecto llamado "Productos" en servidor ["Productos"] autentificado por proyecto ["Identificacion", "Identificacion"] configurado con {}.
+        Agrego un proyecto llamado "Carritos" en servidor ["Carritos"] autentificado por proyecto ["Identificacion", "Identificacion"] configurado con {}.
+
+        Agrego una tabla llamada "correos" en proyecto ["Identificacion", "Identificacion"] configurada con {
+            Propiedad attributes como {}.
+            Propiedad columns como {
+                Propiedad nombre como {
+                    Propiedad attributes como {}.
+                }.
+                Propiedad en_origen como {
+                    Propiedad attributes como {}.
+                }.
+                Propiedad en_destino como {
+                    Propiedad attributes como {}.
+                }.
+                Propiedad en_copia como {
+                    Propiedad attributes como {}.
+                }.
+            }.
+        }.
+
+    } en errores lanzo error.
+
+}.
+*]

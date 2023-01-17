@@ -1,0 +1,5 @@
+creo variable valor como "1".
+
+mientras valor es igual que "1" {
+    incremento valor.
+}.

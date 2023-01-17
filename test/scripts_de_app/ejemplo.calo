@@ -1,0 +1,8 @@
+Importo API nativa.
+
+Imprimo <@ 
+¡Nuestro amigo «<:= config.name :>» nos dice «<:=config.mensaje:>» desde «<:= config.lugar o lugar :>»! @> parametrizada con ({
+    name: "Carlos",
+    mensaje: "¿Qué pasa, colgaos?",
+    lugar: "Georgia, USA"
+}).

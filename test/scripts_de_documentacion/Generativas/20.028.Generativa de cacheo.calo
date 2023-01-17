@@ -1,0 +1,8 @@
+Importo API nativa.
+
+Creo x como 1.
+Creo datoX como un cacheo
+    con clave "datoX"
+    con valor "Contenido del dato X0"
+    refrescado si x es menor que 2.
+Compruebo que datoX es igual que "Contenido del dato X0".

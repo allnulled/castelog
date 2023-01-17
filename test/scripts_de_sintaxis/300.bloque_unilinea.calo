@@ -1,0 +1,4 @@
+Creo valor como 1.
+
+Si valor es igual que 0, imprimo "Es cero";
+Pero si valor es igual que 1, imprimo "Es uno".

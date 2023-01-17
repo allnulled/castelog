@@ -1,0 +1,3 @@
+Creo errorTipico como un nuevo Error("Típico error").
+
+Compruebo que errorTipico es instancia de Error.

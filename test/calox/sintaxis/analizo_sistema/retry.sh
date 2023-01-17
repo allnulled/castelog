@@ -1,0 +1,1 @@
+cd .. && rimraf p01 && calox iniciar proyecto p01 && cd p01 && sudo chmod 777 -R . && ./calo && ./calox && ./calox listar sintaxis && ./calox compilar && ./calox instalar sintaxis ../sintaxis/analizo_sistema && ./calox listar sintaxis && ./calox compilar

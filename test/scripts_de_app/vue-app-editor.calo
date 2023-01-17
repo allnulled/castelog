@@ -1,0 +1,148 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre vue-app-editor
+    con versión 0.0.1
+<head>
+    <title>Vue app editor</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+creo x como <@
+  <: imprimo "HOLA!". :> 
+@>.
+imprimo "OK!".
+[*
+una inserción de estilos en cascada
+un bloque de estilos en cascada
+una inserción de elemento del dom en nodo 
+un elemento html 
+un elemento jquery 
+*]
+
+creo elementos1 como una selección de elementos del dom a partir de document.body con (".una_clase").
+creo elemento2 como una selección del primer elemento del dom a partir de document.body con (".una_clase_especifica").
+hago una inserción de estilos en cascada llamado "estilización 1" con (<@
+  <:
+    creo rasgo_0 como <@
+      display: block;
+      box-sizing: border-box;
+    @> parametrizada con (config).
+    creo rasgo_1 como <@
+      <:= config.rasgo_0 :>
+      background-color: black;
+      border: 1px dashed <:= config.color_de_borde :>;
+    @> parametrizada con (config extendido por { rasgo_0 }).
+  :>
+  .a,
+  .a > .b,
+  .a > .b > .c {
+    <:= rasgo_1 :>
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+  }.
+@> parametrizada con ({ color_del_borde: "#444" })
+).
+hago una inserción de elemento del dom en nodo document.body con (un elemento html con (<@
+  <div class="TituloDePagina">Título de la tabla</div>
+  <table class="ok">
+    <tr>
+      <td>Navegación</td>
+      <td>¡Hola usuario!</td>
+      <td>¡Hola otro!</td>
+    </tr>
+  </table>
+  <footer>Desarrollado por <a href="#">allnulled</a>.</footer>
+@>)).
+creo jDiv como un elemento jquery con ("div")
+  .appendTo(document.body.children[0])
+  .closest("body")
+  .find(".otro_elemento")
+  .eq(0)
+  .find(".sub_elementos")
+  .css({ border: "1px solid red" }).
+
+
+creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+  <div class="PaginaDeInicio Component">
+    <DisposicionFlexible orientacion="horizontal">
+      <Item>Item 1</Item>
+      <Item>Item 2</Item>
+      <Item>Item 3</Item>
+    </DisposicionFlexible>
+    <DisposicionCuadricular esquema="1 1 0 1">
+      <Item>Item 1</Item>
+      <Item>Item 2</Item>
+      <Item>Item 3</Item>
+      <Item>Item 4</Item>
+      <Item>Item 5</Item>
+      <Item>Item 6</Item>
+      <Item>Item 7</Item>
+      <Item>Item 8</Item>
+    </DisposicionCuadricular>
+    <TituloDePagina>Formulario de contacto</TituloDePagina>
+    <EnrutadorGrafico :ruta="[{texto:'Inicio',ruta:'/'},{texto:'Formularios',ruta:'/formularios',{texto:'Formulario de contacto'}}]"></EnrutadorGrafico>
+    <FormularioDeControles :al-enviar="enviar_formulario">
+      <ControlDeTexto entrada="nombre" :ambito="this" propiedad="internal_nombre">Nombre:</ControlDeTexto>
+      <ControlDeTexto entrada="apellidos" subtipo="tags" :ambito="this" propiedad="internal_apellidos">Apellidos:</ControlDeTexto>
+      <ControlDeTexto entrada="correo" subtipo="correo" :ambito="this" propiedad="internal_correo">Correo:</ControlDeTexto>
+      <ControlDeTexto entrada="contrasenya" subtipo="contraseña" :ambito="this" propiedad="internal_contrasenya">Contraseña:</ControlDeTexto>
+      <ControlDeTexto entrada="pregunta_secreta" :ambito="this" propiedad="">Pregunta secreta:</Cointernal_pregunta_secretantrolDeTexto>
+      <ControlDeTexto entrada="respuesta_secreta" :ambito="this" propiedad="">Respuesta secreta:</Cointernal_respuesta_secretantrolDeTexto>
+      <ControlDeTexto entrada="detalles" subtipo="largo" :ambito="this" propiedad="internal_detalles">Detalles:</ControlDeTexto>
+      <ControlDeLista entrada="lista_uno" :ambito="this" propiedad="internal_lista_uno" identificador-de-lista="id_uno">
+        <DisposicionCuadricula esquema="0 1 0">
+          <ControlDeTexto entrada="x" :ambito="internal_lista_uno" propiedad="x">La x:</ControlDeTexto>
+          <ControlDeTexto entrada="y" :ambito="internal_lista_uno" propiedad="y">La y:</ControlDeTexto>
+          <ControlDeTexto entrada="z" :ambito="internal_lista_uno" propiedad="z">La z:</ControlDeTexto>
+          <ControlDeBoton data-boton-eliminar-de-lista="id_uno">Eliminar</ControlDeBoton>
+        </DisposicionCuadricula>
+        <ControlDeBoton data-boton-anyadir-en-lista="id_uno">Añadir</ControlDeBoton>
+      </ControlDeLista>
+      <DisposicionCuadricular esquema="1 0 0">
+        <Item></Item>
+        <ControlDeEnvio>Aceptar</ControlDeEnvio>
+        <ControlDeReseteo>Aceptar</ControlDeReseteo>
+      </DisposicionCuadricular>
+    </FormularioDeControles>
+  </div>
+}.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <router-view></router-view>
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

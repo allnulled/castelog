@@ -1,0 +1,16 @@
+Creo Ser como una clase.
+Creo Animal como una clase que extiende Ser.
+Creo Humano como una clase que extiende Animal donde {
+    Propiedad estática especie donde retorno "Homo sapiens sapiens".
+    Método estático respirar con (oxigeno, otros) donde retorno "dióxido de carbono".
+    Propiedad pensamiento donde retorno "pensamientos".
+    Método beber con (agua) donde retorno "orina".
+    Método constructor con (nombre) donde {
+        Hago super().
+        Asigno this.nombre como nombre.
+    }.
+}.
+Creo humano como un nuevo Humano("Primer humano").
+Creo humana como una nueva Humano("Primera humana").
+Compruebo que humano.nombre es igual que "Primer humano".
+Compruebo que humana.nombre es igual que "Primera humana".

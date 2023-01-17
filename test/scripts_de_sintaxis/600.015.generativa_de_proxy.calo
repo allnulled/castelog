@@ -1,0 +1,19 @@
+creo x como un proxy a partir de {
+    nombre: "Carl",
+    obtenerNombre: un proxy a partir de una función donde retorno "Carl" proxificado con {
+        apply: una función con (dato, propiedaz) donde {
+            retorno "Carl Carlson".
+        }
+    }
+} proxificado con {
+    get: una función con (dato, propiedaz) donde {
+        si propiedaz es igual que "obtenerNombre" {
+            retorno dato[propiedaz].
+        }.
+        retorno "Carlson".
+    }
+}.
+
+imprimo x.nombre.
+imprimo x.edad.
+imprimo x.obtenerNombre().

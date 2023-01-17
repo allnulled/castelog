@@ -1,0 +1,344 @@
+si Castelog es tipo indefinido importo api nativa.
+
+creo testeo_de_dp como un testeo llamado "Testeo de generativa de design pattern" que en menos de 5 segundos pase los tests [
+    "Test de un abstract factory design pattern",
+    "Test de un adapter design pattern",
+    "Test de un bridge design pattern",
+    "Test de un builder design pattern",
+    "Test de un chain of responsability design pattern",
+    "Test de un command design pattern",
+    "Test de un composite design pattern",
+    "Test de un decorator design pattern",
+    "Test de un facade design pattern",
+    "Test de un factory method design pattern",
+    "Test de un flyweight design pattern",
+    "Test de un hooks design pattern",
+    "Test de un interpreter design pattern",
+    "Test de un iterator design pattern",
+    "Test de un mediator design pattern",
+    "Test de un memento design pattern",
+    "Test de un observer design pattern",
+    "Test de un progressive composition design pattern",
+    "Test de un progressive decoration design pattern",
+    "Test de un prototype design pattern",
+    "Test de un proxy design pattern",
+    "Test de un singleton design pattern",
+    "Test de un state design pattern",
+    "Test de un strategy design pattern",
+    "Test de un template method design pattern",
+    "Test de un visitor design pattern"
+] en errores lanzo error.
+
+
+asigno global.testeo_de_dp como testeo_de_dp.
+creo rutaBase como __dirname + "/todos_los_design_patterns".
+creo resultadosTests como require("fs").readdirSync(rutaBase) mapeado con (fichero) donde {
+    si fichero.endsWith(".calo") retorno undefined.
+    retorno require(rutaBase + "/" + fichero).
+}.
+
+@Sección SINGLETON DESIGN PATTERN:
+
+@Sección FACTORY METHOD DESIGN PATTERN:
+hago un test llamado "Test de un factory method design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { factory, classes } a partir de un factory method design pattern
+        con classes como {
+            propiedad FactoryPrototype como una clase con {
+                método constructor con (configuraciones) donde hago this extendido por configuraciones o {}.
+            }.
+            propiedad Factory1 como una clase que extiende de dp.classes.FactoryPrototype con {
+                método build con (parametros) donde retorno un nuevo dp.products.Product1() extendido por parametros también extendido por { tipo: "Product of type 1" }.
+            }.
+            propiedad Factory2 como una clase que extiende de dp.classes.FactoryPrototype con {
+                método build con (parametros) donde retorno un nuevo dp.products.Product2() extendido por parametros también extendido por { tipo: "Product of type 2" }.
+            }.
+        }.
+    creo product1 como factory("Factory 1", { x: "ok" }, { z: true }).
+    creo product2 como factory("Factory 2", { x: "ok" }, { z: true }).
+    compruebo que product1.tipo es igual que "Product of type 1".
+    compruebo que product2.tipo es igual que "Product of type 2".
+    imprimo "¡Test de un factory method design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un abstract factory design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { abstractFactory } a partir de un abstract factory design pattern
+        con abstractFactory como una clase {
+            método estático createFactory con (id, parametros) donde si dp.factories contiene clave id retorno un nuevo dp.factories[id](parametros); y si no lanzo un nuevo Error("No se encontró factory con identificador: " + id).
+            método estático createProduct con (id, parametros) donde si dp.products contiene clave id retorno un nuevo dp.products[id](parametros); y si no lanzo un nuevo Error("No se encontró product con identificador: " + id).
+            método build con (settings) donde lanzo un nuevo Error("El método «build» debe ser sobreescrito por la factory no abstracta en abstract factory design pattern nº 0003").
+        } con factories como {
+            propiedad factory1 como una clase que extiende de dp.abstractFactory con {
+                método build con (parametros) donde {
+                    retorno dp.products.product1(parametros).
+                }.
+            }.
+            propiedad factory2 como una clase que extiende de dp.abstractFactory con {
+                método build con (parametros) donde {
+                    retorno dp.products.product2(parametros).
+                }.
+            }.
+            propiedad factory3 como una clase que extiende de dp.abstractFactory con {
+                método build con (parametros) donde {
+                    retorno dp.products.product3(parametros).
+                }.
+            }.
+        } con products como {
+            método product1 con (settings) donde retorno this extendido por settings también extendido por { type: "Producto de tipo 1" }.
+            método product2 con (settings) donde retorno this extendido por settings también extendido por { type: "Producto de tipo 2" }.
+            método product3 con (settings) donde retorno this extendido por settings también extendido por { type: "Producto de tipo 3" }.
+        }.
+    creo fabrica1 como abstractFactory.createFactory("factory1", {}).
+    creo fabrica2 como abstractFactory.createFactory("factory2", {}).
+    creo fabrica3 como abstractFactory.createFactory("factory3", {}).
+    creo producto1 como abstractFactory.createProduct("product1", {}).
+    creo producto2 como abstractFactory.createProduct("product2", {}).
+    creo producto3 como abstractFactory.createProduct("product3", {}).
+    compruebo que fabrica1 es instancia de factories.factory1.
+    compruebo que fabrica2 es instancia de factories.factory2.
+    compruebo que fabrica3 es instancia de factories.factory3.
+    compruebo que producto1 es instancia de products.product1.
+    compruebo que producto2 es instancia de products.product2.
+    compruebo que producto3 es instancia de products.product3.
+    imprimo "¡Test de un abstract factory design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un decorator design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { decorator, decorables } a partir de un decorator design pattern
+        con decorator como una lambda con (original, decorables) donde {
+            si decorables no es tipo lista lanzo un nuevo Error("Required decorables to be an array in decorator design pattern").
+            desde 0 hasta decorables.length {
+                creo decorable como decorables[index].
+                si decorable es tipo texto {
+                    si dp.decorables no contiene clave decorable lanzo un nuevo Error("Required decorables on index " + index + " to be a known decorable").
+                    creo decorableClass como dp.decorables[decorable].
+                    creo transmutation como decorableClass(original).
+                    si transmutation no es tipo indefinido asigno original como transmutation.
+                }.
+            }.
+            retorno original.
+        } con decorables como {
+            método Decorable1 con (datos) donde {
+                retorno datos + "!+deco:1; ".
+            }.
+            método Decorable2 con (datos) donde {
+                retorno datos + "!+deco:2; ".
+            }.
+            método Decorable3 con (datos) donde {
+                retorno datos + "!+deco:3; ".
+            }.
+        }.
+    creo decorated como decorator("!+isOriginal:true; ", [
+        "Decorable1",
+        "Decorable2",
+        "Decorable3",
+        "Decorable3",
+        "Decorable2",
+        "Decorable1",
+        "Decorable3",
+        "Decorable2"
+    ]).
+    compruebo que decorated es tipo texto.
+    compruebo que decorated contiene valor "!+isOriginal:true; ".
+    compruebo que decorated contiene valor "!+deco:1; ".
+    compruebo que decorated contiene valor "!+deco:2; ".
+    compruebo que decorated contiene valor "!+deco:3; ".
+    imprimo "¡Test de un decorator design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un proxy design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { proxy } a partir de un proxy design pattern con proxy como {
+        
+    } con proxified como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un proxy design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un command design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { commander, commands } a partir de un command design pattern con commander como {
+        
+    } con commands como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un command design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un prototype design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { prototype, original, prototyped } a partir de un prototype design pattern con prototype como {
+        
+    } con original como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un prototype design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un builder design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { factory, builders } a partir de un builder design pattern con factory como una lambda donde retorno {
+        
+    } con builders como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un builder design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un observer design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { observer, observations } a partir de un observer design pattern con observer como {
+        
+    } con observations como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un observer design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un iterator design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { iterator, iterables } a partir de un iterator design pattern con iterator como {
+        
+    } con iterables como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un iterator design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un interpreter design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { interpret, interpretable } a partir de un interpreter design pattern con interpret como {
+        
+    } con interpretable como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un interpreter design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un bridge design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { original, bridges } a partir de un bridge design pattern con original como {
+        
+    } con bridges como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un bridge design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un adapter design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { adapter, adaptations } a partir de un adapter design pattern con adapter como {
+        
+    } con adaptations como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un adapter design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un composite design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { composer, composables } a partir de un composite design pattern con composer como {
+        
+    } con composables como {
+        
+    } con composition como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un composite design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un facade design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { original, facade } a partir de un facade design pattern con original como {
+        
+    } con facade como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un facade design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un flyweight design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { flyweight, data } a partir de un flyweight design pattern con flyweight como {
+        
+    } con data como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un flyweight design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un chain of responsability design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { chain, responsability } a partir de un chain of responsability design pattern con chain como [] con responsability como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un chain of responsability design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un mediator design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { mediator, mediations, data } a partir de un mediator design pattern con mediator como {
+        
+    } con mediations como {
+        
+    } con data como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un mediator design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un memento design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { memento, memorizables, commit, uncommit, state } a partir de un memento design pattern con memento como {
+        
+    } con memorizables como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un memento design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un strategy design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { procedure, strategies } a partir de un strategy design pattern con procedure como una lambda donde retorno {
+        
+    } con strategies como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un strategy design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un state design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { store, state } a partir de un state design pattern con store como {
+        
+    } con state como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un state design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un template method design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { template, data } a partir de un template method design pattern con template como una lambda donde retorno {
+        
+    } con data como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un template method design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un visitor design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { visitor, visitation } a partir de un visitor design pattern con visitor como una lambda donde retorno {
+        
+    } con visitation como una lambda donde retorno {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un visitor design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un progressive composition design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { original, components } a partir de un progressive composition design pattern con original como {
+        
+    } con components como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un progressive composition design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un progressive decoration design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { original, decorators } a partir de un progressive decoration design pattern con original como {
+        
+    } con decorators como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un progressive decoration design pattern pasado exitosamente!".
+}.
+hago un test llamado "Test de un hooks design pattern" para testeo testeo_de_dp donde {
+    desacoplo constantes { hooks, manager } a partir de un hooks design pattern con hooks como {
+        
+    } con manager como {
+        
+    }.
+    compruebo que true es igual que true.
+    imprimo "¡Test de un hooks design pattern pasado exitosamente!".
+}.

@@ -1,0 +1,4 @@
+Creo variable x como 100.
+Hago una espera de 2 segundos donde asigno x como 200.
+Compruebo que x es igual que 100.
+Hago una espera de 3 segundos donde compruebo que x es igual que 200.

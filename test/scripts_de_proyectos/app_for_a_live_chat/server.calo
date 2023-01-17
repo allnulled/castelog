@@ -1,0 +1,48 @@
+este script funcionó con {}.
+ejecutable por /usr/bin/env node
+
+importo api nativa.
+importo módulo es5 de ruta __dirname + "/package.json" creando constante packageJson.
+
+creo servidor_http como un servidor http a partir de una función con (request, response) donde sirvo ficheros estáticos con { subruta: "/static/", directorio: __dirname + "/app", request, response } en errores {
+    hago response.writeHead(200, { "Content-type": "text/plain" }).
+    hago response.write("This is a chat server only").
+    retorno response.end().
+} en errores hago response.end("Hubo errores: " + error.name + ": " + error.message + " | " + error.stack).
+
+creo servidor_socketio como un servidor socket.io a partir de servidor_http con socket que {
+    en evento "disconnect" está usando una función con (parametros, contexto) donde {
+        imprimo "disconnect".
+        retorno {}.
+    } en errores imprimo error.
+    en evento "send_message" está usando una función con (parametros, contexto) donde {
+        imprimo "send message".
+        compruebo que parametros es tipo lista lanzando un nuevo Error("Error en servidor de «mensaje enviado mal formado» (1 / servidor)").
+        compruebo que parametros.length es mayor que 0 lanzando un nuevo Error("Error en servidor de «mensaje enviado mal formado» (2 / servidor)").
+        compruebo que parametros[0] es tipo objeto lanzando un nuevo Error("Error en servidor de «mensaje enviado mal formado» (3 / servidor)").
+        compruebo que parametros[0] contiene clave "message" lanzando un nuevo Error("Error en servidor de «mensaje enviado mal formado» (4 / servidor)").
+        compruebo que parametros[0].message es tipo texto lanzando un nuevo Error("Error en servidor de «mensaje enviado mal formado» (5 / servidor)").
+        hago contexto.io.emit("message_sent", { message: parametros[0].message, user: parametros[0].user o "anonimousa" }).
+        retorno {}.
+    } en errores imprimo error.
+    en evento "receive_message" está usando una función con (parametros, contexto) donde {
+        imprimo "receive message".
+        retorno {}.
+    } en errores imprimo error.
+    en evento "get_user_in" está usando una función con (parametros, contexto) donde {
+        imprimo "get user in".
+        retorno {}.
+    } en errores imprimo error.
+    en evento "get_user_out" está usando una función con (parametros, contexto) donde {
+        imprimo "get user out".
+        retorno {}.
+    } en errores imprimo error.
+}.
+
+creo iniciado como una promesa donde hago servidor_http.listen(packageJson.mainConfigurations.APP_PORT, una función donde imprimo "aplicación servidor escuchando en puerto: " + packageJson.mainConfigurations.APP_PORT después retorno ok()).
+
+exporto como módulo es5 {
+    http: servidor_http,
+    io: servidor_socketio,
+    iniciado
+}.

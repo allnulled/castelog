@@ -1,0 +1,61 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre app-por-defecto
+    con versión 0.0.1
+<head>
+    <title>Diagrama de desarrollo de ejemplo 1</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <TituloDePagina>Diagrama de desarrollo de ejemplo 1</TituloDePagina>
+    <DiagramaDeGantt :diagrama="diagrama" />
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        diagrama: un diagrama temporal configurado con {
+            
+        } donde {
+            defino agente de diagrama temporal con { nombre: "Persona 1" }.
+            defino agente de diagrama temporal con { nombre: "Persona 2" }.
+            defino agente de diagrama temporal con { nombre: "Persona 3" }.
+            defino tarea de diagrama temporal con {
+                nombre: "X",
+                prototipo: undefined,
+                tipo: "tarea",
+                inicio: "2022-11-19 20:00:00",
+                final: "2022-11-19 20:00:00"
+            }
+        }
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

@@ -1,0 +1,94 @@
+importo api nativa.
+
+@Sección para Proxy:
+
+creo x como un proxy a partir de {} proxificado con {
+    get: una función donde retorno "siempre devuelve esto"
+}.
+compruebo que x.name es tipo texto.
+compruebo que x.name es igual que "siempre devuelve esto".
+compruebo que x.age es igual que "siempre devuelve esto".
+compruebo que x.city es igual que "siempre devuelve esto".
+compruebo que x.profession es igual que "siempre devuelve esto".
+
+@Sección para Proxificación:
+
+creo observado como una proxificación a partir de {
+    ciudad: "Bonastre, Tarragona, Cataluña, España, Europa"
+}.
+siempre que proxificación observado accede a propiedad "nombre" {
+    retorno un resultado de proxificación con ("Carl Carlson").
+} creando constante devolver_nombre_de_carl_carlson.
+siempre que proxificación observado accede a cualquier propiedad {
+    desacoplo constantes { clave } a partir de evento_de_proxificacion.
+    retorno "No está disponible".
+} creando constante prevenir_acceso_a_variables_por_defecto.
+siempre que proxificación observado asigna cualquier propiedad {} creando constante supervisar_cambios_por_defecto.
+siempre que proxificación observado asigna propiedad "edad" { lanzo un nuevo Error("Yep, la edad no se toca"). } creando constante prevenir_cambio_de_edad.
+compruebo que observado.nombre es tipo texto.
+compruebo que observado.nombre es igual que "Carl Carlson".
+creo variable salto_error como false.
+intento {
+    asigno observado.edad como 40.
+} en errores {
+    asigno salto_error como error.
+}.
+compruebo que salto_error es instancia de Error.
+compruebo que salto_error.message es igual que "Yep, la edad no se toca".
+
+creo devuelve_acceso_normal como una función con (parametros) donde {
+    desacoplo constantes { clave, dato } a partir de parametros.
+    si dato no contiene clave clave lanzo un nuevo Error("El dato proxificado no contiene la clave especificada «" + clave + "»").
+    retorno un resultado de proxificación con (dato[clave]).
+}.
+siempre que proxificación observado accede a cualquier propiedad
+    deja de prevenir_acceso_a_variables_por_defecto
+    en su lugar devuelve_acceso_normal.
+
+en proceso test_1 {
+    asigno salto_error como un nuevo Error("El error debió especificarse o falsearse").
+    intento {
+        imprimo observado.ciudad.
+        compruebo que observado.ciudad es tipo texto.
+        compruebo que observado.ciudad es igual que "Bonastre, Tarragona, Cataluña, España, Europa".
+        asigno salto_error como false.
+    } en errores {
+        asigno salto_error como error.
+    }.
+    compruebo que salto_error es igual que false.
+}.
+
+en proceso test_2 {
+    asigno salto_error como un nuevo Error("El error debió especificarse o falsearse").
+    intento {
+        imprimo observado.edad.
+    } en errores {
+        asigno salto_error como error.
+    }.
+    compruebo que salto_error es instancia de Error.
+    compruebo que salto_error.message es tipo texto.
+    compruebo que salto_error.message contiene valor "El dato proxificado no contiene la clave especificada «edad»".
+}.
+
+@Sección para 
+
+hago una observación fenoménica a partir de {} con (observacion) donde {
+    asigno observacion.Sol como una interfaz vacía.
+    asigno observacion.Luna como una interfaz vacía.
+    asigno observacion.Tiempo como una interfaz vacía.
+    creo pasar_el_tiempo_normal como una ley basada en observacion donde al cambiar fenómeno "Tiempo" {
+        hago observacion.Sol.mover({ x: 1, y: 1, z: 1 }).
+        hago observacion.Luna.mover({ x: 1, y: 1, z: 1 }).
+    }.
+    creo pasar_el_tiempo_estranio como una ley basada en observacion donde al cambiar fenómeno "Tiempo" {
+
+    }.
+    creo interceptar_todo_normal como una ley basada en observacion donde al cambiar cualquier fenómeno {
+
+    }.
+    una actualización de ley basada en observacion donde deja de pasar_el_tiempo en su lugar pasar_el_tiempo_estranio.
+    una eliminación de ley basada en observacion donde deja de interceptar_todo_normal.
+}.
+
+
+

@@ -1,0 +1,3 @@
+Imprimo ([ 1,2,3 ] mapeado con (item) donde {
+    Retorno "+" + item.
+})[0] es igual que "+1".

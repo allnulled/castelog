@@ -1,0 +1,1011 @@
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre gantt-01
+    con versión 0.0.1
+<head>
+    <title>Diagrama de Gantt</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+          font-family: Arial;
+      }
+      * {
+          box-sizing: border-box;
+      }
+      .visibility_hidden { visibility: hidden; }
+      .DiagramaDeGantt {
+          padding: 0px;
+          border: 1px solid #333;
+      }
+      .tarea_box_container {
+      }
+      .tarea_box {
+        margin: 2px;
+        border: 0px solid #333;
+        background-color: rgba(0,0,40,0.5);
+        color: white;
+        text-shadow: 0 0 1px white;
+        font-size: 9px;
+        min-height: 13px;
+      }
+      .tarea_title {
+        display: table;
+        width: 100%;
+        padding: 5px;
+        border-bottom: 0px solid #333;
+        background-color: #333;
+        color: white;
+        min-height: 13px;
+        text-align: left;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      .tarea_title_text {
+          display: table-cell;
+          width: 100%;
+      }
+      .tarea_buttons {
+          display: table-cell;
+          width: 100%;
+          white-space: nowrap;
+      }
+      .tarea_tiempos {
+          display: table;
+          width: 100%;
+      }
+      .tarea_inicio {
+        display: table-cell;
+        width: 50%;
+        padding: 5px;
+        border-bottom: 0px solid #333;
+        background-color: rgba(60,110,200,0.5);
+        min-height: 13px;
+      }
+      .tarea_final {
+        display: table-cell;
+        width: 50%;
+        padding: 5px;
+        border-bottom: 0px solid #333;
+        background-color: rgba(20,30,90,0.5);
+        color: yellow;
+        text-shadow: 0 0 1px yellow;
+        text-decoration: underline;
+        min-height: 13px;
+      }
+      .tarea_agentes {
+        display: block;
+        padding: 5px;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        background-color: rgba(200,60,110,0.5);
+        color: white;
+        text-shadow: 0 0 1px white;
+        min-height: 13px;
+      }
+      .tarea_tareas {
+        display: block;
+        padding: 0px;
+        margin-top. 0px;
+        margin-left: 0px;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        background-color: #FFF;
+        color: black;
+        text-shadow: 0 0 1px black;
+        min-height: 13px;
+      }
+      .AgentesDeDiagramaDeGantt {
+          font-size: 9px;
+      }
+      .AgentesDeDiagramaDeGantt .agentes_informacion {
+        display: block;
+        width: 100%;
+        border-top: 0px solid #333;
+        padding: 2px;
+        padding-bottom: 0px;
+      }
+      .AgentesDeDiagramaDeGantt .agente_detalles {
+        display: table;
+        width: 100%;
+        margin-bottom: 2px;
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+      }
+      .AgentesDeDiagramaDeGantt .agente_orden {
+        display: table-cell;
+        width: 1%;
+        padding: 2px;
+        padding-left: 5px;
+        font-weight: bold;
+        border-bottom: 0px solid #333;
+        min-height: 13px;
+      }
+      .AgentesDeDiagramaDeGantt .agente_nombre {
+        display: table-cell;
+        width: 100%;
+        padding: 2px;
+        font-weight: bold;
+        border: 1px solid #333;
+        border-top: 0px solid #333;
+        min-height: 13px;
+      }
+      .float_right { float: right; }
+      .hide { display: none; }
+      input[type=radio] {
+          vertical-align: middle;
+      }
+      select,
+      option,
+      button {
+          cursor: pointer;
+          border-radius: 3pt;
+          overflow: hidden;
+          border: 1px solid #333;
+          background-color: #CCC;
+          padding: 2px;
+          font-size: 9px;
+          font-family: Arial;
+      }
+      select.control_input {
+          font-size: 9px;
+      }
+      .panel_de_pestanyas {
+          font-size: 9px;
+          margin-top: 0px;
+          overflow: hidden;
+      }
+      .panel_de_pestanyas > .grupo_de_pestanyas {
+          display: table;
+          width: 100%;
+          margin-bottom: 0px;
+      }
+      .panel_de_pestanyas > .grupo_de_pestanyas > .pestanya {
+          display: table-cell;
+          width: 25%;
+          padding: 2px;
+          margin-right: 2px;
+          margin-bottom: 2px;
+          border: 1px solid #333;
+          border-radius: 0pt;
+          text-align: center;
+          cursor: pointer;
+          white-space: nowrap;
+      }
+      .panel_de_pestanyas > .grupo_de_pestanyas > .pestanya.seleccionada {
+          background-color: black;
+          color: white;
+      }
+      .panel_de_pestanyas > .grupo_de_paneles {}
+      .panel_de_pestanyas > .grupo_de_paneles > .panel {
+          display: none;
+          padding: 0px;
+          border: 1px solid #333;
+      }
+      .panel_de_pestanyas > .grupo_de_paneles > .panel.seleccionado {
+          display: block;
+      }
+      .dialogos_estaticos_box {
+          position: fixed;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          z-index: 9999;
+          background-color: rgba(255,255,255,0.5);
+          padding: 5px;
+      }
+      .dialogo_box_container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+      }
+      .dialogo_box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 2pt;
+      }
+      .dialogo_box_content {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+      }
+      .dialogo_header {
+          background-color: #333;
+          color: white;
+          text-align: left;
+          font-size: 15px;
+          padding: 5px;
+      }
+      .dialogo_body {
+          flex-grow: 1;
+          background-color: #DDD;
+          color: black;
+          font-size: 9px;
+          padding: 10px;
+          padding-top: 0px;
+          min-height: 120px;
+          overflow: scroll;
+      }
+      .dialogo_footer {
+          background-color: #333;
+          color: white;
+          text-align: right;
+          font-size: 9px;
+          padding: 5px;
+      }
+      .control_item {
+          padding-top: 1px;
+      }
+      .control_item > .control_label {
+          margin-top: 2px;
+          padding-top: 5px;
+          border-top: 1px solid #BBB;
+          font-weight: bold;
+          text-decoration: underline;
+          white-space: nowrap;
+          padding-bottom: 2px;
+      }
+      .control_input {
+          width: 100%;
+          font-size: 12px;
+      }
+      .control_inline_select {
+          display: table;
+          width: 100%;
+      }
+      .control_inline_checkbox {
+          display: inline-block;
+      }
+      .control_checkbox {
+          display: inline-block;
+          width: auto;
+      }
+      .control_checkbox > .control_label {
+          cursor: pointer;
+      }
+      .control_checkbox > .control_label > .control_input {
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+      }
+      .control_inline_select > .control_label {
+          display: table-cell;
+          width: 1%;
+          padding-right: 5px;
+          vertical-align: middle;
+          white-space: nowrap;
+      }
+      .control_inline_select > .control_input {
+          display: table-cell;
+          width: 100%;
+          vertical-align: middle;
+      }
+    </style>
+</head>
+<body><div id="app"></div></body>.
+
+importo api nativa.
+
+asigno window.process_NODE_ENV como "produccion".
+asigno window.process_NODE_ENV como "test".
+
+creo cargar_base_de_datos como una función asíncrona donde {
+    conecto asíncronamente un sistema rest configurado con {
+        platform: "browser",
+        debug: cuando process_NODE_ENV es igual que "produccion" entonces false si no true
+    } con server configurado con {
+        adapter: "dexie",
+        credentials: {}
+    } creando constante conexion.
+    si process_NODE_ENV no es igual que "produccion" {
+        hago asíncronamente conexion.resetDatabase().
+    }.
+    hago asíncronamente conexion.addService({
+        table: "tarea",
+        creationScript: "++id,nombre,tipo,inicio,final,color,agentes,descripcion,urgencia,estado,puntuacion,feedback",
+        schema: {}
+    }).
+    hago asíncronamente conexion.addService({
+        table: "agente",
+        creationScript: "++id,nombre,color",
+        schema: {}
+    }).
+    hago asíncronamente conexion.initialize().
+    inserto asíncronamente a varios ítems en modelo "agente" con valores [{
+        nombre: "Yo"
+    }] usando adaptador conexion.
+    inserto asíncronamente a varios ítems en modelo "tarea" con valores [{
+        nombre: "Tarea 1",
+        inicio: "2022-11-19 08:00:00",
+        final: ""
+    }, {
+        nombre: "Tarea 2",
+        inicio: "2022-11-19 08:00:00",
+        final: ""
+    }, {
+        nombre: "Tarea 3",
+        inicio: "2022-11-19 08:00:00",
+        final: ""
+    }, {
+        nombre: "Tarea 4",
+        inicio: "2022-11-19 08:00:00",
+        final: ""
+    }] usando adaptador conexion.
+    retorno conexion.
+}.
+
+creo ControlParaFechaConReloj como un componente vue2 con nombre "ControlParaFechaConReloj" con plantilla {
+    <div class="ControlParaFechaConReloj Component">
+        Reloj... {{ valor }}
+    </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            valor: {
+                type: Date,
+                default: una función donde retorno un nuevo Date()
+            },
+            vincularValor: {
+                type: Array,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+                internal_value: this.valor
+            }.
+        }.
+        propiedad watch como {
+            método internal_value con (nuevoValor) donde {
+                si this.vincularValor es tipo lista y this.vincularValor.length es mayor que 1 y this.vincularValor[1] es tipo texto {
+                    asigno this.vincularValor[0][this.vincularValor[1]] como nuevoValor.
+                    si this.vincularValor[0].$forceUpdate es tipo función hago this.vincularValor[0].$forceUpdate(true).
+                }.
+            }.
+        }.
+    }.
+}.
+
+creo ControlParaFechaConCalendario como un componente vue2 con nombre "ControlParaFechaConCalendario" con plantilla {
+    <div class="ControlParaFechaConCalendario Component">
+        Calendario... {{ valor }}
+    </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            valor: {
+                type: Date,
+                default: una función donde retorno un nuevo Date()
+            },
+            vincularValor: {
+                type: Array,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+                internal_value: this.valor
+            }.
+        }.
+        propiedad watch como {
+            método internal_value con (nuevoValor) donde {
+                si this.vincularValor es tipo lista y this.vincularValor.length es mayor que 1 y this.vincularValor[1] es tipo texto {
+                    asigno this.vincularValor[0][this.vincularValor[1]] como nuevoValor.
+                    si this.vincularValor[0].$forceUpdate es tipo función hago this.vincularValor[0].$forceUpdate(true).
+                }.
+            }.
+        }.
+    }.
+}.
+
+creo ControlParaFecha como un componente vue2 con nombre "ControlParaFecha" con plantilla {
+    <div class="ControlParaFecha Component">
+        <ControlParaFechaConCalendario v-if="['calendario','completo'].indexOf(modo) !== -1" :vincular-valor="[this, 'internal_day']" :valor="valor" />
+        <ControlParaFechaConReloj v-if="['completo','reloj'].indexOf(modo) !== -1" :vincular-valor="[this, 'internal_hour']" :valor="valor" />
+    </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            valor: {
+                type: Date,
+                default: una función donde retorno un nuevo Date()
+            },
+            vincularValor: {
+                type: Array,
+                required: true
+            },
+            alCambiar: {
+                type: Function,
+                default: una función
+            },
+            modo: {
+                type: String,
+                default: una función donde retorno "completo" # "calendario", "reloj"
+            }
+        }.
+        método data donde {
+            retorno {
+                internal_day: undefined,
+                internal_hour: undefined,
+                internal_value: undefined
+            }.
+        }.
+        propiedad watch como {
+            método internal_day con (nuevoValor) donde {
+
+            }.
+            método internal_hour con (nuevoValor) donde {
+
+            }.
+            método internal_value con (nuevoValor) donde {
+                si this.vincularValor es tipo lista y this.vincularValor.length es mayor que 1 y this.vincularValor[1] es tipo texto {
+                    asigno this.vincularValor[0][this.vincularValor[1]] como nuevoValor.
+                    si this.vincularValor[0].$forceUpdate es tipo función {
+                        hago this.vincularValor[0].$forceUpdate(true).
+                    }
+                    y si no lanzo un nuevo Error("Algo fue mal").
+                }.
+                si this.alCambiar es tipo función hago this.alCambiar(nuevoValor, this).
+            }.
+        }.
+        método mounted donde {
+            asigno this.internal_day como this.$utils.getDayStringFromDate(this.valor).
+            asigno this.internal_hour como this.$utils.getHourStringFromDate(this.valor).
+        }.
+    }.
+}.
+
+creo DialogosEstaticos como un componente vue2 con nombre "DialogosEstaticos" con plantilla {
+  <div class="DialogosEstaticos Component">
+    <div class="dialogos_estaticos_box" v-if="seleccionado">
+        <div class="dialogo_box_container" v-if="seleccionado === 'Añadir tarea' || seleccionado === 'Editar tarea'">
+            <div class="dialogo_box">
+                <div class="dialogo_box_content">
+                    <div class="dialogo_header">
+                        <span class="dialogo_title">{{ seleccionado }}</span>
+                        <span class="float_right">
+                            <button v-on:click="() => fallar_dialogo()">Cerrar</button>
+                        </span>
+                    </div>
+                    <div class="dialogo_body">
+                        <div class="control_item">
+                            <div class="control_label">Nombre de tarea:</div>
+                            <input class="control_input" type="text" v-model="dialogo_editar_tarea__nombre_de_tarea" />
+                        </div>
+                        <div class="control_item">
+                            <div class="control_label">Inicio de tarea:</div>
+                            <div class="control_inline_select">
+                                <label class="control_label"><input type="radio" style="vertical-align: middle;" name="modo_de_inicio_de_tarea" v-model="dialogo_editar_tarea__modo_de_inicio_de_tarea" v-on:change="() => $forceUpdate(true)" value="Según fecha" /> Fecha</label>
+                                <label class="control_label"><input type="radio" style="vertical-align: middle;" name="modo_de_inicio_de_tarea" v-model="dialogo_editar_tarea__modo_de_inicio_de_tarea" v-on:change="() => $forceUpdate(true)" value="Según tarea" /> Tarea</label>
+                                <label class="control_label" style="width: 100%;"></label>
+                            </div>
+                        </div>
+                        <div class="control_item" v-if="dialogo_editar_tarea__modo_de_inicio_de_tarea === 'Según fecha'">
+                            <ControlParaFecha
+                                :valor="new Date()"
+                                :vincular-valor="[this, 'dialogo_editar_tarea__inicio_de_tarea']"
+                                :al-cambiar="(valor) => dialogo_editar_tarea__inicio_de_tarea = valor"
+                                modo="completo"
+                            />
+                        </div>
+                        <div class="control_item" v-else-if="dialogo_editar_tarea__modo_de_inicio_de_tarea === 'Según tarea'">
+                            Según tarea.... es más complicado.
+                        </div>
+                        <div class="control_item">
+                            <div class="control_label">Final de tarea:</div>
+                            <div class="control_inline_select">
+                                <label class="control_label"><input type="radio" name="dialogo_editar_tarea__modo_de_final_de_tarea" v-model="dialogo_editar_tarea__modo_de_final_de_tarea" v-on:change="() => $forceUpdate(true)" value="Según fecha" /> Fecha</label>
+                                <label class="control_label"><input type="radio" name="dialogo_editar_tarea__modo_de_final_de_tarea" v-model="dialogo_editar_tarea__modo_de_final_de_tarea" v-on:change="() => $forceUpdate(true)" value="Según tarea" /> Tarea</label>
+                                <label class="control_label"><input type="radio" name="dialogo_editar_tarea__modo_de_final_de_tarea" v-model="dialogo_editar_tarea__modo_de_final_de_tarea" v-on:change="() => $forceUpdate(true)" value="Según duración" /> Duración</label>
+                                <label class="control_label" style="width: 100%;"></label>
+                            </div>
+                        </div>
+                        <div class="control_item" v-if="dialogo_editar_tarea__modo_de_final_de_tarea === 'Según fecha'">
+                            <ControlParaFecha
+                                :valor="new Date()"
+                                :vincular-valor="[this, 'dialogo_editar_tarea__final_de_tarea']"
+                                :al-cambiar="(valor) => dialogo_editar_tarea__final_de_tarea = valor"
+                                modo="completo"
+                            />
+                        </div>
+                        <div class="control_item" v-if="dialogo_editar_tarea__modo_de_final_de_tarea === 'Según tarea'">
+                            Según tarea.... es más complicado.
+                        </div>
+                        <div class="control_item">
+                            <div class="control_label">Agentes:</div>
+                            <div class="control_inline_checkbox">
+                                <div class="control_checkbox" v-for="(agente, agenteIndex) in dialogo_editar_tarea__agentes_disponibles" v-bind:key="'agente-disponible-' + agenteIndex">
+                                    <label class="control_label">
+                                        <input class="control_input" type="checkbox" v-model="dialogo_editar_tarea__agente" />
+                                        <span class="control_label_text">{{ agente }}</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialogo_footer">
+                        <span>
+                            <button v-on:click="() => resolver_dialogo()">Aceptar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialogo_box_container">
+        <div class="dialogo_box">
+            <div class="dialogo_title">
+                <span></span>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            uid: {
+                type: String,
+                default: una función donde retorno un texto aleatorio de 10 caracteres
+            },
+            root: {
+                type: Object,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+                mapeo_seleccionado_y_prefijo_de_variables: {
+                    "Añadir tarea": "dialogo_editar_tarea",
+                    "Editar tarea": "dialogo_editar_tarea"
+                },
+                seleccionado: undefined
+            }.
+        }.
+        propiedad methods como {
+            método resetear_estado() donde {
+                hago this extendido por {
+                    parametros_de_dialogo: undefined,
+                    dialogo_editar_tarea__nombre_de_tarea: "",
+                    dialogo_editar_tarea__modo_de_inicio_de_tarea: "",
+                    dialogo_editar_tarea__modo_de_final_de_tarea: "",
+                    dialogo_editar_tarea__inicio_de_tarea: undefined,
+                    dialogo_editar_tarea__final_de_tarea: undefined,
+                    dialogo_editar_tarea__agente: "",
+                    dialogo_editar_tarea__agentes_disponibles: [
+                        "Persona 1",
+                        "Persona 2",
+                        "Persona 3",
+                        "persona 4"
+                    ]
+                } también extendido por this.$utils.adaptParametersToPrefixedProps(cuando this.parametros_de_dialogo entonces this.parametros_de_dialogo.parametros si no {}, "dialogo_editar_tarea").
+            }.
+            método iniciar_dialogo(id, parametros) donde {
+                asigno window.dialogos como this.
+                si this.seleccionado no es tipo indefinido lanzo un nuevo Error("Required component «DialogosEstaticos» to has «seleccionado» property unset in order to «iniciar_dialogo». Right now, the active dialog is set to: " + this.seleccionado).
+                hago this.resetear_estado().
+                asigno this.parametros_de_dialogo como parametros.
+                asigno this.seleccionado como id.
+                retorno una promesa con (ok, fail) donde {
+                    asigno this.resolver_dialogo como una lambda con () donde {
+                        creo prefijo como this.mapeo_seleccionado_y_prefijo_de_variables[id]. 
+                        creo claves como un conjunto de claves del objeto this.
+                        creo claves_de_prefijo como claves filtrado donde retorno item.startsWith(prefijo + "__").
+                        creo salida como claves_de_prefijo reducido desde {} donde {
+                            asigno output[item.replace(prefijo + "__", "")] como this[item].
+                            retorno output.
+                        }.
+                        asigno this.seleccionado como undefined.
+                        hago this.$forceUpdate(true).
+                        retorno ok(salida).
+                    }.
+                    asigno this.fallar_dialogo como una lambda con (error) donde {
+                        asigno this.seleccionado como undefined.
+                        hago this.$forceUpdate(true).
+                        retorno ok(undefined).
+                    }.
+                    hago this.$forceUpdate(true).
+                }.
+            }.
+        }.
+        método beforeMount donde {
+            asigno Vue.prototype.$dialogos_estaticos como this.
+        }.
+    }.
+}.
+
+creo AgentesDeDiagramaDeGantt como un componente vue2 con nombre "AgentesDeDiagramaDeGantt" con plantilla {
+  <div class="AgentesDeDiagramaDeGantt Component">
+    <div class="agentes_informacion">
+      <div class="agente_detalles" v-for="(agente, agenteIndex) in agentes" v-bind:key="'agente-de-diagrama-de-gantt-' + uid + '-posicion-' + agenteIndex">
+        <div class="tarea_title">
+            <div class="tarea_title_text">
+                <span>{{ agenteIndex + 1 }}. </span> <span>{{ agente }}</span>
+            </div>
+            <span class="tarea_buttons">
+                <button class="boton" v-on:click="() => editar_agente(agenteIndex)">Editar</button>
+                <button class="boton" v-on:click="() => seleccionar_agente(agenteIndex)">Ver</button>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            uid: {
+                type: String,
+                default: una función donde retorno un texto aleatorio de 10 caracteres
+            },
+            agentes: {
+                type: Array,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {}.
+        }.
+    }.
+}.
+
+creo FechaDeDiagramaDeGantt como un componente vue2 con nombre "FechaDeDiagramaDeGantt" con plantilla {
+  <span class="FechaDeDiagramaDeGantt Component">
+    <template v-if="typeof fecha === 'object'">
+        <span v-if="'duracion' in fecha">
+            duración: {{ fecha.duracion }}
+        </span>
+        <span v-if="'desde' in fecha">
+            tarea: {{ fecha.desde }}
+        </span>
+        <span v-if="fecha instanceof Date">
+            fecha: {{ fecha }}
+        </span>
+    </template>
+    <template v-if="typeof fecha === 'string'">
+        <span v-if="fecha === 'por defecto'">
+            por defecto
+        </span>
+        <span v-else>
+            {{ fecha }}
+        </span>
+    </template>
+  </span>
+} con lógica {
+    retorno {
+        propiedad props como {
+            uid: {
+                type: String,
+                default: una función donde retorno un texto aleatorio de 10 caracteres
+            },
+            fecha: {
+                type: [String,Object,Date],
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {}.
+        }.
+    }.
+}.
+
+creo TareasDeDiagramaDeGantt como un componente vue2 con nombre "TareasDeDiagramaDeGantt" con plantilla {
+  <div class="TareasDeDiagramaDeGantt Component">
+    <div class="panel_de_pestanyas">
+        <div class="grupo_de_pestanyas">
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Por tiempo')" :class="{ seleccionada: pestanya_seleccionada === 'Por tiempo' }">
+                Tiempo
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Por tareas')" :class="{ seleccionada: pestanya_seleccionada === 'Por tareas' }">
+                Tareas
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Prototipos')" :class="{ seleccionada: pestanya_seleccionada === 'Prototipos' }">
+                Prototipos
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Por agentes')" :class="{ seleccionada: pestanya_seleccionada === 'Por agentes' }">
+                Agentes
+            </div>
+        </div>
+        <div class="grupo_de_pestanyas">
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Buscar')" :class="{ seleccionada: pestanya_seleccionada === 'Buscar' }">
+                Buscar
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Analíticas')" :class="{ seleccionada: pestanya_seleccionada === 'Analíticas' }">
+                Analíticas
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Hechas')" :class="{ seleccionada: pestanya_seleccionada === 'Hechas' }">
+                Hechas
+            </div>
+            <div class="pestanya" v-on:click="() => seleccionar_pestanya('Configuraciones')" :class="{ seleccionada: pestanya_seleccionada === 'Configuraciones' }">
+                Configuraciones
+            </div>
+        </div>
+        <div class="grupo_de_paneles">
+            <div class="panel" :class="{ seleccionado: pestanya_seleccionada === 'Por tareas' }" style="padding: 0px;">
+                <TareasEnCartas :tareas="tareas" />
+            </div>
+            <div class="panel" :class="{ seleccionado: pestanya_seleccionada === 'Por agentes' }">
+                <AgentesDeDiagramaDeGantt :agentes="agentes" />
+            </div>
+            <div class="panel" :class="{ seleccionado: pestanya_seleccionada === 'Por tiempo' }">
+                Por tiempo...
+            </div>
+            <div class="panel" :class="{ seleccionado: pestanya_seleccionada === 'Prototipos' }">
+                Prototipos...
+            </div>
+        </div>
+    </div>
+  </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            uid: {
+                type: String,
+                default: una función donde retorno un texto aleatorio de 10 caracteres
+            },
+            tareas: {
+                type: Array,
+                required: true
+            },
+            agentes: {
+                type: Array,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+                pestanya_seleccionada: "Por tareas"
+            }.
+        }.
+        propiedad methods como {
+            método seleccionar_pestanya con (pestanya) donde {
+                asigno this.pestanya_seleccionada como pestanya.
+            }.
+        }.
+    }.
+}.
+
+creo TareasEnCartas como un componente vue2 con nombre "TareasEnCartas" con plantilla {
+    <div class="TareasEnCartas Component">
+        <div class="tarea_box_container" v-for="(tarea, tareaIndex) in tareas" v-bind:key="'tareas-de-diagrama-de-gantt-' + uid + '-posicion-' + tareaIndex">
+            <div class="tarea_box">
+                <div class="tarea_title">
+                    <div class="tarea_title_text">
+                        <span>{{ tareaIndex + 1 }}. </span> <span>{{ tarea.nombre }}</span>
+                    </div>
+                    <span class="tarea_buttons">
+                        <button class="boton" v-on:click="() => editar_tarea(tareaIndex)">Editar</button>
+                        <button class="boton" v-on:click="() => seleccionar_tarea(tareaIndex)">{{ tarea.seleccionada === true ? 'Ocultar' : 'Ver' }}</button>
+                    </span>
+                </div>
+                <div :class="{hide:tarea.seleccionada !== true}">
+                    <div class="tarea_agentes" v-if="tarea.agentes">
+                        <span>Emprendida por: </span>
+                        {{ tarea.agentes.join(", ") }}
+                    </div>
+                    <span class="tarea_tiempos">
+                        <span class="tarea_inicio">
+                            <span v-if="tarea.inicio">Desde </span>
+                            <FechaDeDiagramaDeGantt :fecha="tarea.inicio" />
+                        </span>
+                        <span class="tarea_final">
+                            <span v-if="tarea.final">Hasta </span>
+                            <FechaDeDiagramaDeGantt :fecha="tarea.final" />
+                        </span>
+                    </span>
+                    <div class="tarea_tareas" v-if="tarea.tareas">
+                        <TareasEnCartas :tareas="tarea.tareas" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tarea_box_container">
+            <div class="tarea_box">
+                <div class="tarea_title" style="text-align: right;">
+                    <button class="boton" v-on:click="() => anyadir_tarea()">Añadir subtarea</button>
+                </div>
+            </div>
+        </div>
+    </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            uid: {
+                type: String,
+                default: una función donde retorno un texto aleatorio de 10 caracteres
+            },
+            tareas: {
+                type: Array,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+
+            }.
+        }.
+        propiedad methods como {
+            método seleccionar_tarea con (indiceTarea) donde {
+                si this.tareas[indiceTarea] no contiene clave "seleccionada" {
+                    asigno this.tareas[indiceTarea].seleccionada como false.
+                }.
+                asigno this.tareas[indiceTarea].seleccionada como no no no this.tareas[indiceTarea].seleccionada.
+                hago this.$forceUpdate(true).
+            }.
+            método asíncrono editar_tarea(indiceTarea) donde {
+                creo dato como asíncronamente Vue.prototype.$dialogos_estaticos.iniciar_dialogo("Editar tarea", {
+                    indice: indiceTarea, 
+                    tarea: this.tareas[indiceTarea], 
+                    todas: this.tareas
+                }).
+                imprimo dato.
+                # asigno this.tareas[indiceTarea] como dato.
+            }.
+            método asíncrono anyadir_tarea() donde {
+                creo dato como asíncronamente Vue.prototype.$dialogos_estaticos.iniciar_dialogo("Añadir tarea").
+                imprimo dato.
+                # asigno this.tareas[indiceTarea] como dato.
+            }.
+        }.
+    }.
+}.
+
+creo DiagramaDeGantt como un componente vue2 con nombre "DiagramaDeGantt" con plantilla {
+  <div class="DiagramaDeGantt Component">
+    <div v-if="internal_datos_de_diagrama">
+        <TareasDeDiagramaDeGantt :tareas="internal_datos_de_diagrama.tareas" :agentes="internal_datos_de_diagrama.agentes" :configuraciones="internal_datos_de_diagrama.configuraciones" />
+    </div>
+  </div>
+} con lógica {
+    retorno {
+        propiedad props como {
+            diagrama: {
+                type: Function,
+                required: true
+            }
+        }.
+        método data donde {
+            retorno {
+                internal_factory_de_diagrama: this.diagrama,
+                internal_datos_de_diagrama: undefined
+            }.
+        }.
+        propiedad methods como {
+            método cargar_diagrama_de_memoria donde {
+                retorno false.
+            }.
+            método asíncrono cargar_diagrama donde {
+                si no this.cargar_diagrama_de_memoria() {
+                    asigno this.internal_datos_de_diagrama como asíncronamente this.internal_factory_de_diagrama().
+                }.
+            }.
+        }.
+        método asíncrono mounted donde {
+            hago asíncronamente this.cargar_diagrama().
+        }.
+    }.
+}.
+
+creo PaginaDeInicio como un componente vue2 con nombre "PaginaDeInicio" con plantilla {
+  <div class="PaginaDeInicio Component">
+    <div v-if="diagrama">
+      <DiagramaDeGantt :diagrama="diagrama" />
+    </div>
+  </div>
+} con lógica {
+    retorno {
+        método data donde {
+            retorno {
+                propiedad diagrama como una función asíncrona donde {
+                    retorno {
+                        configuraciones: {
+                            inicio: "2022-11-15",
+                            final: { duracion: "1 mes" }
+                        },
+                        agentes: ["Persona 1", "Persona 2", "Persona 3"],
+                        tareas: [{
+                            nombre: "Tarea 001",
+                            inicio: "2022-11-18 20:00:00",
+                            agentes: [ "Persona 1", "Persona 2" ],
+                            final: { duracion: "1 día" }
+                        }, {
+                            nombre: "Conjunto 002",
+                            inicio: "2022-11-18",
+                            final: { duracion: "8 horas" },
+                            tareas: [{
+                                nombre: "Tarea 003",
+                                inicio: "por defecto",
+                                final: { duracion: "2 horas" }
+                            }, {
+                                nombre: "Tarea 004",
+                                inicio: { desde: "Tarea 003" },
+                                final: { duracion: "2 horas" }
+                            }, {
+                                nombre: "Tarea 005",
+                                inicio: { desde: "Tarea 004" },
+                                final: { duracion: "2 horas" }
+                            }, {
+                                nombre: "Conjunto 006",
+                                inicio: { desde: "Tarea 005" },
+                                final: { duracion: "1 hora" },
+                                tareas: [{
+                                    nombre: "Tarea 007",
+                                    inicio: "por defecto",
+                                    final: { duracion: "10 minutos" }
+                                }, {
+                                    nombre: "Tarea 008",
+                                    inicio: { desde: "Tarea 007" },
+                                    final: { duracion: "10 minutos" }
+                                }, {
+                                    nombre: "Tarea 009",
+                                    inicio: { desde: "Tarea 008" },
+                                    final: { duracion: "10 minutos" }
+                                }]
+                            }]
+                        }]
+                    }.
+                }.
+            }.
+        }.
+    }.
+}.
+
+creo utils como {
+    padStart: una función con (texto, minimo o en su defecto 2, relleno o en su defecto "0") donde {
+        creo variable salida como "" + texto.
+        mientras salida.length es menor que minimo incremento salida en relleno.
+        retorno salida.
+    },
+    getDayStringFromDate: una función con (date) donde {
+        retorno `${utils.padStart(date.getFullYear(), 4)}/${utils.padStart(date.getMonth() + 1, 2)}/${utils.padStart(date.getDate(), 2)}`.
+    },
+    getHourStringFromDate: una función con (date) donde {
+        retorno `${utils.padStart(date.getHours(), 2)}:${utils.padStart(date.getMinutes(), 2)}:${utils.padStart(date.getSeconds(), 2)}.000`.
+    },
+    adaptParametersToPrefixedProps: una función con (parametros, prefijo) donde {
+        creo salida como {}.
+        itero como objeto parametros creando prop donde {
+            imprimo prop.
+        }.
+        retorno salida.
+    }
+}.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <router-view></router-view>
+    <DialogosEstaticos :root="this" ref="dialogos_estaticos" />
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método asíncrono beforeMount donde {
+        asigno Vue.prototype.$root como this.
+        creo db como asíncronamente cargar_base_de_datos().
+        asigno Vue.prototype.$db como db.
+        asigno Vue.prototype.$utils como utils.
+    }.
+    método mounted donde {}.
+  }.
+} montada en "#app".

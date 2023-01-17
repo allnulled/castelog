@@ -1,0 +1,55 @@
+Compilable con:
+  ./nativa.calo
+  ./estilos.calo
+  ./componentes.api.calo
+Empaquetable con:
+  ./prescripts.js
+Ejecutable como documento HTML5
+    con autor allnulled
+    con nombre components
+    con versión 0.0.1
+<head>
+    <title>Componentes de la API Nativa de Castelog</title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./nativa.js"></script>
+    <script src="./estilos.js"></script>
+    <script src="./componentes.api.js"></script>
+</head>
+<body><div id="app"></div></body>.
+
+creo App como una aplicación vue2 con nombre "App" con rutas [{
+    propiedad path como "/".
+    propiedad name como "Home".
+    propiedad component como Vue.options.components.PaginaDeInicio.
+    propiedad props como {}.
+}] con traducciones {
+    propiedad es como {}.
+    propiedad en como {}.
+    propiedad ca como {}.
+} con plantilla {
+  <div class="App Component Castelog-app">
+    <button v-on:click="() => $comunicaciones.una_entrada({ componente: 'Comunicacion1', atributos: {} })">Go!</button>
+    <router-view></router-view>
+    <PuertoDeComunicaciones :aplicacion="this" />
+    <PuertoDeDialogos :aplicacion="this" />
+    <PuertoDeNotificaciones :aplicacion="this" />
+  </div>
+} con estilos {
+    html {}
+    body {}
+    .Component {}
+    .App {}
+} con lógica {
+  retorno {
+    método data donde {
+      retorno {
+        
+      }.
+    }.
+    propiedad methods como {}.
+    propiedad watch como {}.
+    método beforeMount donde {}.
+    método mounted donde {}.
+  }.
+} montada en "#app".

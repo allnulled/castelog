@@ -1,0 +1,75 @@
+creo estilos como {}.
+
+asigno estilos.rasgos como {
+    para: {
+        espaciado_0: <@ padding: 0px; @> parametrizada con ({ estilos }),
+        espaciado_1: <@ padding: 3px; @> parametrizada con ({ estilos }),
+        espaciado_2: <@ padding: 6px; @> parametrizada con ({ estilos }),
+        espaciado_3: <@ padding: 9px; @> parametrizada con ({ estilos }),
+        marginado_1: <@ margin: 3px; @> parametrizada con ({ estilos }),
+        marginado_2: <@ margin: 6px; @> parametrizada con ({ estilos }),
+        marginado_3: <@ margin: 9px; @> parametrizada con ({ estilos }),
+        bordeado: <@ border: 1px solid #333; @> parametrizada con ({ estilos }),
+        bordeado_rallado: <@ border: 1px dashed #333; @> parametrizada con ({ estilos }),
+
+        espaciado_horizontal_0: <@
+            padding-left: 0px;
+            padding-right: 0px;
+        @> parametrizada con ({ estilos }),
+        espaciado_horizontal_1: <@
+            padding-left: 3px;
+            padding-right: 3px;
+        @> parametrizada con ({ estilos }),
+        espaciado_horizontal_2: <@
+            padding-left: 6px;
+            padding-right: 6px;
+        @> parametrizada con ({ estilos }),
+        espaciado_horizontal_3: <@
+            padding-left: 9px;
+            padding-right: 9px;
+        @> parametrizada con ({ estilos }),
+        marginado_horizontal_1: <@
+            margin-left: 3px;
+            margin-right: 3px;
+        @> parametrizada con ({ estilos }),
+        marginado_horizontal_2: <@
+            margin-left: 6px;
+            margin-right: 6px;
+        @> parametrizada con ({ estilos }),
+        marginado_horizontal_3: <@
+            margin-left: 9px;
+            margin-right: 9px;
+        @> parametrizada con ({ estilos }),
+
+        espaciado_vertical_0: <@
+            padding-top: 0px;
+            padding-bottom: 0px;
+        @> parametrizada con ({ estilos }),
+        espaciado_vertical_1: <@
+            padding-top: 3px;
+            padding-bottom: 3px;
+        @> parametrizada con ({ estilos }),
+        espaciado_vertical_2: <@
+            padding-top: 6px;
+            padding-bottom: 6px;
+        @> parametrizada con ({ estilos }),
+        espaciado_vertical_3: <@
+            padding-top: 9px;
+            padding-bottom: 9px;
+        @> parametrizada con ({ estilos }),
+        marginado_vertical_1: <@
+            margin-top: 3px;
+            margin-bottom: 3px;
+        @> parametrizada con ({ estilos }),
+        marginado_vertical_2: <@
+            margin-top: 6px;
+            margin-bottom: 6px;
+        @> parametrizada con ({ estilos }),
+        marginado_vertical_3: <@
+            margin-top: 9px;
+            margin-bottom: 9px;
+        @> parametrizada con ({ estilos })
+    }
+}.
+
+asigno Castelog.variables.estilos_en_cascada_1 como estilos.

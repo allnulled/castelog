@@ -1,0 +1,44 @@
+Importo api nativa.
+
+# Persistencia » Ficheros » Generativas
+
+Creo fichero1 como una escritura de fichero
+    con ruta "root.js"
+    con contenido "alert('¡Hola 5!')"
+    con codificación "utf8".
+
+Creo contenido como una lectura de fichero
+    con ruta "root.js"
+    con codificación "utf8".
+
+# Persistencia » Ficheros » Sentencias
+
+Leo fichero con ruta "root.js"
+    con codificación "utf8".
+
+Escribo fichero con ruta "root.js"
+    con contenido "alert('¡Hola 6!')"
+    con codificación "utf8".
+
+Escribo fichero con ruta "./texto.txt"
+    con contenido "Un poco de contenido."
+    con codificación "utf8"
+    usando sistema operativo.
+
+Leo fichero con ruta "./texto.txt"
+    con codificación "utf8"
+    usando sistema operativo
+    creando constante contenido2.
+
+Escribo fichero con ruta "./texto.txt"
+    con contenido "Un poco más de contenido."
+    con codificación "utf8"
+    usando sistema operativo.
+
+Leo fichero con ruta "./texto.txt"
+    con codificación "utf8"
+    usando sistema operativo
+    creando constante contenido3.
+
+Compruebo que contenido2 es igual que "Un poco de contenido.".
+Compruebo que contenido3 es igual que "Un poco más de contenido.".

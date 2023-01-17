@@ -1,0 +1,54 @@
+{
+    "name": "castelog",
+    "displayName": "CASTELOG",
+    "description": "Extensión oficial del lenguaje de programación Castelog",
+    "version": "0.0.1",
+    "author": "allnulled",
+    "publisher": "allnulled",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./actions/main.js",
+	"activationEvents": [
+        "onCommand:castelog.compilarFichero"
+	],
+    "contributes": {
+        "languages": [
+            {
+                "id": "castelog",
+                "aliases": [
+                    "Castelog",
+                    "castelog"
+                ],
+                "extensions": [
+                    ".clg",
+                    ".castelog"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "castelog",
+                "scopeName": "source.castelog",
+                "path": "./syntaxes/castelog.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "Castelog Basic Color Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/castelog-basic-color-theme.json"
+            }
+        ],
+		"commands": [{
+            "command": "castelog.compilarFichero",
+            "title": "Compilar fichero de Castelog a JavaScript"
+
+		}]
+    },
+    "icon": "./resources/clg2.png"
+}

@@ -1,0 +1,9 @@
+Importo API nativa.
+
+Creo plantilla1 como una plantilla con ("Esto es una plantilla con ID <:= config.id :>.", { id: 503 }).
+Creo texto1 como plantilla1({ id: 503 }).
+Compruebo que texto1 es igual que "Esto es una plantilla con ID 503.".
+
+Creo plantilla2 como <@Esto es una plantilla de texto con ID <:=config.id:> con sintaxis específica.@>.
+Creo texto2 como plantilla2({ id: 504 }).
+Compruebo que texto2 es igual que "Esto es una plantilla de texto con ID 504 con sintaxis específica.".

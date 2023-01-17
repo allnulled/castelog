@@ -1,0 +1,14 @@
+si false {
+
+@Sección de notación para EcmaScript 5:
+Exporto como módulo es5 {}.
+# module.exports = {}
+
+@Sección de notación para EcmaScript 6:
+Exporto como módulo es6 {}.
+ # export default {}
+
+@Sección de notación para sistema de módulos de Castelog:
+Exporto módulo universal estándar llamado "un.modulo.concreto" a partir de {}.
+
+}.

@@ -1,0 +1,8 @@
+Creo variable x como 0.
+En proceso uno {
+    Creo variable y como 9.
+    Si y es menor que 10 interrumpo proceso uno;
+    Y si no lanzo un nuevo Error("Error imposible").
+    Asigno x como undefined.
+}.
+Compruebo que x es igual que 0.

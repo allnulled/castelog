@@ -1,0 +1,87 @@
+creo diagrama como un diagrama de comunicaciones configurado con {
+    eventos: {
+        al_empezar: una función,
+        al_definir_sistema: una función,
+        al_definir_proceso: una función,
+        al_definir_entrada: una función,
+        al_definir_salida: una función,
+        al_terminar: una función
+    }
+} donde {
+    defino sistemas como {
+        Cliente: { texto: "Alice", usando: {} },
+        Servidor: { texto: "Bob", usando: {} }
+    }.
+    defino secuencia llamada "Logueo" donde {
+        desde sistema Cliente {
+            defino proceso
+                que se llama preparar_login
+                que retorna user de tipo String
+                que retorna password de tipo String.
+            defino salida
+                que se llama intentar_login
+                que emite a sistema Servidor
+                que recibe user de tipo String
+                que recibe password de tipo String
+                que retorna mediante entrada recibir_sesion.
+        }.
+        desde sistema Servidor {
+            defino entrada
+                que se llama recibir_login
+                que procede de sistema A
+                que recibe user de tipo String
+                que recibe password de tipo String
+                que retorna user de tipo String
+                que retorna password de tipo String.
+            defino proceso
+                que se llama realizar_login
+                que recibe user de tipo String
+                que recibe password de tipo String
+                que retorna sesion de tipo Object
+                que se describe como [
+                    "valida usuario y password",
+                    "hace una query en la base de datos buscando usuarios que coincidan",
+                    "filtra los resultados y lanza el error pertinente, si escaece",
+                    "hace una query en la base de datos buscando grupos, privilegios y sesiones que coincidan",
+                    "filtra los resultados y lanza el error pertinente, si escaece",
+                    "compila los datos recopilados de la sesión de usuario",
+                    "si no existe una sesión abierta, la crea",
+                    "devuelve el estado final de la sesión"
+                ].
+            defino salida 
+                que se llama devolver_sesion
+                que emite a sistema Cliente
+                que recibe sesion de tipo Object
+                que retorna session de tipo Object
+                que retorna token de tipo String
+                que se describe como [
+                    "crea un objeto",
+                    "pone la propiedad «session» con los datos de sesión",
+                    "pone la propiedad «token» con el token de sesión"
+                ].
+        }.
+        desde sistema Cliente {
+            defino entrada 
+                que se llama recibir_sesion
+                que procede de sistema Servidor
+                que recibe session de tipo Object
+                que recibe token de tipo String
+                que se describe como []
+                que retorna session de tipo Object
+                que retorna token de tipo String.
+            defino proceso
+                que se llama adoptar_sesion
+                que recibe session de tipo Object
+                que recibe token de tipo String
+                que se describe como []
+                que retorna session de tipo Object
+                que retorna token de tipo String.
+        }.
+    }.
+    defino secuencia llamada "Alta de ticket" donde {
+        
+        desde sistema A {
+            defino proceso ""
+        }
+    }.
+}.

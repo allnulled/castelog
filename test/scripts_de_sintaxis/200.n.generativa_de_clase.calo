@@ -1,0 +1,29 @@
+Creo Animal como una clase con {
+    Método constructor() donde {
+        Asigno this.id como "animal".
+    }.
+}.
+
+Creo Persona como una clase que extiende de Animal con {
+    Propiedad estática CONFIGURACIONES_POR_DEFECTO donde {
+        Retorno { id: undefined }.
+    }.
+    Método estático crear donde {
+        Asigno this.id como "lo que sea".
+        Asigno this.opciones como {}.
+        Asigno this.debug como false.
+    }.
+    Propiedad x donde {
+        Retorno "100".
+    }.
+    Método constructor(opciones) donde {
+        Hago super().
+        Hago Object.assign(this, opciones).
+    }.
+}.
+
+Creo persona1 como una nueva Persona({
+    nombre: "Carl",
+    apellidos: "Carlson Carlson"
+}).
+

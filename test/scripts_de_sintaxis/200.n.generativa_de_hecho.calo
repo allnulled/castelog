@@ -1,0 +1,7 @@
+Creo constante x como un hecho asíncrono donde {
+    Retorno 100.
+} en errores {
+    Retorno 0.
+}.then(una función con (resultado) {
+    Compruebo que resultado es tipo número y resultado es igual que 100.
+}).

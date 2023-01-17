@@ -1,0 +1,17 @@
+Importo módulo es5 de ruta "fs" creando constante fs.
+
+Hago fs.writeFileSync(__dirname + "/ok.json", '{"más datos": "que nada"}', "utf8").
+
+Creo x como { a: 0, b: 1, c: 0 }.
+Asigno ok como 10. 
+Imprimo x.
+Elimino propiedad x.a.
+Imprimo x.
+Elimino propiedad x.b.
+Imprimo x.
+Itero como objeto global creando constante prop donde {
+    Imprimo prop+ ": " + typeof(global[prop]).
+}.
+Creo mensaje como "Ok!!!".
+Imprimo mensaje.
+Incremento x.c en 5.

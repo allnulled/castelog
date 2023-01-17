@@ -1,0 +1,7 @@
+Creo variable x como 0.
+En proceso dos {
+    Incremento x en 2.
+    Interrumpo proceso dos.
+    Incremento x en 1.
+}.
+Compruebo que x es igual que 2.

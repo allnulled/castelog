@@ -1,0 +1,4 @@
+Compruebo que { nombre: "Castelog" } es tipo objeto.
+Compruebo que un objeto con { nombre: "Castelog" } es tipo objeto.
+Compruebo que un objeto con { Propiedad nombre como "Castelog". } es tipo objeto.
+Compruebo que un objeto con { Método llamar como 0. } es tipo objeto.

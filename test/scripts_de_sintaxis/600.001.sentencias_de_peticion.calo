@@ -1,0 +1,10 @@
+
+
+# Comunicación » Petición
+
+Creo x como "sometoken".
+Creo respuesta1 como una petición http
+    con url "https://www.example.com"
+    con método "GET"
+    con cuerpo ""
+    con cabeceras { Authorization: "Bearer " + x }.

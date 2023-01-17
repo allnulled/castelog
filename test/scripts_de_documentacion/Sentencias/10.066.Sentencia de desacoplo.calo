@@ -1,0 +1,12 @@
+Creo objeto como { x: "x", y: "y", z: "z" }.
+Creo objeto2 como { a: "a", b: "b", c: "c" }.
+
+Desacoplo constantes x, y, z a partir de objeto.
+Desacoplo variables a, b, c como ce a partir de objeto2.
+
+Compruebo que x es igual que "x".
+Compruebo que y es igual que "y".
+Compruebo que z es igual que "z".
+Compruebo que a es igual que "a".
+Compruebo que b es igual que "b".
+Compruebo que ce es igual que "c".

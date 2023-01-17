@@ -1,0 +1,92 @@
+Importo API nativa.
+
+Creo Aplicacion como un componente vue2 con nombre "Aplicacion" con plantilla {
+    <div class="app-component" data-url="alguna cosa">
+        <h1>Título.</h1>
+        <h3>Subtítulo.</h3>
+        <p>Párrafo.</p>
+    </div>
+} con estilos {
+    .app-component {}
+    .app-component > h1 {}
+    .app-component > h3 {}
+    .app-component > p {}
+} con lógica {
+    Retorno un objeto con {
+        Propiedad name como "Aplicacion".
+        Propiedad methods como {}.
+        Propiedad watch como {}.
+        Método data como una función donde retorno un objeto con {}.
+        Método mount como una función donde retorno {}.
+    }.
+}.
+
+Creo plantilla_de_documento como <@
+    <div>
+        <:
+        Imprimo "OK: Ejecutando plantilla de documento principal.".
+        :>
+        <h1><:= config.titulo :></h1>
+        <div>
+            <p><:= config.subtitulo :></p>
+            <p><:= config.comentario_principal :></p>
+            <p><:= config.parrafos.join("</p><p>") :></p>
+            <p>
+                <ul>
+                    <li><:= config.clausulas.join("</li><li>") :></li>
+                </ul>
+            </p>
+            <p><:= config.despido :></p>
+            <p><:= config.firma :></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p><:= config.firma_de_empresa :></p>
+            <:
+            Creo variable x como 0.
+            Mientras x es menor que 10 {
+                Incremento x.
+                :><p>¡Hola por <:=x:> vez!</p><:
+            }.
+            :>
+        </div>
+        <:
+        Imprimo "OK: Ejecutada correctamente plantilla de documento principal.".
+        :>
+    </div>
+@>.
+
+En proceso x {
+    Si estoy en sistema {
+        Creo salida1 como cuando estoy en linux entonces un comando de consola consistente en "cat texto.txt | grep 'Un poco'"
+            si no cuando estoy en windows entonces un comando de consola consistente en "type texto.txt | cat 'Un poco'"
+            si no cuando estoy en mac entonces un comando de consola consistente en "cat texto.txt | grep 'Un poco'"
+            si no un hecho donde lanzo un nuevo Error("No se ha detectado entorno").
+    }.
+    Si estoy en navegador {
+        # Reok...
+    }.
+    Interrumpo proceso x.
+}.
+
+En proceso x_2 {
+    Interrumpo proceso x_2.
+}.
+
+Creo fuente_del_documento como plantilla_de_documento({ 
+    titulo: "titulo del documento",
+    subtitulo: "subtitulo del documento",
+    comentario_principal: "comentario_principal del documento",
+    parrafos: ["parrafo 1 del documento"],
+    clausulas: ["clausula 1 del documento"],
+    despido: "despido del documento",
+    firma: "firma del documento",
+    firma_de_empresa: "firma_de_empresa del documento"
+}).
+
+Si estoy en navegador {
+    Creo documento_en_htmlelement como un elemento html con ( fuente_del_documento ).
+} y si no {
+    Imprimo "Si estuviera en un navegador se habría imprimido:".
+    Imprimo fuente_del_documento.
+}.

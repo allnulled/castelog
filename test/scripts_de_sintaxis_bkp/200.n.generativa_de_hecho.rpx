@@ -1,0 +1,13 @@
+Creo constante x como un hecho asíncrono donde {
+    Hago asíncronamente una espera de 5 segundos donde {
+
+    } en errores con error {
+
+    }.
+    Imprimo "Esperado 1 segundo".
+    Hago asíncronamente una espera de 2000 milisegundos.
+    Imprimo "Esperados 2 segundos más".
+    Retorno 100.
+} en errores {
+    Retorno 0.
+}.
