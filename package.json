@@ -4,8 +4,8 @@
   "description": "Programación JavaScript en castellano.",
   "main": "src/castelog.api.js",
   "bin": {
-    "calo": "./calo",
-    "calox": "./calox"
+    "calo": "./src/castelog.bin.js",
+    "calox": "./src/castelog-xtensions.bin.js"
   },
   "scripts": {
     "develop": "nodemon -w src/sintaxis/ -w src/lib/ -w test/ -e 'part.js,pegjs,test.js,clg' -x 'npm run compile && npm run test'",
