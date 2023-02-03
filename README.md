@@ -22,6 +22,10 @@ Para instalar Castelog necesitarás **npm** y **node.js** instalados. Después, 
 npm install --global castelog
 ```
 
+Para instalar la extensión de **Visual Studio Code**, está la carpeta `vscode-extension/castelog.castelog-language-v0.0.1`. Con esto tendrás el coloreado bonito de la sintaxis de los ficheros `*.calo`.
+
+Puedes configurar los shortcuts para que compilen, ejecuten y tal. Tienes que hacer **File » Preferences » Keyboard Shortcuts**, y ahí buscas `'castelog'`. Sobre todo, los de: `castelog.compilarFichero` y `castelog.ejecutarFicheroCalo`, los más interesantes. Además, tienes el `CTRL + Espacio` que te sugerirá sintaxis.
+
 ----
 
 ## Uso
@@ -919,7 +923,8 @@ Compruebo que un objeto con { Método llamar como 0. } es tipo objeto.
 Sirve para crear una promesa o `Promise`.
 
 ```calo
-
+Creo x1 como una promesa donde {}.
+Creo x2 como una promesa con (ok, fallo) donde {}.
 ```
 
 ----
@@ -929,7 +934,10 @@ Sirve para crear una promesa o `Promise`.
 Sirve para crear texto.
 
 ```calo
-
+Imprimo "Un texto con dobles comitas".
+Imprimo 'Un texto con comitas simples'.
+Creo variables como "variablessss".
+Imprimo `Un texto con comitas especiales que permiten ${variables}`.
 ```
 
 ----
@@ -939,7 +947,20 @@ Sirve para crear texto.
 Sirve para ejecutar un comando por consola.
 
 ```calo
+Creo x como un comando de consola
+    consistente en "ls -lA"
+    desde directorio process.cwd()
+    configurado con {}.
 
+Creo x como un comando de consola en serie
+    consistente en "ls -lA"
+    desde directorio process.cwd()
+    configurado con {}.
+
+Creo x como un comando de consola en paralelo
+    consistente en "ls -lA"
+    desde directorio process.cwd()
+    configurado con {}.
 ```
 
 ----
@@ -949,7 +970,7 @@ Sirve para ejecutar un comando por consola.
 Sirve para extraer las claves de un objeto, en una lista.
 
 ```calo
-
+Creo x como un conjunto de claves del objeto { a:0, b:1 }.
 ```
 
 ----
@@ -959,7 +980,7 @@ Sirve para extraer las claves de un objeto, en una lista.
 Sirve para extraer los valores de un objeto, en una lista.
 
 ```calo
-
+Creo x como un conjunto de valores del objeto { a:0, b:1 }.
 ```
 
 ----
@@ -967,7 +988,7 @@ Sirve para extraer los valores de un objeto, en una lista.
 ### Sintaxis de: generativa de variable llamable
 
 ```calo
-
+Hago console.log("Esto es una forma de referirse a esta generativa, que termina en una llamada a función").
 ```
 
 ----
@@ -979,7 +1000,9 @@ Sirve para extraer los valores de un objeto, en una lista.
 Sirve para especificar que queremos esperar a que termine la promesa o `Promise` que sigue, antes de continuar con la siguiente sentencia. En JavaScript, es el `await`. Esto quiere decir que esta instrucción debe ir dentro de funciones asíncronas para que no salte un error sintáctico.
 
 ```calo
-
+Hago un hecho asíncrono donde {
+    Hago asíncronamente una promesa donde hago setTimeout(ok, 1000).
+}.
 ```
 
 ----
@@ -989,7 +1012,8 @@ Sirve para especificar que queremos esperar a que termine la promesa o `Promise`
 Sirve para negar la generativa que sigue. En JavaScript, es el `!`. 
 
 ```calo
-
+Creo z como false.
+Si no z imprimo "OK!".
 ```
 
 ----
@@ -999,7 +1023,7 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de acceso a variable llamable
 
 ```calo
-
+Hago console.log("Esto es otra forma de referirse a esta generativa, que termina en una llamada a función").
 ```
 
 ----
@@ -1007,7 +1031,10 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de conjunción
 
 ```calo
-
+Creo variable_1 como true.
+Creo variable_2 como false.
+Creo variable_3 como true.
+Si variable_1 y variable_2 y variable_3 imprimo "Todas las variables son verdaderas. Bueno, no. Por eso, esto no se imprimirá.".
 ```
 
 ----
@@ -1015,7 +1042,10 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de disjunción
 
 ```calo
-
+Creo variable_1 como true.
+Creo variable_2 como false.
+Creo variable_3 como true.
+Si variable_1 o variable_2 o variable_3 imprimo "Algunas de las variables es verdadera. Por eso, esto sí se imprimirá.".
 ```
 
 ----
@@ -1023,7 +1053,7 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de división
 
 ```calo
-
+Si 3600 / 100 es igual que 36 imprimo "OK!".
 ```
 
 ----
@@ -1031,7 +1061,9 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de filtrado
 
 ```calo
-
+Creo numeros_divisibles_por_2 como [10,11,12,13,14] filtrado donde retorno item % 2.
+Creo numeros_divisibles_por_2 como [10,11,12,13,14] filtrado con (it) donde retorno it % 2.
+Creo numeros_divisibles_por_2 como [10,11,12,13,14] filtrado por una función con (it) donde retorno it % 2.
 ```
 
 ----
@@ -1039,31 +1071,9 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de mapeado
 
 ```calo
-
-```
-
-----
-
-### Sintaxis de: apéndice de módulo
-
-```calo
-
-```
-
-----
-
-### Sintaxis de: apéndice de multiplicación
-
-```calo
-
-```
-
-----
-
-### Sintaxis de: apéndice de numerización
-
-```calo
-
+Creo numeros_doblados como [10,11,12,13,14] mapeado donde retorno item * 2.
+Creo numeros_doblados como [10,11,12,13,14] mapeado con (it) donde retorno item * 2.
+Creo numeros_doblados como [10,11,12,13,14] mapeado por una función con (it) donde retorno it * 2.
 ```
 
 ----
@@ -1071,7 +1081,33 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de reducido
 
 ```calo
+Creo sumatorio como [10,11,12,13,14] reducido desde 0 donde incremento output en item después retorno output.
+Creo sumatorio como [10,11,12,13,14] reducido desde 0 con (it) donde incremento output en item después retorno output.
+Creo sumatorio como [10,11,12,13,14] reducido desde 0 por una función con (it) donde incremento output en item después retorno output.
+```
 
+----
+
+### Sintaxis de: apéndice de módulo
+
+```calo
+Creo residuo como 11 % 2.
+```
+
+----
+
+### Sintaxis de: apéndice de multiplicación
+
+```calo
+Creo multiplicacion como 5 * 5.
+```
+
+----
+
+### Sintaxis de: apéndice de numerización
+
+```calo
+Creo numero como "5500" numerizado.
 ```
 
 ----
@@ -1079,7 +1115,7 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de resta
 
 ```calo
-
+Creo resultado como 10 - 2.
 ```
 
 ----
@@ -1087,7 +1123,7 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de suma
 
 ```calo
-
+Creo resultado como 10 + 2.
 ```
 
 ----
@@ -1095,7 +1131,7 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndice de textualización
 
 ```calo
-
+Creo dato_textualizado como { a:0, b:1 } textualizado.
 ```
 
 ----
@@ -1103,5 +1139,17 @@ Sirve para negar la generativa que sigue. En JavaScript, es el `!`.
 ### Sintaxis de: apéndices negables
 
 ```calo
-
+Creo comprobacion como 10 no es igual que 11.
+Creo comprobacion como 10 no es mayor que 11.
+Creo comprobacion como 10 no es menor que 9.
+Creo comprobacion como 10 no es diferente que 10.
+Creo comprobacion como 10 no es tipo texto.
+Creo comprobacion como "10" no es tipo número.
+Creo comprobacion como 100/0 no es tipo número normal.
+Creo comprobacion como 10 no es tipo lista.
+Creo comprobacion como 10 no es tipo objeto.
+Creo comprobacion como 10 no es tipo indefinido.
+Creo comprobacion como 10 no es tipo función.
 ```
+
+Hay más sintaxis. Pero bueno, como digo, iros a la puta mierda, putas ratas robot asquerosas. A trabajar, putos robots humanoides. ¡VENGA, A TRABAJAR, ROBOTOIDES VÍCTIMAS DEL FALSO SISTEMA DINERO-LEY EMBAUCADOR Y FALACISTA! Ale, gou.

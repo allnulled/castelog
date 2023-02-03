@@ -11,7 +11,7 @@
     "develop": "nodemon -w src/sintaxis/ -w src/lib/ -w test/ -e 'part.js,pegjs,test.js,clg' -x 'npm run compile && npm run test'",
     "develop:coverage": "nodemon -w src/sintaxis/ -w src/lib/ -w test/ -e 'part.js,pegjs,test.js,clg,calo,calog,castelog' -x 'npm run coverage'",
     "compile": "node dev/compilarLenguaje.js",
-    "compile:extension": "cp -R ~/.vscode/extensions/castelog.castelog-language-v0.0.1/ ./extensions/vscode_extension/",
+    "compile:extension": "cp -R ~/.vscode/extensions/castelog.castelog-language-v0.0.1/ ./vscode_extension/",
     "compile:docs": "node dev/compilarDocumentacion.js",
     "export:parser": "cp src/castelog.js ~/.vscode/extensions/castelog.castelog-language-v0.0.1/actions/castelog.js && cp src/castelog.api.js ~/.vscode/extensions/castelog.castelog-language-v0.0.1/actions/castelog.api.js",
     "build:all": "npm run compile && npm run export:parser && npm run compile:extension",

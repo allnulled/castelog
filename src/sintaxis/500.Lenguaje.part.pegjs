@@ -2608,7 +2608,7 @@ Apendice_de_mapeado_por = _* "mapeado" _*
   asincronamente:Token_asincronamente?
   por:Subsentencia_por
   errores:Subsentencia_en_errores_como_funcion?
-    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_mapeado_por(${generativa}, " + `${bloque}, null, ${errores})` }
+    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_mapeado_por(${generativa}, " + `${por}, null, ${errores})` }
 
 Apendice_de_filtrado = ( Apendice_de_filtrado_donde / Apendice_de_filtrado_por )
 Apendice_de_filtrado_donde = _* "filtrado"
@@ -2621,7 +2621,7 @@ Apendice_de_filtrado_por = _* "filtrado" _*
   asincronamente:Token_asincronamente?
   por:Subsentencia_por
   errores:Subsentencia_en_errores_como_funcion?
-    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_filtrado_por(${generativa}, " + `${bloque}, null, ${errores})` }
+    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_filtrado_por(${generativa}, " + `${por}, null, ${errores})` }
 
 Apendice_de_reducido = ( Apendice_de_reducido_donde / Apendice_de_reducido_por )
 Apendice_de_reducido_donde = _* "reducido"
@@ -2636,7 +2636,7 @@ Apendice_de_reducido_por = _* "reducido" _*
   desde:Subsentencia_desde?
   por:Subsentencia_por
   errores:Subsentencia_en_errores_como_funcion?
-    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_reducido_por(${generativa}, " + `undefined, ${desde}, ${errores})` }
+    { return (asincronamente ? "await " : "") + "Castelog.metodos.un_reducido_por(${generativa}, " + `${por}, ${desde}, ${errores})` }
 
 Apendice_de_modificado = ( Apendice_de_modificado_donde / Apendice_de_modificado_por )
 Apendice_de_modificado_donde = _* "modificado"
