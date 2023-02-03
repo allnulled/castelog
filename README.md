@@ -10,6 +10,8 @@
 
 **Castelog** compila a **JavaScript**, igual que lo podría hacer **CoffeeScript** u otros.
 
+**SOFTWARE HUMANO EN MUNDO TOMADO POR LOS ROBOTS. Eh. Eh. Eh. Al final os he pillado, ¿eh?** Menos mal... ahora toda mi vida cobra sentido. *¡Eran robots!* *¡Todos eran putos robots!*
+
 ----
 
 ## Instalación
