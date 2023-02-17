@@ -2528,7 +2528,7 @@ Item_de_array_sintaxis_2_item_1 = _* ("Ítem " / "ítem ")
 Item_de_array_sintaxis_2_item_n = item:(Item_de_array_sintaxis_2_item_1 / Parametro_llamado_incluyo) { return item }
 
 Prependice_de_generativa = (Prependice_de_negacion / Prependice_de_asincronamente)
-Prependice_de_negacion = "no" _* { return "(!(${generativa}))" }
+Prependice_de_negacion = "no" _+ { return "(!(${generativa}))" }
 Prependice_de_asincronamente = Token_asincronamente _* { return "(await ${generativa})"; }
 
 Apendice_de_generativa = apendice:(

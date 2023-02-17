@@ -25487,9 +25487,9 @@ Castelog = (function(factory, scope) {
             }
         },
         compilacion: {
-  "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-git/castelog-core",
+  "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-ultimo",
   "sistema_operativo": "",
-  "fecha": "2023/20/30 21:45.41.655"
+  "fecha": "2023/20/17 50:14.14.614"
 }
     };
 
