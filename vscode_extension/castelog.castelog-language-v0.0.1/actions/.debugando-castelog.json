@@ -1,10 +1,10 @@
 [
   "onCompletion",
   {
-    "_uri": "file:///home/carlos/Escritorio/Nuevo/rest.network/src/www/static/app/example/app.calo",
+    "_uri": "file:///home/carlos/Escritorio/Nuevo/rest.network/src/www/static/app/main/app.calo",
     "_languageId": "castelog",
-    "_version": 2245,
-    "_content": "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Example</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <script src=\"/static/js/socket.io-client.js\"></script>\n    <style>\n      \n    </style>\n</head>\n<body><div id=\"app\"></div></body>.\n\nimporto api nativa.\n\ncreo socket_io como io(\"http://127.0.0.1:9002\").\ncreo socket_io_subscripciones como {}.\ncreo subscribir_a_socket como una función con (evento_id, evento_funcion) donde {\n    asigno socket_io_subscripciones[evento_id] como evento_funcion.\n}.\ncreo desubscribir_a_socket como una función con (id) donde {\n    elimino propiedad socket_io_subscripciones[id].\n}.\nhago socket_io.on(\"connect\", una función con () donde {\n    imprimo \"Socket se conectó!\".\n}).\nhago socket_io.on(\"server to client message\", una función con (datos) donde {\n    imprimo \"Recibidos datos: \" + (datos textualizado).\n    imprimo socket_io_subscripciones.\n    itero como objeto socket_io_subscripciones creando constante evento_id donde {\n        imprimo datos.\n        creo evento_funcion como socket_io_subscripciones[evento_id].\n        hago evento_funcion(datos).\n    }.\n}).\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component\">\n    <h3>Sockets example</h3>\n    <table style=\"width: 100%;\">\n        <tr>\n            <td colspan=\"100\">\n                <textarea v-model=\"conversation\" style=\"width: 100%; resive: vertical; min-height: 120px;\" editable=\"false\"></textarea>\n            </td>\n        </tr>\n        <tr>\n            <td style=\"width: 100%;\">\n                <input v-model=\"message_to_send\" style=\"width: 100%;\" type=\"text\" />\n            </td>\n            <td>\n                <button v-on:click=\"send_message\">Enviar</button>\n            </td>\n        </tr>\n    </table>\n  </div>\n} con lógica {\n    retorno {\n        método data donde {\n            retorno {\n                propiedad conversation como \"\".\n                propiedad message_to_send como \"\".\n            }.\n        }.\n        propiedad methods como {\n            método send_message con () donde {\n                hago socket_io.emit(\"client to server message\", {\n                    propiedad message como this.message_to_send.\n                }).\n                asigno this.message_to_send como \"\".\n            }.\n        }.\n        método mounted donde {\n            @Sección: Subscripción a eventos de Socket.IO\n            hago subscribir_a_socket(\"evento del chat principal\", una lambd con (datos) donde {\n                incremento this.conversation en \"[\" + datos.user + \"] \" + datos.message.\n            }).\n        }.\n        método unmounted donde {\n            @Sección: Desubscripción a eventos de Socket.IO\n            hago desubscribir_a_socket(\"evento del chat principal\").\n        }.\n    }.\n}.\n\ncreo App como una aplicación vue2 con nombre \"App\" con rutas [{\n    propiedad path como \"/\".\n    propiedad name como \"Home\".\n    propiedad component como PaginaDeInicio.\n    propiedad props como {}.\n}] con traducciones {\n    propiedad es como {}.\n    propiedad en como {}.\n    propiedad ca como {}.\n} con plantilla {\n  <div class=\"App Component Castelog-app\">\n    <router-view></router-view>\n  </div>\n} con estilos {\n    html {}\n    body {}\n    .Component {}\n    .App {}\n} con lógica {\n  retorno {\n    método data donde {\n      retorno {\n        \n      }.\n    }.\n    propiedad methods como {}.\n    propiedad watch como {}.\n    método beforeMount donde {}.\n    método mounted donde {}.\n  }.\n} montada en \"#app\".",
+    "_version": 6,
+    "_content": "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Office</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <style>\n      \n    </style>\n</head>\n<body><div id=\"app\"></div></body>.\n\nimporto api nativa.\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component\">\n    <button role>OK</button>\n  </div>\n}.\n\ncreo App como una aplicación vue2 con nombre \"App\" con rutas [{\n    propiedad path como \"/\".\n    propiedad name como \"Home\".\n    propiedad component como PaginaDeInicio.\n    propiedad props como {}.\n}] con traducciones {\n    propiedad es como {}.\n    propiedad en como {}.\n    propiedad ca como {}.\n} con plantilla {\n  <div class=\"App Component Castelog-app\">\n    <router-view></router-view>\n  </div>\n} con estilos {\n    html {}\n    body {}\n    .Component {}\n    .App {}\n} con lógica {\n  retorno {\n    método data donde {\n      retorno {\n        \n      }.\n    }.\n    propiedad methods como {}.\n    propiedad watch como {}.\n    método beforeMount donde {}.\n    método mounted donde {}.\n  }.\n} montada en \"#app\".",
     "_lineOffsets": [
       0,
       32,
@@ -12,464 +12,107 @@
       77,
       95,
       102,
-      129,
-      157,
-      234,
-      293,
-      305,
-      312,
-      325,
-      333,
-      368,
-      369,
-      389,
-      390,
-      439,
-      478,
-      560,
-      628,
-      631,
-      692,
-      744,
-      747,
-      803,
-      837,
-      841,
-      919,
-      975,
-      1013,
-      1096,
-      1119,
-      1189,
-      1225,
-      1232,
-      1236,
-      1237,
-      1325,
-      1366,
-      1395,
-      1428,
-      1441,
-      1472,
-      1608,
-      1626,
-      1640,
-      1653,
-      1691,
-      1776,
-      1794,
-      1811,
-      1877,
-      1895,
-      1909,
-      1922,
-      1931,
-      1946,
-      1960,
-      1988,
-      2010,
-      2058,
-      2109,
-      2124,
-      2135,
-      2168,
-      2215,
-      2281,
-      2346,
-      2366,
-      2419,
-      2434,
-      2445,
-      2476,
-      2534,
-      2630,
-      2719,
-      2735,
-      2746,
-      2779,
-      2839,
-      2908,
-      2919,
-      2926,
-      2929,
-      2930,
-      2994,
-      3023,
-      3055,
-      3100,
-      3129,
-      3151,
-      3177,
-      3203,
-      3229,
-      3247,
-      3290,
-      3322,
-      3331,
-      3347,
-      3359,
-      3371,
-      3389,
-      3401,
-      3416,
-      3428,
-      3452,
-      3468,
-      3477,
-      3486,
-      3493,
-      3524,
-      3553,
-      3586,
-      3615,
-      3620
+      128,
+      156,
+      233,
+      245,
+      252,
+      265,
+      273,
+      308,
+      309,
+      329,
+      330,
+      418,
+      459,
+      488,
+      497,
+      500,
+      501,
+      565,
+      594,
+      626,
+      671,
+      700,
+      722,
+      748,
+      774,
+      800,
+      818,
+      861,
+      893,
+      902,
+      918,
+      930,
+      942,
+      960,
+      972,
+      987,
+      999,
+      1023,
+      1039,
+      1048,
+      1057,
+      1064,
+      1095,
+      1124,
+      1157,
+      1186,
+      1191
     ]
   },
-  75,
-  75,
-  "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Example</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <script src=\"/static/js/socket.io-client.js\"></script>\n    <style>\n      \n    </style>\n</head>\n<body><div id=\"app\"></div></body>.\n\nimporto api nativa.\n\ncreo socket_io como io(\"http://127.0.0.1:9002\").\ncreo socket_io_subscripciones como {}.\ncreo subscribir_a_socket como una función con (evento_id, evento_funcion) donde {\n    asigno socket_io_subscripciones[evento_id] como evento_funcion.\n}.\ncreo desubscribir_a_socket como una función con (id) donde {\n    elimino propiedad socket_io_subscripciones[id].\n}.\nhago socket_io.on(\"connect\", una función con () donde {\n    imprimo \"Socket se conectó!\".\n}).\nhago socket_io.on(\"server to client message\", una función con (datos) donde {\n    imprimo \"Recibidos datos: \" + (datos textualizado).\n    imprimo socket_io_subscripciones.\n    itero como objeto socket_io_subscripciones creando constante evento_id donde {\n        imprimo datos.\n        creo evento_funcion como socket_io_subscripciones[evento_id].\n        hago evento_funcion(datos).\n    }.\n}).\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component\">\n    <h3>Sockets example</h3>\n    <table style=\"width: 100%;\">\n        <tr>\n            <td colspan=\"100\">\n                <textarea v-model=\"conversation\" style=\"width: 100%; resive: vertical; min-height: 120px;\" editable=\"false\"></textarea>\n            </td>\n        </tr>\n        <tr>\n            <td style=\"width: 100%;\">\n                <input v-model=\"message_to_send\" style=\"width: 100%;\" type=\"text\" />\n            </td>\n            <td>\n                <button v-on:click=\"send_message\">Enviar</button>\n            </td>\n        </tr>\n    </table>\n  </div>\n} con lógica {\n    retorno {\n        método data donde {\n            retorno {\n                propiedad conversation como \"\".\n                propiedad message_to_send como \"\".\n            }.\n        }.\n        propiedad methods como {\n            método send_message con () donde {\n                hago socket_io.emit(\"client to server message\", {\n                    propiedad message como this.message_to_send.\n                }).\n                asigno this.message_to_send como \"\".\n            }.\n        }.\n        método mounted donde {\n            @Sección: Subscripción a eventos de Socket.IO\n            hago subscribir_a_socket(\"evento del chat principal\", una lambd",
+  18,
+  16,
+  "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Office</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <style>\n      \n    </style>\n</head>\n<body><div id=\"app\"></div></body>.\n\nimporto api nativa.\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component\">\n    <button role",
   [
     {
-      "label": "{ separación }",
+      "label": "{ [[\"A\",\"Z\"],[\"a\",\"z\"],[\"0\",\"9\"],\"-\",\"_\",\":\",\".\",\"@\"] }",
       "kind": 1,
-      "insertText": "\n",
+      "insertText": "*",
       "data": 70,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": ".",
+      "label": "{ [\"\\n\",\"\\r\",\"\\t\",\" \"] }",
       "kind": 1,
+      "insertText": "*",
       "data": 71,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "punto",
+      "label": "=",
       "kind": 1,
-      "data": 73,
+      "data": 72,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "[",
+      "label": "/>",
       "kind": 1,
       "data": 75,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "iniciolista",
+      "label": ">",
       "kind": 1,
-      "data": 77,
+      "data": 81,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "(",
-      "kind": 1,
-      "data": 80,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "iniciogrupo",
+      "label": "<",
       "kind": 1,
       "data": 82,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "+",
-      "kind": 1,
-      "data": 84,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "-",
+      "label": "</",
       "kind": 1,
       "data": 86,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "*",
-      "kind": 1,
-      "data": 88,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "/",
-      "kind": 1,
-      "data": 90,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "%",
-      "kind": 1,
-      "data": 92,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "mapeado por su propiedad",
-      "kind": 1,
-      "data": 94,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "mapeado",
-      "kind": 1,
-      "data": 96,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "filtrado",
-      "kind": 1,
-      "data": 100,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "reducido",
-      "kind": 1,
-      "data": 104,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "modificado",
-      "kind": 1,
-      "data": 108,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "extendido por",
-      "kind": 1,
-      "data": 112,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "concatenado por",
-      "kind": 1,
-      "data": 114,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "siendo",
-      "kind": 1,
-      "data": 116,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "no",
-      "kind": 1,
-      "data": 118,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es mayor o igual que",
-      "kind": 1,
-      "data": 120,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es menor o igual que",
-      "kind": 1,
-      "data": 122,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es mayor que",
-      "kind": 1,
-      "data": 124,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es menor que",
-      "kind": 1,
-      "data": 126,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es igual que",
-      "kind": 1,
-      "data": 128,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es diferente que",
-      "kind": 1,
-      "data": 130,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "contiene valor",
-      "kind": 1,
-      "data": 132,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "contiene clave",
-      "kind": 1,
-      "data": 134,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "está contenido",
-      "kind": 1,
-      "data": 136,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "está contenida",
-      "kind": 1,
-      "data": 137,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo número normal",
-      "kind": 1,
-      "data": 139,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo número",
-      "kind": 1,
-      "data": 141,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo texto",
-      "kind": 1,
-      "data": 143,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo objeto",
-      "kind": 1,
-      "data": 145,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo lista",
-      "kind": 1,
-      "data": 147,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo función",
-      "kind": 1,
-      "data": 149,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo indefinido",
-      "kind": 1,
-      "data": 151,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es instancia de",
-      "kind": 1,
-      "data": 153,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "es tipo booleano",
-      "kind": 1,
-      "data": 155,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "y",
-      "kind": 1,
-      "data": 157,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "o",
-      "kind": 1,
-      "data": 159,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "numerizado",
-      "kind": 1,
-      "data": 161,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "retornando",
-      "kind": 1,
-      "data": 163,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "textualizado",
-      "kind": 1,
-      "data": 173,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": ",",
-      "kind": 1,
-      "data": 175,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "coma",
-      "kind": 1,
-      "data": 177,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": ")",
-      "kind": 1,
-      "data": 180,
-      "detail": "",
-      "documentation": ""
-    },
-    {
-      "label": "okgrupo",
-      "kind": 1,
-      "data": 182,
       "detail": "",
       "documentation": ""
     }
