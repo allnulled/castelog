@@ -159,7 +159,7 @@
 			"patterns": [
 				{
 					"name": "modifier.control.castelog",
-					"match": "\\b(una reducción recursiva|una promesa|una clase|que extiende( de)?|numerizado|textualizado|modificado con|modificado por|mapeado de objeto a lista por su|mapeado con|mapeado donde|filtrado con|filtrado donde|reducido desde|reducido con|reducido por|extendido por|también extendido por|concatenado por|también concatenado por|cuando|entonces|si no|( ?con )?un nuevo|( ?con )?una nueva|una función mixta|( ?con )?una función|( ?con )?una lambda|lo demás en|incluyo |retornando|modificado con)\\b"
+					"match": "\\b(una reducción recursiva|una promesa|una clase|que extiende( de)?|numerizado|textualizado|modificado con|modificado por|mapeado de objeto a lista por su|mapeado con|mapeado donde|filtrado con|filtrado donde|reducido desde|reducido con|reducido por|extendido por|expandido por|también extendido por|concatenado por|también concatenado por|cuando|entonces|si no|( ?con )?un nuevo|( ?con )?una nueva|una función mixta|( ?con )?una función|( ?con )?una lambda|lo demás en|incluyo |retornando|modificado con)\\b"
 				}
 			]
 		},

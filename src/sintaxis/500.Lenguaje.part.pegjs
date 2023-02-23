@@ -2544,6 +2544,7 @@ Apendice_de_generativa = apendice:(
   Apendice_de_reducido /
   Apendice_de_modificado /
   Apendice_de_extendido_por /
+  Apendice_de_expandido_por /
   Apendice_de_concatenado_por /
   Apendice_de_siendo /
   Apendices_negables / 
@@ -2655,6 +2656,8 @@ Subsentencia_por = _* "por" _* reducer:Generativa { return reducer }
 
 Apendice_de_extendido_por = _* "extendido por" _* extension_1:Generativa extension_n:Subsentencia_de_tambien_extendido_por?
     { return "Object.assign(${generativa}, " + extension_1 + ( extension_n ? (', ' + extension_n) : '' ) + " )" }
+Apendice_de_expandido_por = _* "expandido por" _* expansion_1:Generativa
+    { return "Castelog.metodos.una_expansion(${generativa}, " + expansion_1 + ")" }
 Apendice_de_concatenado_por = _* "concatenado por" _* extension_1:Generativa extension_n:Subsentencia_de_tambien_concatenado_por?
     { return "(${generativa}).concat(" + extension_1 + ( extension_n ? (', ' + extension_n) : '' ) + " )" }
 Apendice_de_conjuncion = _* "y" _+ generativa:Generativa

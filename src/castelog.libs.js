@@ -25489,7 +25489,7 @@ Castelog = (function(factory, scope) {
         compilacion: {
   "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-ultimo",
   "sistema_operativo": "",
-  "fecha": "2023/20/20 21:42.51.542"
+  "fecha": "2023/20/23 15:49.90.282"
 }
     };
 
@@ -29895,6 +29895,38 @@ Castelog.variables.Resultado_de_reduccion_recursiva = class {
         this.resultado = resultado;
     }
 };
+
+//Included:lib/578.castelog.v1.metodos.una_expansion.js
+Castelog.variables.configuraciones_de_expansion_por_defecto = {
+    separador: "/"
+};
+Castelog.metodos.una_expansion = function(base = {}, expansor = {}, configuraciones_arg = {}) {
+    const configuraciones = Object.assign({}, Castelog.variables.configuraciones_de_expansion_por_defecto, configuraciones_arg);
+    const { separador } = configuraciones;
+    const expansor_ids = Object.keys(expansor);
+    for(let index_id = 0; index_id < expansor_ids.length; index_id++) {
+        const expansor_id = expansor_ids[index_id];
+        const expansor_valor = expansor[expansor_id];
+        const expansor_partes = expansor_id.split(separador).filter(it => it !== "");
+        let pivote = base;
+        for(let index_parte_id = 0; index_parte_id < expansor_partes.length; index_parte_id++) {
+            const expansor_parte = expansor_partes[index_parte_id];
+            if(typeof pivote === "undefined") {
+                pivote = {};
+            } else if (typeof pivote === "boolean") {
+                pivote = { $valor: pivote };
+            } else if (typeof pivote === "number") {
+                pivote = { $valor: pivote };
+            }
+            if(index_parte_id === expansor_partes.length - 1) {
+                pivote[expansor_parte] = expansor_valor;
+            } else {
+                pivote = pivote[expansor_parte];
+            }
+        }
+    }
+    return base;
+}
 
 //Included:lib/600.castelog.v1.componentes_vue2.js
 

@@ -1,9 +1,0 @@
-Imprimo "OK!".
-
-Creo constante x como un objeto con {
-    Propiedad a como "a".
-    Propiedad b como "b".
-    Propiedad c como "c".
-}.
-
-Elimino propiedad x.a.
