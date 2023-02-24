@@ -185,6 +185,7 @@ Generativa_simple = generativa:(
   Generativa_de_un_resultado_de_proxificacion /
   Generativa_de_una_interfaz_vacia /
   Generativa_de_un_navegador_automatico /
+  Generativa_de_un_acceso_a_propiedad /
   Generativa_de_sabes_pues /
   Hook_para_generativa /
   Generativa_de_una_propiedad_para /
@@ -2144,6 +2145,12 @@ Generativa_de_una_interfaz_vacia = _* "una interfaz vacía"
 Generativa_de_un_navegador_automatico = _* "un navegador automático"
   configuraciones:Subsentencia_configurado_con?
     { return `Castelog.metodos.un_navegador_automatico(${configuraciones})` }
+
+Generativa_de_un_acceso_a_propiedad = _* "un acceso a propiedad"
+  propiedad:Generativa
+  base:Subsentencia_a_partir_de
+  defecto:Subsentencia_por_defecto?
+    { return `Castelog.metodos.un_acceso_a_propiedad(${propiedad}, ${base}, ${defecto ? defecto : "Error"})` }
 
 Generativa_de_sabes_pues = Subgenerativa_de_sabes_pues_1
 

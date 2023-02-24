@@ -25489,7 +25489,7 @@ Castelog = (function(factory, scope) {
         compilacion: {
   "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-ultimo",
   "sistema_operativo": "",
-  "fecha": "2023/20/24 10:31.24.688"
+  "fecha": "2023/20/24 12:11.44.469"
 }
     };
 
@@ -28835,93 +28835,6 @@ Castelog.metodos.un_diagrama_de_dependencias = function(diagrama) {
 
 };
 
-//Included:lib/562.castelog.v1.metodos.utilidades_del_dom.js
-Castelog.metodos.una_seleccion_de_elementos_del_dom = function(parametros, base) {
-    if(typeof parametros !== "string") {
-        throw new Error("Required parameter «parametros» to be a string (a css selector) in order to «Castelog.metodos.una_seleccion_de_elementos_del_dom»");
-    }
-    if(typeof base === "string") {
-        base = document.querySelector(base);
-    }
-    if(!(base instanceof HTMLElement)) {
-        throw new Error("Required parameter «base» to a string (a css selector) matching at least 1 element or an instance of HTMLElement in order to «Castelog.metodos.una_seleccion_de_elementos_del_dom»");
-    }
-    return Array.from(base.querySelectorAll(parametros));
-};
-Castelog.metodos.una_seleccion_del_primer_elemento_del_dom = function(parametros, base) {
-    if (typeof parametros !== "string") {
-        throw new Error("Required parameter «parametros» to be a string (a css selector) in order to «Castelog.metodos.una_seleccion_del_primer_elemento_del_dom»");
-    }
-    if (typeof base === "string") {
-        base = document.querySelector(base);
-    }
-    if (!(base instanceof HTMLElement)) {
-        throw new Error("Required parameter «base» to a string (a css selector) matching at least 1 element or an instance of HTMLElement in order to «Castelog.metodos.una_seleccion_del_primer_elemento_del_dom»");
-    }
-    return base.querySelector(parametros);
-};
-Castelog.metodos.una_insercion_de_estilos_en_cascada = function(id, contenidos) {
-    const PROPERTY = "data-identificador-de-estilo-en-cascada-de-castelog";
-    const matches = Array.from(document.head.querySelectorAll(`style`)).filter(item => {
-        const id_elemento = item.getAttribute(PROPERTY);
-        return id === id_elemento;
-    });
-    if(matches.length) {
-        return false;
-    }
-    const styleTag = document.createElement("style");
-    styleTag.setAttribute(PROPERTY, id);
-    styleTag.textContent = contenidos;
-    document.head.appendChild(styleTag);
-};
-Castelog.metodos.un_bloque_de_estilos_en_cascada = function(bloque_de_texto) {
-    return bloque_de_texto;
-};
-Castelog.metodos.una_insercion_de_elemento_del_dom = function(selector, base, elemento_html) {
-    if(typeof base === "string") {
-        base = Array.from(document.querySelectorAll(base));
-    }
-    if (base === null) {
-        base = [document.body];
-    }
-    if(base instanceof HTMLElement) {
-        base = [ base ];
-    }
-    if(!Array.isArray(base)) {
-        throw new Error("Required parameter «base» to result a css selection as an array in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    if(base.length === 0) {
-        throw new Error("Required parameter «base» to be css selection matching minimum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    if(base.length > 1) {
-        throw new Error("Required parameter «base» to be css selection matching maximum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    base = base[0];
-    if(!(base instanceof HTMLElement)) {
-        throw new Error("Required parameter «base» to result an instance of HTMLElement in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    if (typeof selector !== "string") {
-        throw new Error("Required parameter «selector» to be a string in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    const selection = base.querySelectorAll(selector);
-    if(selection.length === 0) {
-        throw new Error("Required parameter «selector» to match minimum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    if(selection.length > 1) {
-        throw new Error("Required parameter «selector» to match maximum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
-    }
-    const selected = selection[0];
-    selected.appendChild(elemento_html);
-    return [selected, elemento_html];
-};
-Castelog.metodos.un_elemento_jquery = function(...parametros) {
-    if(typeof jQuery !== "function") {
-        throw new Error("Required «jQuery» library to be loaded in order to «Castelog.metodos.un_elemento_jquery»");
-    }
-    return jQuery(...parametros);
-};
-
-
 //Included:lib/563.castelog.v1.metodos.un_formateo_de_fecha.js
 Castelog.variables.formato_de_fecha_por_defecto = "YYYY/MM/DD HH:mm:ss.xxx";
 Castelog.metodos.un_formateo_de_fecha = function (fecha = new Date(), formato = Castelog.variables.formato_de_fecha_por_defecto, direccion = "un formateo de fecha a texto") {
@@ -29944,6 +29857,127 @@ Castelog.metodos.un_navegador_automatico = function(configuraciones_arg = {}) {
     }
     return puppeteer.launch(configuraciones);
 }
+
+//Included:lib/580.castelog.v1.metodos.una_seleccion_de_elementos_del_dom.js
+Castelog.metodos.una_seleccion_de_elementos_del_dom = function (parametros, base) {
+    if (typeof parametros !== "string") {
+        throw new Error("Required parameter «parametros» to be a string (a css selector) in order to «Castelog.metodos.una_seleccion_de_elementos_del_dom»");
+    }
+    if (typeof base === "string") {
+        base = document.querySelector(base);
+    }
+    if (!(base instanceof HTMLElement)) {
+        throw new Error("Required parameter «base» to a string (a css selector) matching at least 1 element or an instance of HTMLElement in order to «Castelog.metodos.una_seleccion_de_elementos_del_dom»");
+    }
+    return Array.from(base.querySelectorAll(parametros));
+};
+
+//Included:lib/581.castelog.v1.metodos.una_seleccion_del_primer_elemento_del_dom.js
+Castelog.metodos.una_seleccion_del_primer_elemento_del_dom = function (parametros, base) {
+    if (typeof parametros !== "string") {
+        throw new Error("Required parameter «parametros» to be a string (a css selector) in order to «Castelog.metodos.una_seleccion_del_primer_elemento_del_dom»");
+    }
+    if (typeof base === "string") {
+        base = document.querySelector(base);
+    }
+    if (!(base instanceof HTMLElement)) {
+        throw new Error("Required parameter «base» to a string (a css selector) matching at least 1 element or an instance of HTMLElement in order to «Castelog.metodos.una_seleccion_del_primer_elemento_del_dom»");
+    }
+    return base.querySelector(parametros);
+};
+
+//Included:lib/582.castelog.v1.metodos.una_insercion_de_estilos_en_cascada.js
+Castelog.metodos.una_insercion_de_estilos_en_cascada = function (id, contenidos) {
+    const PROPERTY = "data-identificador-de-estilo-en-cascada-de-castelog";
+    const matches = Array.from(document.head.querySelectorAll(`style`)).filter(item => {
+        const id_elemento = item.getAttribute(PROPERTY);
+        return id === id_elemento;
+    });
+    if (matches.length) {
+        return false;
+    }
+    const styleTag = document.createElement("style");
+    styleTag.setAttribute(PROPERTY, id);
+    styleTag.textContent = contenidos;
+    document.head.appendChild(styleTag);
+};
+
+//Included:lib/583.castelog.v1.metodos.un_bloque_de_estilos_en_cascada.js
+Castelog.metodos.un_bloque_de_estilos_en_cascada = function (bloque_de_texto) {
+    return bloque_de_texto;
+};
+
+//Included:lib/584.castelog.v1.metodos.un_elemento_jquery.js
+Castelog.metodos.una_insercion_de_estilos_en_cascada = function (id, contenidos) {
+    const PROPERTY = "data-identificador-de-estilo-en-cascada-de-castelog";
+    const matches = Array.from(document.head.querySelectorAll(`style`)).filter(item => {
+        const id_elemento = item.getAttribute(PROPERTY);
+        return id === id_elemento;
+    });
+    if (matches.length) {
+        return false;
+    }
+    const styleTag = document.createElement("style");
+    styleTag.setAttribute(PROPERTY, id);
+    styleTag.textContent = contenidos;
+    document.head.appendChild(styleTag);
+};
+
+//Included:lib/585.castelog.v1.metodos.una_insercion_de_elemento_del_dom.js
+Castelog.metodos.una_insercion_de_elemento_del_dom = function (selector, base, elemento_html) {
+    if (typeof base === "string") {
+        base = Array.from(document.querySelectorAll(base));
+    }
+    if (base === null) {
+        base = [document.body];
+    }
+    if (base instanceof HTMLElement) {
+        base = [base];
+    }
+    if (!Array.isArray(base)) {
+        throw new Error("Required parameter «base» to result a css selection as an array in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    if (base.length === 0) {
+        throw new Error("Required parameter «base» to be css selection matching minimum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    if (base.length > 1) {
+        throw new Error("Required parameter «base» to be css selection matching maximum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    base = base[0];
+    if (!(base instanceof HTMLElement)) {
+        throw new Error("Required parameter «base» to result an instance of HTMLElement in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    if (typeof selector !== "string") {
+        throw new Error("Required parameter «selector» to be a string in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    const selection = base.querySelectorAll(selector);
+    if (selection.length === 0) {
+        throw new Error("Required parameter «selector» to match minimum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    if (selection.length > 1) {
+        throw new Error("Required parameter «selector» to match maximum 1 element in order to «Castelog.metodos.una_insercion_de_elemento_del_dom»");
+    }
+    const selected = selection[0];
+    selected.appendChild(elemento_html);
+    return [selected, elemento_html];
+};
+
+//Included:lib/586.castelog.v1.metodos.un_acceso_a_propiedad.js
+Castelog.metodos.un_acceso_a_propiedad = function (selector, base, valor_por_defecto = Error) {
+    if (!Array.isArray(selector)) {
+        throw new Error("Se requiere propiedad «selector» ser un array para «Castelog.metodos.un_acceso_a_propiedad»");
+    }
+    let valor_pivote = base;
+    try {
+        for(let index = 0; index < selector.length; index++) {
+            const parte_de_selector = selector[index];
+            valor_pivote = valor_pivote[parte_de_selector];
+        }
+    } catch (error) {
+        valor_pivote = valor_por_defecto;
+    }
+    return valor_pivote;
+};
 
 //Included:lib/600.castelog.v1.componentes_vue2.js
 
