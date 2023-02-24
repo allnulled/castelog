@@ -184,6 +184,7 @@ Generativa_simple = generativa:(
   Generativa_de_un_manifiesto_web /
   Generativa_de_un_resultado_de_proxificacion /
   Generativa_de_una_interfaz_vacia /
+  Generativa_de_un_navegador_automatico /
   Generativa_de_sabes_pues /
   Hook_para_generativa /
   Generativa_de_una_propiedad_para /
@@ -222,7 +223,7 @@ Lenguaje_inicial_sin_salto_final = _* sentencias:Sentencias { return sentencias 
 Lenguaje_inicial = _* sentencias:Sentencias _* { return sentencias }
 Nuevo_bloque_en_texto = _* SIMBOLO_ABRIR_BLOQUE _* Escript_de_castelog _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(text().replace(/^[\n\t ]*\{|\}[\n\t ]*$/g, "")) }
 Nuevo_bloque_en_js = _* SIMBOLO_ABRIR_BLOQUE _* script:Escript_de_castelog _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(script) }
-Nuevo_bloque_en_css = _* SIMBOLO_ABRIR_BLOQUE _* script:Codigo_css _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(script) }
+Nuevo_bloque_en_css = _* SIMBOLO_ABRIR_BLOQUE _* script:Codigo_css_a_texto _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(script) }
 Bloque = ( Bloque_unilinea / Bloque_multilinea )
 Bloque_unilinea "bloque unilinea" = (SIMBOLO_DE_COMA/":"/_*) _* bloque:Sentencia_incompleta despues:Subsentencias_despues? ";"? { return bloque + ( despues ? ("\n" + despues) : "" ) }
 Bloque_multilinea  = _* SIMBOLO_ABRIR_BLOQUE _* bloque:Lenguaje_inicial _* SIMBOLO_CERRAR_BLOQUE { return bloque }
@@ -2139,6 +2140,10 @@ Generativa_de_un_resultado_de_proxificacion = _* "un resultado de proxificación
 Generativa_de_una_interfaz_vacia = _* "una interfaz vacía" 
   con:Subsentencia_con
     { return `Castelog.metodos.una_interfaz_vacia(${con})` }
+
+Generativa_de_un_navegador_automatico = _* "un navegador automático"
+  configuraciones:Subsentencia_configurado_con?
+    { return `Castelog.metodos.un_navegador_automatico(${configuraciones})` }
 
 Generativa_de_sabes_pues = Subgenerativa_de_sabes_pues_1
 

@@ -25489,7 +25489,7 @@ Castelog = (function(factory, scope) {
         compilacion: {
   "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-ultimo",
   "sistema_operativo": "",
-  "fecha": "2023/20/23 15:49.90.282"
+  "fecha": "2023/20/24 10:31.24.688"
 }
     };
 
@@ -29904,19 +29904,21 @@ Castelog.metodos.una_expansion = function(base = {}, expansor = {}, configuracio
     const configuraciones = Object.assign({}, Castelog.variables.configuraciones_de_expansion_por_defecto, configuraciones_arg);
     const { separador } = configuraciones;
     const expansor_ids = Object.keys(expansor);
-    for(let index_id = 0; index_id < expansor_ids.length; index_id++) {
+    for (let index_id = 0; index_id < expansor_ids.length; index_id++) {
         const expansor_id = expansor_ids[index_id];
         const expansor_valor = expansor[expansor_id];
         const expansor_partes = expansor_id.split(separador).filter(it => it !== "");
         let pivote = base;
         for(let index_parte_id = 0; index_parte_id < expansor_partes.length; index_parte_id++) {
             const expansor_parte = expansor_partes[index_parte_id];
-            if(typeof pivote === "undefined") {
-                pivote = {};
-            } else if (typeof pivote === "boolean") {
-                pivote = { $valor: pivote };
-            } else if (typeof pivote === "number") {
-                pivote = { $valor: pivote };
+            if(typeof pivote[expansor_parte] === "undefined") {
+                pivote[expansor_parte] = {};
+            } else if (typeof pivote[expansor_parte] === "boolean") {
+                pivote[expansor_parte] = { $meta: { valor: pivote[expansor_parte] } };
+            } else if (typeof pivote[expansor_parte] === "number") {
+                pivote[expansor_parte] = { $meta: { valor: pivote[expansor_parte] } };
+            } else if (pivote[expansor_parte] === null) {
+                pivote[expansor_parte] = { $meta: { valor: pivote[expansor_parte] } };
             }
             if(index_parte_id === expansor_partes.length - 1) {
                 pivote[expansor_parte] = expansor_valor;
@@ -29926,6 +29928,21 @@ Castelog.metodos.una_expansion = function(base = {}, expansor = {}, configuracio
         }
     }
     return base;
+}
+
+//Included:lib/579.castelog.v1.metodos.un_navegador_automatico.js
+Castelog.variables.configuraciones_de_navegador_automatico_por_defecto = {
+    headless: false
+};
+Castelog.metodos.un_navegador_automatico = function(configuraciones_arg = {}) {
+    const configuraciones = Object.assign({}, Castelog.variables.configuraciones_de_navegador_automatico_por_defecto, configuraciones_arg);
+    let puppeteer = undefined;
+    try {
+        puppeteer = require("puppeteer");
+    } catch(error) {
+        throw new Error("Se requiere del módulo «puppeteer» (versión 19.7.2 óptimamente) para «Castelog.metodos.un_navegador_automatico»");
+    }
+    return puppeteer.launch(configuraciones);
 }
 
 //Included:lib/600.castelog.v1.componentes_vue2.js

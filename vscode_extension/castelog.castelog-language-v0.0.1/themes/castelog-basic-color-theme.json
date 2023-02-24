@@ -1423,6 +1423,13 @@
 			}
 		},
 		{
+			"scope": "webtools.control.castelog",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#834376"
+			}
+		},
+		{
 			"scope": "security.control.castelog",
 			"settings": {
 				"fontStyle": "bold",

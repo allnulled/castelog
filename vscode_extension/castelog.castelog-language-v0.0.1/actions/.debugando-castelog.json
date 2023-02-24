@@ -1,137 +1,367 @@
 [
   "onCompletion",
   {
-    "_uri": "file:///home/carlos/Escritorio/Nuevo2/carl.os/test/controlator.calo",
+    "_uri": "file:///home/carlos/Escritorio/Nuevo2/scrapers/playwright/pupi2.calo",
     "_languageId": "castelog",
-    "_version": 272,
-    "_content": "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre controlator.ui\n    con versión 1\n<head>\n    <title></title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <script sync=\"true\" src=\"/lib/nativa.js\"></script>\n    <script sync=\"true\" src=\"/lib/controlator.js\"></script>\n    <style>\n      \n    </style>\n    <script>\nCastelog.metodos.una_expansion = function(base = {}, expansor = {}, configuraciones_arg = {}) {\n    const configuraciones = Object.assign({}, Castelog.variables.configuraciones_de_expansion_por_defecto, configuraciones_arg);\n    const { separador } = configuraciones;\n    const expansor_ids = Object.keys(expansor);\n    for(let index_id = 0; index_id < expansor_ids.length; index_id++) {\n        const expansor_id = expansor_ids[index_id];\n        console.log(\"ID: \" + expansor_id);\n        const expansor_valor = expansor[expansor_id];\n        const expansor_partes = expansor_id.split(separador).filter(it => it !== \"\");\n        let pivote = base;\n        for(let index_parte_id = 0; index_parte_id < expansor_partes.length; index_parte_id++) {\n            const expansor_parte = expansor_partes[index_parte_id];\n            console.log(\"PARTE: \" + expansor_parte);\n            if(typeof pivote[expansor_parte] === \"undefined\") {\n                pivote[expansor_parte] =  $valor: undefind};\n            } else if (typeof pivote[expansor_parte] === \"boolean\") {\n                pivote[expansor_parte] = { $valor: pivote[expansor_parte] };\n            } else if (typeof pivote === \"number\") {\n                pivote[expansor_parte] = { $valor: pivote[expansor_parte] };\n            }\n            if(index_parte_id === expansor_partes.length - 1) {\n                console.log(\"Poniendo en \" + expansor_partes.join(\"/\") + \": \", expansor_valor);\n                pivote[expansor_parte] = expansor_valor;\n            } else {\n                pivote = pivote[expansor_parte];\n            }\n        }\n    }\n    return base;\n}\n    </script>\n</head>\n<body><div id=\"app\"></div></body>.\n\nasigno window.app_principal como {} expandido por {\n    método { \"/ventana/de/alerta/abrir\" } con (mensaje) donde {}.\n    método { \"/ventana/de/texto/abrir\" } con (mensaje) donde {}.\n    método { \"/ventana/de/opcion/abrir\" } con (mensaje) donde {}.\n}.\n\nimprimo window.app_principal.\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component\">\n    <Controlator :app=\"app\"></Controlator>\n  </div>\n} con lógica {\n    retorno {\n        método data donde {\n            retorno {\n                app: this.$window.app_principal\n            }.\n        }.\n    }.\n}.\n\ncreo App como una aplicación vue2 con nombre \"App\" con rutas [{\n    propiedad path como \"/\".\n    propiedad name como \"Home\".\n    propiedad component como PaginaDeInicio.\n    propiedad props como {}.\n}] con traducciones {\n    propiedad es como {}.\n    propiedad en como {}.\n    propiedad ca como {}.\n} con plantilla {\n  <div class=\"App Component Castelog-app\">\n    <router-view></router-view>\n  </div>\n} con estilos {\n    html {}\n    body {}\n    .Component {}\n    .App {}\n} con lógica {\n  retorno {\n    método data donde {\n      retorno {\n        \n      }.\n    }.\n    propiedad methods como {}.\n    propiedad watch como {}.\n    método beforeMount donde {}.\n    método mounted donde {}.\n  }.\n} montada en \"#app\".",
+    "_version": 470,
+    "_content": "hago un hecho asíncrono donde {\n    creo navegador como un navegador automático configurado con {}.\n    creo pagina como asíncronamente navegador.newPage().\n    hago asíncronamente pagina.goto(\"https://google.es\").\n    hago asíncronamente pagina.setViewport({ width: 1080, height: 1024 }).\n    hago asíncronamente pagina.type(\".er8xn\", \"Something to translate.\").\n    hago asíncronamente una espera de 3 segundos.\n    hago asíncronamente navegador.close().\n}.",
     "_lineOffsets": [
       0,
       32,
-      56,
-      86,
-      104,
-      111,
-      131,
-      159,
-      236,
-      291,
-      351,
-      363,
-      370,
-      383,
-      396,
-      492,
-      621,
-      664,
-      712,
-      784,
-      836,
-      879,
-      933,
-      1019,
-      1046,
-      1143,
-      1211,
-      1264,
-      1328,
-      1389,
-      1459,
-      1536,
-      1589,
-      1666,
-      1680,
-      1744,
-      1840,
-      1897,
-      1918,
-      1967,
-      1981,
-      1991,
-      1997,
-      2014,
-      2016,
-      2030,
-      2038,
-      2073,
-      2074,
-      2126,
-      2192,
-      2257,
-      2323,
-      2326,
-      2327,
-      2357,
-      2358,
-      2446,
-      2487,
-      2530,
-      2539,
-      2554,
-      2568,
-      2596,
-      2618,
-      2666,
-      2681,
-      2692,
-      2699,
-      2702,
-      2703,
-      2767,
-      2796,
-      2828,
-      2873,
-      2902,
-      2924,
-      2950,
-      2976,
-      3002,
-      3020,
-      3063,
-      3095,
-      3104,
-      3120,
-      3132,
-      3144,
-      3162,
-      3174,
-      3189,
-      3201,
-      3225,
-      3241,
-      3250,
-      3259,
-      3266,
-      3297,
-      3326,
-      3359,
-      3388,
-      3393
+      100,
+      157,
+      215,
+      290,
+      364,
+      414,
+      457
     ]
   },
+  1,
   28,
-  58,
-  "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre controlator.ui\n    con versión 1\n<head>\n    <title></title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <script sync=\"true\" src=\"/lib/nativa.js\"></script>\n    <script sync=\"true\" src=\"/lib/controlator.js\"></script>\n    <style>\n      \n    </style>\n    <script>\nCastelog.metodos.una_expansion = function(base = {}, expansor = {}, configuraciones_arg = {}) {\n    const configuraciones = Object.assign({}, Castelog.variables.configuraciones_de_expansion_por_defecto, configuraciones_arg);\n    const { separador } = configuraciones;\n    const expansor_ids = Object.keys(expansor);\n    for(let index_id = 0; index_id < expansor_ids.length; index_id++) {\n        const expansor_id = expansor_ids[index_id];\n        console.log(\"ID: \" + expansor_id);\n        const expansor_valor = expansor[expansor_id];\n        const expansor_partes = expansor_id.split(separador).filter(it => it !== \"\");\n        let pivote = base;\n        for(let index_parte_id = 0; index_parte_id < expansor_partes.length; index_parte_id++) {\n            const expansor_parte = expansor_partes[index_parte_id];\n            console.log(\"PARTE: \" + expansor_parte);\n            if(typeof pivote[expansor_parte] === \"undefined\") {\n                pivote[expansor_parte] =  $valor: undefind",
+  "hago un hecho asíncrono donde {\n    creo navegador como un n",
   [
     {
-      "label": "<",
+      "label": "{ separación }",
       "kind": 1,
+      "insertText": "\n",
       "data": 70,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "{ [\"\\n\",\"\\r\",\"\\t\",\" \"] }",
+      "label": ".",
       "kind": 1,
-      "insertText": "*",
-      "data": 72,
+      "data": 71,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "</",
+      "label": "punto",
       "kind": 1,
-      "data": 74,
+      "data": 73,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "[",
+      "kind": 1,
+      "data": 75,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "iniciolista",
+      "kind": 1,
+      "data": 77,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "(",
+      "kind": 1,
+      "data": 80,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "iniciogrupo",
+      "kind": 1,
+      "data": 82,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "+",
+      "kind": 1,
+      "data": 84,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "-",
+      "kind": 1,
+      "data": 86,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "*",
+      "kind": 1,
+      "data": 88,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "/",
+      "kind": 1,
+      "data": 90,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "%",
+      "kind": 1,
+      "data": 92,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "mapeado por su propiedad",
+      "kind": 1,
+      "data": 94,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "mapeado",
+      "kind": 1,
+      "data": 96,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "filtrado",
+      "kind": 1,
+      "data": 100,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "reducido",
+      "kind": 1,
+      "data": 104,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "modificado",
+      "kind": 1,
+      "data": 108,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "extendido por",
+      "kind": 1,
+      "data": 112,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "expandido por",
+      "kind": 1,
+      "data": 114,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "concatenado por",
+      "kind": 1,
+      "data": 116,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "siendo",
+      "kind": 1,
+      "data": 118,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "no",
+      "kind": 1,
+      "data": 120,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es mayor o igual que",
+      "kind": 1,
+      "data": 122,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es menor o igual que",
+      "kind": 1,
+      "data": 124,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es mayor que",
+      "kind": 1,
+      "data": 126,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es menor que",
+      "kind": 1,
+      "data": 128,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es igual que",
+      "kind": 1,
+      "data": 130,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es diferente que",
+      "kind": 1,
+      "data": 132,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "contiene valor",
+      "kind": 1,
+      "data": 134,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "contiene clave",
+      "kind": 1,
+      "data": 136,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "está contenido",
+      "kind": 1,
+      "data": 138,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "está contenida",
+      "kind": 1,
+      "data": 139,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo número normal",
+      "kind": 1,
+      "data": 141,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo número",
+      "kind": 1,
+      "data": 143,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo texto",
+      "kind": 1,
+      "data": 145,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo objeto",
+      "kind": 1,
+      "data": 147,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo lista",
+      "kind": 1,
+      "data": 149,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo función",
+      "kind": 1,
+      "data": 151,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo indefinido",
+      "kind": 1,
+      "data": 153,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es instancia de",
+      "kind": 1,
+      "data": 155,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "es tipo booleano",
+      "kind": 1,
+      "data": 157,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "y",
+      "kind": 1,
+      "data": 159,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "o",
+      "kind": 1,
+      "data": 161,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "numerizado",
+      "kind": 1,
+      "data": 163,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "retornando",
+      "kind": 1,
+      "data": 165,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "textualizado",
+      "kind": 1,
+      "data": 175,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": ",",
+      "kind": 1,
+      "data": 178,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "coma",
+      "kind": 1,
+      "data": 180,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "oksentencia",
+      "kind": 1,
+      "data": 182,
       "detail": "",
       "documentation": ""
     }

@@ -1,4 +1,4 @@
-
+Codigo_css_a_texto = Codigo_css { return text() }
 Codigo_css
   = stylesheet:stylesheet comment* { return stylesheet; }
 

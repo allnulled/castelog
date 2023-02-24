@@ -72,6 +72,9 @@
 			"include": "#commandline"
 		},
 		{
+			"include": "#webtools"
+		},
+		{
 			"include": "#htmlconnector"
 		},
 		{
@@ -445,6 +448,14 @@
 				{
 					"name": "commandline.control.castelog",
 					"match": "\\b((((Reseteo|reseteo) (asíncronamente |~ )?directorio)|una aplicación sintáctica universal|un punto sintáctico universal)|(Inicio|inicio)( asíncronamente| ~)?( proyecto NPM| proyecto npm)|desde directorio|(Ejecuto|ejecuto)( asíncronamente| ~)?|un comando de consola en serie|un comando de consola en paralelo|un comando de consola|((Elimino|elimino|Genero|genero)( asíncronamente| ~)?( recursivamente| ~)?( directorio| fichero))|recursiva)\\b"
+				}
+			]
+		},
+		"webtools": {
+			"patterns": [
+				{
+					"name": "webtools.control.castelog",
+					"match": "\\bun navegador automático\\b"
 				}
 			]
 		}
