@@ -79,7 +79,16 @@ try {
     }
     let sourcecodeFinalParser = `/*::Esta compilación de Castelog fue creada en ${formattedDate}::*/\n` + generated_parser;
     fs.writeFileSync(sourceDir + "/castelog.js", sourcecodeFinalParser, "utf8");
-    fs.writeFileSync("/home/carlos/Escritorio/Nuevo/Castelog/castelog-site/scripts/api-castelog.js", sourcecodeFinalParser, "utf8");
+    try {
+        fs.writeFileSync("/home/carlos/Escritorio/Nuevo/Castelog/castelog-site/scripts/api-castelog.js", sourcecodeFinalParser, "utf8");
+    } catch(error) {
+        console.log("Could not export castelog parser to site");
+    }
+    try {
+        fs.writeFileSync("/home/carlos/Escritorio/Nuevo2/shellver/src/static/js/castelog.js", sourcecodeFinalParser, "utf8");
+    } catch (error) {
+        console.log("Could not export castelog parser to shellver-gui");
+    }
     
     /* 4. generate castelog-Xtensions parser source code */
     const castelogXtensionsInput = path.resolve(__dirname + "/../src/castelog-xtensions.pegjs");

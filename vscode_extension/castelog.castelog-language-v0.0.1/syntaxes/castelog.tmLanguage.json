@@ -21,6 +21,15 @@
 			"include": "#design_patterns"
 		},
 		{
+			"include": "#special_operators"
+		},
+		{
+			"include": "#special_operators_2"
+		},
+		{
+			"include": "#special_operators_3"
+		},
+		{
 			"include": "#keywordspref"
 		},
 		{
@@ -190,6 +199,30 @@
 				}
 			]
 		},
+		"special_operators": {
+			"patterns": [
+				{
+					"name": "special_operators.control.castelog",
+					"match": "(Opero con|opero con|\\!|\\¡)|Substituido por|substituido por|Interpelado por|interpelado donde"
+				}
+			]
+		},
+		"special_operators_2": {
+			"patterns": [
+				{
+					"name": "special_operators_2.control.castelog",
+					"match": "inicializado (donde|por)?"
+				}
+			]
+		},
+		"special_operators_3": {
+			"patterns": [
+				{
+					"name": "special_operators_3.control.castelog",
+					"match": "posteriormente"
+				}
+			]
+		},
 		"executability": {
 			"patterns": [
 				{
@@ -355,7 +388,7 @@
 			"patterns": [
 				{
 					"name": "database.control.castelog",
-					"match": "\\b(una conexión|un sistema REST|un sistema rest|en base de datos|modelada por|una selección| a un ítem| a varios ítems| a tabla| a columna| a base de datos| a script de base de datos|filtrando por|ordenando por|agrupando por|paginando por|una inserción|en modelo|una actualización|una eliminación|con registro|Selecciono|selecciono|Inserto|inserto|Actualizo|actualizo|Elimino|elimino|un cacheo|con clave|con valores|con valor|refrescado si|una escritura de fichero|una lectura de fichero|una copia de ficheros|con contenido|con codificación|Leo fichero|leo fichero|Escribo fichero|escribo fichero|cacheo|Cacheo|Conecto |conecto |una base de datos( tipo)?|una pool de bases de datos( tipo)?)\\b"
+					"match": "\\b(una conexión|un sistema REST|un sistema rest|en base de datos|modelada por|una selección| a un ítem| a varios ítems| a tabla| a columna| a base de datos| a script de base de datos|filtrando por|ordenando por|agrupando por|paginando por|una inserción|en modelo|una actualización|una eliminación|con registro|Selecciono|selecciono|Inserto|inserto|Actualizo|actualizo|Elimino|elimino|un cacheo|con clave|con valores|con valor|refrescado si|una escritura de fichero|una lectura de fichero|una copia de ficheros|con contenido|con codificación|Leo fichero|leo fichero|Escribo fichero|escribo fichero|cacheo|Cacheo|Conecto |conecto |una base de datos( tipo)?|una pool de bases de datos( tipo)?)|un escaneo de ficheros\\b"
 				}
 			]
 		},

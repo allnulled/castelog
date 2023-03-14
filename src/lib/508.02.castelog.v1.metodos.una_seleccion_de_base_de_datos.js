@@ -1,4 +1,4 @@
-Castelog.metodos.una_seleccion_de_base_de_datos = function (modelo, filtrando, ordenando, agrupando, paginando, bd = "system", adaptador = Castelog.variables.SimplestDB, objetivo = "a varios ítems") {
+Castelog.metodos.una_seleccion_de_base_de_datos = function (modelo, filtrando, ordenando, agrupando, paginando, bd = "system", adaptador = Castelog.variables.adaptador_de_bases_de_datos_por_defecto, objetivo = "a varios ítems") {
     if(typeof adaptador === "undefined") {
         throw new Error("Required argument «adaptador» to not be undefined in order to «Castelog.metodos.una_seleccion_de_base_de_datos»");
     }

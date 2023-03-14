@@ -3,6 +3,10 @@
   const jquery_source_code = /*::castelog_jquery_source_code::*/ 0
   let lib_source_code = /*::castelog_api_source_code::*/ 0
 
+  const CHARS = {
+    SIMBOLO_ABRIR_BLOQUE: "{",
+    SIMBOLO_CERRAR_BLOQUE: "}",
+  };
   const reduceGenerative = function(prependixes, generative, appendixes) {
     let output = generative;
     for(let index = 0; index < prependixes.length; index++) {
@@ -366,22 +370,36 @@
   }
   /* ::CSS CODE */
 
-  const generate_sentence_for_una_aplicacion_vue2 = function(nombre, plantilla, logica, estilos, rutas, traducciones, montada) {
+  const generate_sentence_for_una_aplicacion_vue2 = function(nombre, plantilla, logica, estilos, parametros_de_estilos, rutas, traducciones, montada) {
     return `Castelog.metodos.una_aplicacion_vue2(\n  ${
       nombre ? nombre[1] : "null"
     },\n  ${
-      generate_splitted_stringification(plantilla[1])
+      generate_splitted_stringification(plantilla)
     },\n  ${
       logica ? wrapInVue2ComponentFactoryFunction(logica[1]) : 'null'
     },\n  ${
-      estilos ? JSON.stringify(estilos[1]) : 'null'
-    }, {},\n  ${
+      estilos ? estilos[1] : 'null'
+    },\n  ${
+      parametros_de_estilos ? parametros_de_estilos : 'null'
+    },\n  ${
       rutas ? rutas[1] : '[]'
     },\n  ${
       traducciones ? traducciones[1] : '{}'
     },\n  ${
       montada ? montada[1] : 'null'
     })`
+  };
+
+  const generate_sentence_for_un_componente_vue2 = function(nombre, plantilla, logica, estilos, parametros_de_estilos) {
+    return `Castelog.metodos.un_componente_vue2(${
+      nombre ? nombre[1] : "null"
+    },\n  ${
+      generate_splitted_stringification(plantilla)
+    },\n  ${
+      logica ? wrapInVue2ComponentFactoryFunction(logica[1]) : 'null'
+    },\n  ${
+      estilos ? estilos[1] : 'null'
+    })`;
   };
 
   const generate_splitted_stringification = function(text) {

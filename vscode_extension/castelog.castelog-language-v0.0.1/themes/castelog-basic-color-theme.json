@@ -1206,6 +1206,27 @@
 			}
 		},
 		{
+			"scope": "special_operators.control.castelog",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#73b673"
+			}
+		},
+		{
+			"scope": "special_operators_2.control.castelog",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#dcb769"
+			}
+		},
+		{
+			"scope": "special_operators_3.control.castelog",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#dd8970"
+			}
+		},
+		{
 			"scope": "keyword.control.castelog",
 			"settings": {
 				"fontStyle": "bold",

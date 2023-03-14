@@ -1,4 +1,4 @@
-Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla, logica, estilos, parametros_de_estilos = {}, rutas = [], traducciones = [], montada = null) {
+Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla_arg, logica, estilos, parametros_de_estilos = {}, rutas = [], traducciones = [], montada = null) {
     if(typeof window === "object") {
         const vue_global = (typeof window.Vue !== "undefined") ? window.Vue : (typeof window.vue !== "undefined") ? window.vue : undefined;
         if(typeof vue_global === "undefined") {
@@ -8,6 +8,10 @@ Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla, logica, estilos,
             if(typeof VueI18next !== "undefined") {
                 vue_global.use(VueI18n);
             }
+        }
+        let plantilla = plantilla_arg;
+        if (typeof plantilla_arg === "function") {
+            plantilla = plantilla_arg(id);
         }
         const componente_base_original = { template: plantilla };
         const definicion_logica_de_componente = logica ? logica(componente_base_original) : {};

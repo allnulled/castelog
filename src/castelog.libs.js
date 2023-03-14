@@ -25475,6 +25475,7 @@ Castelog = (function(factory, scope) {
             Automatic_http_rest_api_interface: Automatic_http_rest_api_interface,
             RanasDB: typeof globalmente.RanasDB !== "undefined" ? globalmente.RanasDB : undefined,
             SimplestDB: globalmente.SimplestDB,
+            adaptador_de_bases_de_datos_por_defecto: globalmente.SimplestDB,
             axios: typeof window !== "object" ? require("axios") : globalmente.axios,
             ejs: globalmente.ejs,
             globales: {
@@ -25489,7 +25490,7 @@ Castelog = (function(factory, scope) {
         compilacion: {
   "ruta_del_sistema": "/home/carlos/Escritorio/Nuevo/Castelog/castelog-ultimo",
   "sistema_operativo": "",
-  "fecha": "2023/20/24 12:11.44.469"
+  "fecha": "2023/30/14 13:90.59.749"
 }
     };
 
@@ -26388,6 +26389,11 @@ Castelog.variables.un_proxy_de_conexion_para_mysql2 = class extends Castelog.var
     }
 };
 
+//Included:lib/409.castelog.v1.variables.operador.part.js
+Castelog.variables.operador = {
+    exclamacion: {},
+};
+
 //Included:lib/501.castelog.v1.metodos.una_peticion_http.part.js
 Castelog.variables.cliente_http = Castelog.variables.axios.create();
 
@@ -26726,7 +26732,7 @@ Castelog.metodos.una_conexion_de_base_de_datos_tipo_mysql2_pool = function (conf
 };
 
 //Included:lib/508.02.castelog.v1.metodos.una_seleccion_de_base_de_datos.js
-Castelog.metodos.una_seleccion_de_base_de_datos = function (modelo, filtrando, ordenando, agrupando, paginando, bd = "system", adaptador = Castelog.variables.SimplestDB, objetivo = "a varios ítems") {
+Castelog.metodos.una_seleccion_de_base_de_datos = function (modelo, filtrando, ordenando, agrupando, paginando, bd = "system", adaptador = Castelog.variables.adaptador_de_bases_de_datos_por_defecto, objetivo = "a varios ítems") {
     if(typeof adaptador === "undefined") {
         throw new Error("Required argument «adaptador» to not be undefined in order to «Castelog.metodos.una_seleccion_de_base_de_datos»");
     }
@@ -26820,7 +26826,7 @@ Castelog.metodos.una_seleccion_de_base_de_datos = function (modelo, filtrando, o
 };
 
 //Included:lib/508.03.castelog.v1.metodos.una_insercion_de_base_de_datos.js
-Castelog.metodos.una_insercion_de_base_de_datos = function (modelo, datos, bd = "system", adaptador = Castelog.variables.SimplestDB) {
+Castelog.metodos.una_insercion_de_base_de_datos = function (modelo, datos, bd = "system", adaptador = Castelog.variables.adaptador_de_bases_de_datos_por_defecto) {
     if (typeof adaptador === "undefined") {
         throw new Error("Required argument «adaptador» to not be undefined in order to «Castelog.metodos.una_insercion_de_base_de_datos»");
     }
@@ -26829,7 +26835,7 @@ Castelog.metodos.una_insercion_de_base_de_datos = function (modelo, datos, bd = 
 };
 
 //Included:lib/508.04.castelog.v1.metodos.una_actualizacion_de_base_de_datos.js
-Castelog.metodos.una_actualizacion_de_base_de_datos = function (modelo, id, datos, bd = "system", adaptador = Castelog.variables.SimplestDB) {
+Castelog.metodos.una_actualizacion_de_base_de_datos = function (modelo, id, datos, bd = "system", adaptador = Castelog.variables.adaptador_de_bases_de_datos_por_defecto) {
     if (typeof adaptador === "undefined") {
         throw new Error("Required argument «adaptador» to not be undefined in order to «Castelog.metodos.una_actualizacion_de_base_de_datos»");
     }
@@ -26838,7 +26844,7 @@ Castelog.metodos.una_actualizacion_de_base_de_datos = function (modelo, id, dato
 };
 
 //Included:lib/508.05.castelog.v1.metodos.una_eliminacion_de_base_de_datos.js
-Castelog.metodos.una_eliminacion_de_base_de_datos = function (modelo, id, bd = "system", adaptador = Castelog.variables.SimplestDB) {
+Castelog.metodos.una_eliminacion_de_base_de_datos = function (modelo, id, bd = "system", adaptador = Castelog.variables.adaptador_de_bases_de_datos_por_defecto) {
     if (typeof adaptador === "undefined") {
         throw new Error("Required argument «adaptador» to not be undefined in order to «Castelog.metodos.una_eliminacion_de_base_de_datos»");
     }
@@ -28194,12 +28200,16 @@ Castelog.metodos.un_visitor_design_pattern = function(data) {
 };
 
 //Included:lib/553.castelog.v1.metodos.un_componente_vue2.js
-Castelog.metodos.un_componente_vue2 = function(id, plantilla, logica, estilos, parametros_de_estilos = {}) {
+Castelog.metodos.un_componente_vue2 = function(id, plantilla_arg, logica, estilos, parametros_de_estilos = {}) {
     if(typeof window === "object") {
         const vue_global = (typeof window.Vue !== "undefined") ? window.Vue :
             (typeof window.vue !== "undefined") ? window.vue : undefined;
         if(typeof vue_global === "undefined") {
             throw new Error("Castelog no pudo encontrar Vue en el entorno vía 'window.vue' o 'window.Vue'");
+        }
+        let plantilla = plantilla_arg;
+        if(typeof plantilla_arg === "function") {
+            plantilla = plantilla_arg(id);
         }
         const componente_base_original = { template: plantilla };
         const definicion_logica_de_componente = logica ? logica(componente_base_original) : {};
@@ -28226,7 +28236,7 @@ Castelog.metodos.un_componente_vue2 = function(id, plantilla, logica, estilos, p
 };
 
 //Included:lib/554.castelog.v1.metodos.una_aplicacion_vue2.js
-Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla, logica, estilos, parametros_de_estilos = {}, rutas = [], traducciones = [], montada = null) {
+Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla_arg, logica, estilos, parametros_de_estilos = {}, rutas = [], traducciones = [], montada = null) {
     if(typeof window === "object") {
         const vue_global = (typeof window.Vue !== "undefined") ? window.Vue : (typeof window.vue !== "undefined") ? window.vue : undefined;
         if(typeof vue_global === "undefined") {
@@ -28236,6 +28246,10 @@ Castelog.metodos.una_aplicacion_vue2 = function (id, plantilla, logica, estilos,
             if(typeof VueI18next !== "undefined") {
                 vue_global.use(VueI18n);
             }
+        }
+        let plantilla = plantilla_arg;
+        if (typeof plantilla_arg === "function") {
+            plantilla = plantilla_arg(id);
         }
         const componente_base_original = { template: plantilla };
         const definicion_logica_de_componente = logica ? logica(componente_base_original) : {};
@@ -29977,6 +29991,18 @@ Castelog.metodos.un_acceso_a_propiedad = function (selector, base, valor_por_def
         valor_pivote = valor_por_defecto;
     }
     return valor_pivote;
+};
+
+//Included:lib/587.castelog.v1.metodos.un_escaneo_de_ficheros.js
+Castelog.metodos.un_escaneo_de_ficheros = function (ruta = ".", asincrono = false) {
+    if (typeof ruta !== "string") {
+        throw new Error("Se requiere propiedad «ruta» ser un string para «Castelog.metodos.un_escaneo_de_ficheros»");
+    }
+    if(asincrono === false) {
+        return require("fs").readdirSync(ruta);
+    } else {
+        return require("fs").promises.readdir(ruta);
+    }
 };
 
 //Included:lib/600.castelog.v1.componentes_vue2.js
@@ -33371,6 +33397,33 @@ if ((!(typeof window === 'undefined'))) {
         return $plantilla;
     })((estilos_finales))));
 }
+
+//Included:lib/601.castelog.v1.variables.operador.exclamacion.js
+Castelog.variables.operador.exclamacion = {
+    seleccionado: {}
+};
+Castelog.variables.operador.exclamacion.ejs = {};
+Castelog.variables.operador.exclamacion.ejs.ui = {};
+Castelog.variables.operador.exclamacion.ejs.ui.dom = {};
+Castelog.variables.operador.exclamacion.ejs.ui.dom.elemento = function(elemento = "div", atributos = {}, componentes = []) {
+    let plantilla = "";
+    plantilla += "<" + elemento;
+    const clave_de_atributos = Object.keys(atributos);
+    for(let index = 0; index < clave_de_atributos.length; index++) {
+        const clave_de_atributo = clave_de_atributos[index];
+        const valor_de_atributo = atributos[clave_de_atributo];
+        plantilla += ` ${clave_de_atributo}=${JSON.stringify(valor_de_atributo)}`
+    }
+    plantilla += ">";
+    const clave_de_componentes = Object.keys(componentes);
+    for(let index = 0; index < clave_de_componentes.length; index++) {
+        const clave_de_componente = clave_de_componentes[index];
+        const valor_de_componente = componentes[clave_de_componente];
+        plantilla += valor_de_componente;
+    }
+    plantilla += "</" + elemento + ">";
+    return plantilla;
+};
 
 //Included:lib/999.finalizacion.part.js
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

@@ -56,6 +56,7 @@ Sentencia_incompleta = sentencia:(
   Sentencia_de_ignoro_que /
   Sentencia_de_en_proceso /
   Sentencia_de_siempre_que_proxificacion /
+  Sentencia_de_operando_con /
   Hook_para_sentencia )
     { return sentencia }
 
@@ -111,6 +112,7 @@ Generativa_simple = generativa:(
   Hook_para_generativa_preferente /
   Generativa_de_numero /
   Generativa_de_texto /
+  Generativa_de_operador_de_exclamacion /
   Generativa_de_cuando /
   Generativa_de_segun /
   Generativa_de_una_seleccion_de_elementos_del_dom /
@@ -186,6 +188,7 @@ Generativa_simple = generativa:(
   Generativa_de_una_interfaz_vacia /
   Generativa_de_un_navegador_automatico /
   Generativa_de_un_acceso_a_propiedad /
+  Generativa_de_un_escaneo_de_ficheros /
   Generativa_de_sabes_pues /
   Hook_para_generativa /
   Generativa_de_una_propiedad_para /
@@ -1263,20 +1266,29 @@ unidad_de_tiempo_para_milisegundos = ("milisegundos" / "segundos")? { switch(tex
 Generativa_de_un_componente_vue2 = _*
   "un componente vue" ("2")?
   nombre:(( _* "con nombre" _* ) Generativa)
-  plantilla:(( _* "con plantilla" _* ) Codigo_html_entre_parentesis )
+  plantilla:( Subsentencia_con_plantilla )
   estilos:( ( _* "con estilos" _* ) Codigo_css_entre_parentesis )?
   logica:( ( _* "con lógica" (_* "donde" )? _* ) Bloque )?
-    { return `Castelog.metodos.un_componente_vue2(${nombre ? nombre[1] : "null"}, ${generate_splitted_stringification(plantilla[1])}, ${logica ? wrapInVue2ComponentFactoryFunction(logica[1]) : 'null'}, ${estilos ? JSON.stringify(estilos[1], null, 2) : 'null'})` }
+    { return generate_sentence_for_un_componente_vue2(nombre, plantilla, logica, estilos) }
+Subsentencia_con_plantilla = _*
+  sentencia:(Subsentencia_con_plantilla_1 / Subsentencia_con_plantilla_2)
+    { return sentencia }
+Subsentencia_con_plantilla_1 = ( _* "con plantilla como" _* )
+  generativa:Generativa
+    { return generativa }
+Subsentencia_con_plantilla_2 = ( _* "con plantilla" _* ) 
+  html:Codigo_html_entre_parentesis 
+    { return html }
 Generativa_de_una_aplicacion_vue2 = _*
   "una aplicación vue" ("2")?
   nombre:(( _* "con nombre" _* ) Generativa)
   rutas:( ( _* "con rutas" _* ) Generativa )?
   traducciones:( ( _* "con traducciones" _* ) Generativa )?
-  plantilla:(( _* "con plantilla" _* ) Codigo_html_entre_parentesis )
+  plantilla:( Subsentencia_con_plantilla )
   estilos:( ( _* "con estilos" _* ) Codigo_css_entre_parentesis )?
   logica:( ( _* "con lógica" (_* "donde" )? _* ) Bloque )?
   montada:( ( _* "montada en" _* ) Generativa )?
-    { return generate_sentence_for_una_aplicacion_vue2(nombre, plantilla, logica, estilos, rutas, traducciones, montada); }
+    { return generate_sentence_for_una_aplicacion_vue2(nombre, plantilla, logica, estilos, "{}", rutas, traducciones, montada); }
 
 Generativa_de_una_comunicacion_con_usuario = _*
   tipo:("una comunicación de entrada de usuario" / "una comunicación de salida a usuario") _*
@@ -2070,6 +2082,10 @@ Subsentencia_con_decorators_como = _* "con decorators como" _+ generativa:Genera
 Subsentencia_con_hooks_como = _* "con hooks como" _+ generativa:Generativa { return generativa; }
 Subsentencia_con_manager_como = _* "con manager como" _+ generativa:Generativa { return generativa; }
 
+Sentencia_de_operando_con = _* ("Opero con" / "opero con") _*
+  generativa:Generativa
+    { return `const $operador_de_exclamacion = ${generativa});` }
+
 Generativa_de_un_proxy = _* "un proxy" _*
   partir:Subsentencia_a_partir_de?
   proxificado:Subsentencia_proxificado_con
@@ -2151,6 +2167,28 @@ Generativa_de_un_acceso_a_propiedad = _* "un acceso a propiedad"
   base:Subsentencia_a_partir_de
   defecto:Subsentencia_por_defecto?
     { return `Castelog.metodos.un_acceso_a_propiedad(${propiedad}, ${base}, ${defecto ? defecto : "Error"})` }
+
+Generativa_de_un_escaneo_de_ficheros = _* "un escaneo de ficheros"
+  asincrono:(_+ Token_asincrono _*)?
+  ruta:Subsentencia_con_ruta?
+    { return `Castelog.metodos.un_escaneo_de_ficheros(${ruta ? ruta : "'.'"}, ${asincrono ? "true" : "false"})` }
+
+Generativa_de_operador_de_exclamacion = _* "¡"
+  identificador:Acceso_a_variable_para_exclamacion?
+  parametros:Parametros_de_operador? "!"
+    { return `$operador_de_exclamacion${identificador}${parametros ? '(' + parametros + ')' : ''}`}
+
+Acceso_a_variable_para_exclamacion = _*
+  etiqueta:Etiqueta_de_exclamacion_1
+  subruta:Accesorio_a_variable*
+    { return "[" + JSON.stringify(etiqueta) + "]" + ( subruta ? subruta.join("") : "" ) }
+
+Etiqueta_de_exclamacion_1 =[A-Za-z0-9_$ ]+
+    { return text().trim() }
+
+Parametros_de_operador = ":" _*
+  parametros:Lista_de_parametros_llamados
+    { return parametros }
 
 Generativa_de_sabes_pues = Subgenerativa_de_sabes_pues_1
 
@@ -2251,10 +2289,9 @@ Codigo_css_humanizado = "not available yet" {}
 Codigo_html_entre_parentesis = _* SIMBOLO_ABRIR_BLOQUE _*
   html:Codigo_html_solo_text _* SIMBOLO_CERRAR_BLOQUE
     { return html }
-Codigo_css_entre_parentesis = _*
-  usando:(Subsentencia_usando_2 _*)? SIMBOLO_ABRIR_BLOQUE _*
+Codigo_css_entre_parentesis = _* SIMBOLO_ABRIR_BLOQUE _*
   css:Codigo_css_solo_text _* SIMBOLO_CERRAR_BLOQUE 
-    { return JSON.stringify(css) + ", " + (usando ? JSON.stringify("{ " + usando[0] + " }") : "null") }
+    { return JSON.stringify(css) }
 Subsentencia_usando_2 = _* "usando" _* parametros:Parametros_definidos_sin_parentesis { return parametros }
 
 Token_eol_ok = ( ___+ __* ( "Ok" / "OK" ) ) {}
@@ -2564,6 +2601,7 @@ Apendice_de_generativa = apendice:(
   Apendice_de_disjuncion /
   Apendice_de_numerizacion /
   Apendice_de_retornando /
+  Apendice_de_posteriormente /
   Apendice_de_acceso_a_variable_llamable /
   Apendice_de_textualizacion /
   Hook_para_apendice )
@@ -2727,6 +2765,34 @@ Apendice_de_retornando = _* "retornando" _+
   parametro:Etiqueta_de_variable_simple _+ "como" _+
   transformacion:Generativa
     { return { before: "((" + parametro + ") => " + transformacion + ")(", after: SIMBOLO_CERRAR_GRUPO } }
+
+Apendice_de_posteriormente = _* "posteriormente" _*
+  inicializacion:Postapendice_de_inicializado_donde
+  transformaciones:Postapendices_de_posteriomente_intermedios
+{ return 'Castelog.metodos.posteriormente(${generativa}, ' + inicializacion + "\n" + transformaciones + CHARS.SIMBOLO_CERRAR_BLOQUE + ')' }
+
+Postapendices_de_posteriomente_intermedios = _*
+  subapendices:(Postapendice_de_substituido_por / Postapendice_de_interpelado_donde)*
+    { return `${subapendices ? subapendices.join("\n") : ""}` }
+
+Postapendice_de_inicializado_donde = 
+  postapendice:Postapendice_de_inicializado_donde_token?
+    { return postapendice ? postapendice : 'esto => ' + CHARS.SIMBOLO_ABRIR_BLOQUE + '\n' }
+    
+Postapendice_de_inicializado_donde_token = _*
+  asincronamente:Token_asincronamente? _* "inicializado donde" _+
+  bloque:Bloque
+    { return `${asincronamente ? "async " : ""}esto => ${CHARS.SIMBOLO_ABRIR_BLOQUE}\n${bloque}\n` }
+
+Postapendice_de_substituido_por = _*
+  asincronamente:Token_asincronamente? _* "substituido por" _+
+  generativa:Generativa
+    { return `esto = ${asincronamente ? "await " : ""}${generativa};` }
+
+Postapendice_de_interpelado_donde = _*
+  asincronamente:Token_asincronamente? _* "interpelado donde" _+
+  bloque:Bloque
+    { return 'interpelacion = ' + `${asincronamente ? "await (async (" : "(("}esto) => {\n${bloque}\n})(esto);\nif(typeof interpelacion !== 'undefined') {\nesto = interpelacion;\n}` }
 
 Apendice_de_es_mayor_o_igual_que = _* "es mayor o igual que" _* generativa:Generativa
     { return "${generativa} >= " + generativa }

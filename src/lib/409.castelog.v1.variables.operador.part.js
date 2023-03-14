@@ -1,0 +1,3 @@
+Castelog.variables.operador = {
+    exclamacion: {},
+};

@@ -30,6 +30,7 @@ Castelog = (function(factory, scope) {
             Automatic_http_rest_api_interface: Automatic_http_rest_api_interface,
             RanasDB: typeof globalmente.RanasDB !== "undefined" ? globalmente.RanasDB : undefined,
             SimplestDB: globalmente.SimplestDB,
+            adaptador_de_bases_de_datos_por_defecto: globalmente.SimplestDB,
             axios: typeof window !== "object" ? require("axios") : globalmente.axios,
             ejs: globalmente.ejs,
             globales: {
