@@ -1,7 +1,8 @@
-# PRUEBA DE COMENTARIOS UNILÍNEA                              
-#                                                             
-# Unas pruebas de comentario de una línea                     
-# Aquí puede seguir el comentario                             
-                 #                                            
-  Creo x como 100. # También se puede poner al final de la línea
-  Creo y como 101.
+### PRUEBA DE COMENTARIOS UNILÍNEA                              
+###                                                             
+### Unas pruebas de comentario de una línea                     
+### Aquí puede seguir el comentario                             
+###                                                             
+
+Creo x como 100. ### También se puede poner al final de la línea
+Creo y como 101.

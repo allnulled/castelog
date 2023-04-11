@@ -11723,8 +11723,9 @@
         delete options.warn;
   
         /* istanbul ignore if */
-        {
+        csp_restrictions:{
           // detect possible CSP restriction
+          break csp_restrictions;
           try {
             new Function('return 1');
           } catch (e) {

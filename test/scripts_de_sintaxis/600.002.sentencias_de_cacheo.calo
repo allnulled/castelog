@@ -1,6 +1,6 @@
 
 
-# Persistencia » Cacheo » Generativas
+### Persistencia » Cacheo » Generativas
 
 Creo variable visitas como 0.
 Creo preferencia_1 como un cacheo
@@ -8,7 +8,7 @@ Creo preferencia_1 como un cacheo
     con valor "¡Hola 1!"
     refrescado si visitas es mayor que 100.
 
-# Persistencia » Cacheo » Sentencias
+### Persistencia » Cacheo » Sentencias
 
 Cacheo con clave "es.saludo"
     con valor "¡Hola 3!"

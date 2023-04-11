@@ -142,9 +142,9 @@ attrib
         value: extractOptional(operatorAndValue, 2)
       };
     }
-
+pseudoselectors_all = ("::"/":"/( _* "+" _* )) { return text() }
 pseudo
-  = ":"
+  = pseudoselectors_all
     value:(
         name:FUNCTION S* params:(IDENT S*)? ")" {
           return {

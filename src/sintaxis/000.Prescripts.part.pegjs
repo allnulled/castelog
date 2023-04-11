@@ -90,7 +90,7 @@
 
   const fromBlockAndCatchToCode = function(block, catchBlock, forceTry = false, noTryBrackets = false, preTryBlock = "") {
     let output = "";
-    if(catchBlock || forceTry){
+    if(catchBlock || forceTry) {
       output += preTryBlock;
       if(!noTryBrackets) {
         output += "try {\n" + block + "\n} ";
@@ -404,6 +404,20 @@
 
   const generate_splitted_stringification = function(text) {
     return text.split(/\n/g).map(t => JSON.stringify(t)).join("\n + ");
+  };
+
+  const generate_received_parameters_autolabel_dolar = function(params) {
+    let out = "(";
+    if(params && params.len) {
+      for(let i=0; i<params.len; i++) {
+        if(i !== 0) {
+          out += ", ";
+        }
+        out += "$" + (i + 1);
+      }
+    }
+    out += ")";
+    return out;
   };
 
   // @~{ Hooks del Parser de Castelog: CONTENIDOS DE PRESCRIPT }~@

@@ -1,12 +1,12 @@
 @POR-TEST: no
 Creo main como una función asíncrona donde {
-    # Promise usando sync function + trycatch:
+    ### Promise usando sync function + trycatch:
     Hago asíncronamente una promesa con (ok, fail) donde {
         @POR-DO: esta parte está por hacer!
     } en errores {
         @POR-DO: esta parte está por hacer!
     }.
-    # Promise usando async function + trycatch:
+    ### Promise usando async function + trycatch:
     Hago asíncronamente una promesa asíncrona donde {
         @POR-REVIEW: esta parte está por revisar!
     } en errores {

@@ -5,7 +5,13 @@ Castelog.metodos.un_test("Test de una cosa", async () => {
 const { getter, setter, value
 } = Castelog.metodos.un_singleton_design_pattern({
   getter: dp => { return ( typeof dp.value === 'undefined' ? dp.setter : dp.value ); },
-  setter: dp => { return ( valor = 500 ) => {dp.value = valor;
+  setter: dp => { return ( valor = 500 ) => {try {
+dp.value = valor;
+} catch(error) {
+console.log(error);
+throw error;
+}
+
 }; },
   value: dp => { return indefinido; }
 });

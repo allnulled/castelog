@@ -35,6 +35,7 @@ Sentencia_incompleta = sentencia:(
   Sentencia_de_creo / 
   Sentencia_de_desacoplo / 
   Sentencia_de_asigno / 
+  Sentencia_de_alterno /
   Sentencia_de_retorno / 
   Sentencia_de_hago / 
   Sentencia_de_compruebo / 
@@ -115,6 +116,7 @@ Generativa_simple = generativa:(
   Generativa_de_operador_de_exclamacion /
   Generativa_de_cuando /
   Generativa_de_segun /
+  Generativa_de_teniendo /
   Generativa_de_una_seleccion_de_elementos_del_dom /
   Generativa_de_una_seleccion_del_primer_elemento_del_dom /
   Generativa_de_una_insercion_de_estilos_en_cascada /
@@ -142,6 +144,7 @@ Generativa_simple = generativa:(
   Generativa_de_una_aplicacion_sintactica_universal / 
   Generativa_de_un_punto_sintactico_universal / 
   Generativa_de_un_codigo_en_texto /
+  Generativa_de_un_codigo_de_generativa_en_texto /
   Generativa_de_un_codigo_en_js /
   Generativa_de_un_codigo_en_html /
   Generativa_de_un_codigo_en_css /
@@ -150,6 +153,7 @@ Generativa_simple = generativa:(
   Generativa_de_un_dia_de_la_semana /
   Generativa_de_un_nombre_de_mes /
   Generativa_de_una_descripcion_del_entorno /
+  Generativa_de_un_intento /
   Generativa_de_una_confirmacion /
   Generativa_de_una_notificacion /
   Generativa_de_una_peticion_http /
@@ -189,6 +193,7 @@ Generativa_simple = generativa:(
   Generativa_de_un_navegador_automatico /
   Generativa_de_un_acceso_a_propiedad /
   Generativa_de_un_escaneo_de_ficheros /
+  Generativa_de_un_hook_global /
   Generativa_de_sabes_pues /
   Hook_para_generativa /
   Generativa_de_una_propiedad_para /
@@ -219,13 +224,14 @@ Comentarios_entre_espacios = comentario:(
   Sentencia_Documentacion_interno /
   Hook_para_comentario )
     { return comentario }
-Comentario_de_linea_con_salto = "#" (!(___) .)* (___/EOF) _* { return }
+Comentario_de_linea_con_salto = "###" (!(___) .)* (___/EOF) _* { return }
 Comentario_de_por_algo = "@POR-" (!(___) .)* (___/EOF) _* { return }
-Comentario_multilinea = "[*" (!("*]").)* "*]" { return text() }
+Comentario_multilinea = "##*" (!("*##").)* "*##" { return text() }
 
 Lenguaje_inicial_sin_salto_final = _* sentencias:Sentencias { return sentencias }
 Lenguaje_inicial = _* sentencias:Sentencias _* { return sentencias }
 Nuevo_bloque_en_texto = _* SIMBOLO_ABRIR_BLOQUE _* Escript_de_castelog _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(text().replace(/^[\n\t ]*\{|\}[\n\t ]*$/g, "")) }
+Nueva_generativa_en_texto = _* Generativa { return JSON.stringify(text()) }
 Nuevo_bloque_en_js = _* SIMBOLO_ABRIR_BLOQUE _* script:Escript_de_castelog _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(script) }
 Nuevo_bloque_en_css = _* SIMBOLO_ABRIR_BLOQUE _* script:Codigo_css_a_texto _* SIMBOLO_CERRAR_BLOQUE { return JSON.stringify(script) }
 Bloque = ( Bloque_unilinea / Bloque_multilinea )
@@ -449,6 +455,11 @@ Sentencia_de_asigno = _*
   valor:Generativa
     { return nombre + " = " + valor + ";" }
 
+Sentencia_de_alterno = _*
+  Token_alterno _*
+  nombre:Acceso_a_variable
+    { return nombre + " = !!!" + nombre + ";" }
+
 Sentencia_de_hago = _*
   Token_hago _*
   llamada:Generativa
@@ -576,6 +587,7 @@ Subsentencia_en_errores_como_funcion = _*
   con:(Subsentencia_con_para_parametros_definidos)?
   bloque:Bloque
     { return (con ? con : "error") + ' => {\n' + bloque + '}'; }
+
 Subsentencia_en_errores = _*
   Token_en_errores _*
   con:(
@@ -645,10 +657,13 @@ Sentencia_de_desde = _*
 Sentencia_de_apendizo_y_prependizo = _*
   movimiento:("Apendizo" / "apendizo" / "Prependizo" / "prependizo" ) _*
   item:Generativa
+  posicion:Subsentencia_en_posicion?
   _* "en" _+
   lista:Generativa
     { return `${lista}.${(movimiento.toLowerCase() === "apendizo") ? "push" : (movimiento.toLowerCase() === "prependizo") ? "unshift" : "concat" }(${item})` }
 
+Subsentencia_en_posicion = _* "en posición" _+
+  posicion:Generativa
 
 Sentencia_de_en_proceso = _* ( "En proceso" / "en proceso" ) _*
   nombre:Etiqueta_de_variable
@@ -900,12 +915,13 @@ Token_si = ("Si" / "si")
 Token_pero_si = ("Pero si" / "pero si")
 Token_y_si_no = ("Y si no" / "y si no"/"Aunque si no"/"aunque si no")
 Token_mientras = ("Mientras" / "mientras")
-Token_variable_o_constante = ("variable" / "constante") _* { return text().trim() }
+Token_variable_o_constante = ("variable" / "constante") _+ { return text().trim() }
 Token_como_o_igual = (( _* "como" _* ) / ( _* "=" _* ))
 Token_retorno = ("Retorno" / "retorno")
 Token_donde = ("donde")
 Token_con = ("con")
 Token_asigno = ("Asigno" / "asigno")
+Token_alterno = ("Alterno"/"alterno")
 Token_hago = ("Hago" / "hago")
 Token_asincrona = ("asíncrona"/"~")
 Token_imprimo = ("Imprimo" / "imprimo")
@@ -1065,6 +1081,10 @@ Generativa_de_un_codigo_en_texto = _* "un código en texto donde" _+
   codigo:Nuevo_bloque_en_texto
     { return codigo }
 
+Generativa_de_un_codigo_de_generativa_en_texto = _* "un código de generativa en texto con" _+
+  generativa:Nueva_generativa_en_texto
+    { return generativa }
+
 Generativa_de_un_codigo_en_js = _* "un código en js donde" _+
   codigo:Nuevo_bloque_en_js
     { return codigo }
@@ -1117,6 +1137,12 @@ Generativa_de_un_nombre_de_mes = _* "un nombre de mes" _*
 
 Generativa_de_una_descripcion_del_entorno = _* "una descripción del entorno"
     { return "Castelog.metodos.una_descripcion_del_entorno()" }
+
+Generativa_de_un_intento = _* "un intento"
+  asincronamente:Token_asincronamente?
+  bloque:Subsentencia_donde_sin_parentesis?
+  errores:Subsentencia_en_errores?
+    { return `(${asincronamente ? "async" : ""}() => {${bloque ? fromBlockAndCatchToCode(bloque, errores, true, false) : ""}})()` }
 
 Generativa_de_un_reseteo_de_directorio = _* "un reseteo de directorio" _+
   directorio:Generativa
@@ -1228,6 +1254,10 @@ Generativa_de_segun = _*
   bloque:Bloque
     { return `(esto => {\n  ${bloque};\n})(${sujeto})` }
 Token_segun = "Según" / "según" {}
+Generativa_de_teniendo = _* "teniendo" _*
+  parametros:Parametros_llamados_devolviendo_length
+  bloque:Bloque
+    { return `(${generate_received_parameters_autolabel_dolar(parametros)} => {\n  ${bloque};\n})(${(parametros.text)})` }
 Generativa_de_un_nuevo = _*
   Token_un_nuevo _*
   generativa:Generativa
@@ -2173,6 +2203,43 @@ Generativa_de_un_escaneo_de_ficheros = _* "un escaneo de ficheros"
   ruta:Subsentencia_con_ruta?
     { return `Castelog.metodos.un_escaneo_de_ficheros(${ruta ? ruta : "'.'"}, ${asincrono ? "true" : "false"})` }
 
+Generativa_de_un_hook_global =
+  generativa:(Generativa_de_un_hook_global_accesor / Generativa_de_una_insercion_de_hook_global / Generativa_de_una_actualizacion_de_hook_global / Generativa_de_una_eliminacion_de_hook_global / Generativa_de_una_ejecucion_de_hook_global)
+    { return generativa }
+
+Generativa_de_una_ejecucion_de_hook_global = _* "una ejecución de hook global"
+  nombre:Subsentencia_llamado
+  evento:Subsentencia_con?
+    { return `Castelog.metodos.una_ejecucion_de_hook_global(${nombre},${evento})` }
+
+Generativa_de_una_insercion_de_hook_global = _* "una inserción de hook global"
+  nombre:Subsentencia_llamado
+  evento:Subsentencia_con_evento
+  configuraciones:Subsentencia_configurado_con?
+    { return `Castelog.metodos.una_insercion_de_hook_global(${nombre},${evento},${configuraciones ? configuraciones : "null"})` }
+
+Generativa_de_una_actualizacion_de_hook_global = _* "una actualización de hook global"
+  nombre:Subsentencia_llamado
+  evento:Subsentencia_con_evento
+  configuraciones:Subsentencia_configurado_con?
+    { return `Castelog.metodos.actualizacion_de_hook_global(${nombre},${evento},${configuraciones ? configuraciones : "null"})` }
+
+Generativa_de_una_eliminacion_de_hook_global = _* "una eliminación de hook global"
+  nombre:Subsentencia_llamado
+  evento:Subsentencia_con_evento
+  configuraciones:Subsentencia_configurado_con?
+    { return `Castelog.metodos.eliminacion_de_hook_global(${nombre},${evento})` }
+
+Generativa_de_un_hook_global_accesor = _* "un hook global"
+  nombre:Subsentencia_llamado
+  evento:Subsentencia_con_evento?
+  configuraciones:Subsentencia_configurado_con?
+    { return `Castelog.metodos.un_hook_global(${nombre},${evento ? evento : "null"},${configuraciones ? configuraciones : "null"})` }
+
+Subsentencia_con_evento = _* "con evento como" _+
+  evento:Generativa
+    { return evento }
+
 Generativa_de_operador_de_exclamacion = _* "¡"
   identificador:Acceso_a_variable_para_exclamacion?
   parametros:Parametros_de_operador? "!"
@@ -2502,9 +2569,16 @@ Parametro_definido_lo_demas_en =
 
 Parametros_llamados = SIMBOLO_ABRIR_GRUPO _* parametros:Lista_de_parametros_llamados? _* SIMBOLO_CERRAR_GRUPO
     { return "( " + (parametros ? parametros : "") + " )" }
+Parametros_llamados_devolviendo_length = SIMBOLO_ABRIR_GRUPO _*
+  parametros:Lista_de_parametros_llamados_devolviendo_length? _* SIMBOLO_CERRAR_GRUPO
+    { return parametros }
 Parametros_llamados_sin_devolver_parentesis = SIMBOLO_ABRIR_GRUPO _* parametros:Lista_de_parametros_llamados? _* SIMBOLO_CERRAR_GRUPO
     { return (parametros ? parametros : "") }
 
+Lista_de_parametros_llamados_devolviendo_length = _*
+  param_1:(Parametro_llamado_1 / Parametro_llamado_incluyo)
+  param_n:Parametro_llamado_n* 
+    { const all_items = [param_1].concat(param_n || []); return { len: all_items.length, texto: all_items.join(",\n") }; }
 Lista_de_parametros_llamados = _*
   param_1:(Parametro_llamado_1 / Parametro_llamado_incluyo)
   param_n:Parametro_llamado_n* 
@@ -2604,6 +2678,11 @@ Apendice_de_generativa = apendice:(
   Apendice_de_posteriormente /
   Apendice_de_acceso_a_variable_llamable /
   Apendice_de_textualizacion /
+  Apendice_de_serializacion /
+  Apendice_de_parseado_como_json /
+  Apendice_de_pasandole /
+  Apendice_de_pasado_por /
+  Apendice_de_mostrando_solo_propiedades /
   Hook_para_apendice )
     { return apendice }
 
@@ -2718,10 +2797,25 @@ Apendice_de_numerizacion = _* "numerizado"
     { return "parseFloat(${generativa})" }
 Apendice_de_textualizacion = _* "textualizado"
     { return "JSON.stringify(${generativa}, null, 2)" }
+Apendice_de_serializacion = _* ("serializado como JSON" / "serializado como json")
+  { return "Castelog.metodos.una_serializacion_como_json(${generativa})" }
+Apendice_de_parseado_como_json = _* ("parseado como JSON" / "parseado como json")
+  { return "JSON.parse(${generativa})" }
 Apendice_de_acceso_a_variable_llamable = accesorio:Accesorio_a_variable_llamable
     { return "${generativa}" + accesorio }
 Apendice_de_siendo = _* "siendo" _* siendo:(Caracteristicas_de_siendo / Bloque_de_siendo)
     { return `Castelog.metodos.siendo(\${generativa}, [${siendo}])` }
+
+Apendice_de_pasandole = _* "pasándole" _*
+  generativa:Generativa
+    { return `Castelog.metodos.pasandole(\${generativa}, ${generativa})` }
+Apendice_de_pasado_por = _* "pasado por" _*
+  generativa:Generativa
+    { return `Castelog.metodos.pasado_por(\${generativa}, ${generativa})` }
+
+Apendice_de_mostrando_solo_propiedades = _* "mostrando solo propiedades" _*
+  generativa:Generativa
+    { return `Castelog.metodos.mostrando_solo_propiedades(\${generativa}, ${generativa})`}
 
 Subsentencia_de_tambien_extendido_por = sentencias:Subsentencia_de_tambien_extendido_por_1+ 
     { return sentencias.join(", ") }

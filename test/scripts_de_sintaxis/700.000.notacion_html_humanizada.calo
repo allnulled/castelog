@@ -1,9 +1,0 @@
-creo html1 como un código en html con {
-  un elemento div compuesto por {
-      un elemento div con propiedad style como {} compuesto por {
-          un elemento div con atributos { class: "ok" } con eventos {} compuesto por {
-            un texto plano con "{{ name }}".
-          }.
-      }.
-  }.
-}.

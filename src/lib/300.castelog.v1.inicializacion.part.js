@@ -31,11 +31,12 @@ Castelog = (function(factory, scope) {
             RanasDB: typeof globalmente.RanasDB !== "undefined" ? globalmente.RanasDB : undefined,
             SimplestDB: globalmente.SimplestDB,
             adaptador_de_bases_de_datos_por_defecto: globalmente.SimplestDB,
-            axios: typeof window !== "object" ? require("axios") : globalmente.axios,
+            axios: globalmente.axios,
             ejs: globalmente.ejs,
             globales: {
                 entorno: "development"
             },
+            hooks_globales: globalmente.HookByPriority.create(),
             alfabeto_ingles: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split(""),
             Entorno_de_testeo: function(parametros = {}) {
                 Object.assign(this, parametros);

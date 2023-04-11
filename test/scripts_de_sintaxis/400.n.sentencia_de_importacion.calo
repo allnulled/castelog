@@ -4,6 +4,6 @@ Importo módulo es5 de ruta __dirname + "/../texto.js" creando constante texto.
 
 Compruebo que texto es igual que "Esto es un texto de ejemplo.".
 
-# - Módulo es6 - usar solo en entornos válidos.
+### - Módulo es6 - usar solo en entornos válidos.
 
-# Importo módulo es6 de ruta "xxx" en errores, imprimo error.
+### Importo módulo es6 de ruta "xxx" en errores, imprimo error.

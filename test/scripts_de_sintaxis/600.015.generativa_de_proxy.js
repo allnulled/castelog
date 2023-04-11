@@ -1,15 +1,33 @@
 
 const x = (new Proxy({ nombre:"Carl",
-obtenerNombre:(new Proxy(function() {return "Carl";
+obtenerNombre:(new Proxy(function() {try {
+return "Carl";
+} catch(error) {
+console.log(error);
+throw error;
+}
+
 }, { apply:function( dato,
-propiedaz ) {return "Carl Carlson";
+propiedaz ) {try {
+return "Carl Carlson";
+} catch(error) {
+console.log(error);
+throw error;
+}
+
 }
 }))
 }, { get:function( dato,
-propiedaz ) {if(propiedaz === "obtenerNombre") {
+propiedaz ) {try {
+if(propiedaz === "obtenerNombre") {
 return dato[ propiedaz ];
 }
 return "Carlson";
+} catch(error) {
+console.log(error);
+throw error;
+}
+
 }
 }));
 console.log(x.nombre);

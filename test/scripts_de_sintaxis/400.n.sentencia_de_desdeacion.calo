@@ -1,18 +1,18 @@
-# Las variables iniciales:
+### Las variables iniciales:
 
 Creo variable semaforo1 como 0.
 Creo variable semaforo2 como 0.
 Creo variable semaforo3 como 0.
 Creo variable semaforo4 como 0.
 
-# Las cuatro formas de escribir un bucle:
+### Las cuatro formas de escribir un bucle:
 
 Desde 0 hasta 10, incremento semaforo1.
 Desde 0 hasta 10 usando indice, incremento semaforo2 en 2.
 Desde 0 hasta 10 { Incremento semaforo3. }.
 Desde 0 hasta 10 usando indice { Incremento semaforo4 en 2. }.
 
-# Los tests finales:
+### Los tests finales:
 
 Compruebo que semaforo1 es igual que 10.
 Compruebo que semaforo2 es igual que 20.

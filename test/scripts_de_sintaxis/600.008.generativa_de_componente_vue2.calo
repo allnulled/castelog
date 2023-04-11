@@ -64,7 +64,7 @@ En proceso x {
             si no un hecho donde lanzo un nuevo Error("No se ha detectado entorno").
     }.
     Si estoy en navegador {
-        # Reok...
+        ### Reok...
     }.
     Interrumpo proceso x.
 }.

@@ -1,6 +1,6 @@
 importo api nativa.
 
-# Persistencia » Base de datos » Sentencias
+### Persistencia » Base de datos » Sentencias
 
 Creo resultado como una selección
     en modelo "fichero"
@@ -27,7 +27,7 @@ Creo item_eliminado como una eliminación
     con registro id_1
     en base de datos "por_defecto".
 
-# Persistencia » Base de datos » Generativas
+### Persistencia » Base de datos » Generativas
 
 Selecciono
     en modelo "fichero"

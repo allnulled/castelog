@@ -1,6 +1,6 @@
 Importo api nativa.
 
-# Persistencia » Ficheros » Generativas
+### Persistencia » Ficheros » Generativas
 
 Creo fichero1 como una escritura de fichero
     con ruta "root.js"
@@ -11,7 +11,7 @@ Creo contenido como una lectura de fichero
     con ruta "root.js"
     con codificación "utf8".
 
-# Persistencia » Ficheros » Sentencias
+### Persistencia » Ficheros » Sentencias
 
 Leo fichero con ruta "root.js"
     con codificación "utf8".

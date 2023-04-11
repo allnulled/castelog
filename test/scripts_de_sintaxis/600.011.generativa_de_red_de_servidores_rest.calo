@@ -1,8 +1,8 @@
 Importo API nativa.
 
-# RED:SERVIDORES
+### RED:SERVIDORES
 
-[*]
+##*
 Creo resultado como un hecho asíncrono donde {
 
     Creo despliegue como asíncronamente una red de servidores http rest automáticos en ruta __dirname donde {
@@ -49,4 +49,4 @@ Creo resultado como un hecho asíncrono donde {
     } en errores lanzo error.
 
 }.
-*]
+*##

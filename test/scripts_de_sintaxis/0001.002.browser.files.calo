@@ -2,8 +2,8 @@ Importo API nativa.
 
 Creo resultado como un hecho asíncrono donde {
 
-    # Los comentarios sí deben estar destacados.
-    [*
+    ### Los comentarios sí deben estar destacados.
+    ##*
     Mientras true {
         @POR-DO: Opción 5 para decir algo gracioso. Por ejemplo.
         Intento {
@@ -41,6 +41,6 @@ Creo resultado como un hecho asíncrono donde {
             Notifico con mensaje "Hubo errores en la ejecución de algún comando: " + error.message.
         }.
     }.
-    #*]
+    *##
 
 }.

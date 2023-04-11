@@ -1,3 +1,5 @@
 
-try {} catch(error) {
+try {
+
+} catch(error) {
 }

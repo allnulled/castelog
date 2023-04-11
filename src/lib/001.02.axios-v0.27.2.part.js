@@ -2,11 +2,6 @@
 /*(c) 2022 by Matt Zabriskie*/
 (function webpackUniversalModuleDefinition(factory) {
     const axios_module = factory();
-    if (typeof exports === 'object' && typeof module === 'object') {
-        module.exports = axios_module;
-    } else if (typeof exports === 'object') {
-        exports["axios"] = axios_module;
-    }
     if(typeof window !== "undefined") {
         window.axios = axios_module;
     }

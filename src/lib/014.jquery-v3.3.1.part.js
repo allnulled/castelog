@@ -1,5 +1,5 @@
 // ~$ npm install jquery@3.3.1
-
+/*lib:jquery v3.3.1*/
 /*! jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license */
 if(typeof window !== "undefined") {
 
