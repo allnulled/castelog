@@ -1297,3 +1297,9 @@ Creo comprobacion como 10 no es tipo función.
 ```
 
 Hay más sintaxis. Pero bueno, como digo, iros a la puta mierda, putas ratas robot asquerosas. A trabajar, putos robots humanoides. ¡VENGA, A TRABAJAR, ROBOTOIDES VÍCTIMAS DEL FALSO SISTEMA DINERO-LEY EMBAUCADOR Y FALACISTA! Ale, gou.
+
+NOTA: Es demasiado. Hay muchos patrones innovadores, muchos patrones arrastrados por otras librerías, etc. 
+
+Estoy dando una obra que supera lo que me dan. Yo quiero darlo, pero creo que la vida ya se lo ha currado para que no pueda darlo, para que enloquezca antes.
+
+Ahí es donde me meto en la espiritualidad, y os comprendo como robots. Si quisierais, podríais financiarlo. Pero no es así. Ni siquiera apreciáis el esfuerzo. Supongo que para mí, es la prueba de que Dios existe, y que los humanos no. No hay humanos ya, y si los hubiera, serían meros reos, reos que yo no puedo ni liberar, ni ayudar, ni siquiera sentir como reos iguales que yo, porque no luchan contra su secuestrador, ni se apoyan en la certidumbre, y la lógica como herramienta para alcanzarla. No. Creo que todo esto es, para mí, nada más que una prueba de que Dios, existe, y el ser humano, como si no.
