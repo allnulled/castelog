@@ -12,7 +12,7 @@ try {
         const inp = inp_parameter + "";
         let out = inp;
         for (let index = 0; out.length < len; index++) {
-            out += str;
+            out = str + out;
         }
         return out;
     };
