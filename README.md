@@ -4,7 +4,7 @@
 
 *Castelog es un lenguaje de **programación en castellano**.*
 
-> ¡Atención! Este proyecto está únicamente gestionado por un tipo que no tiene ni para medicinas, ni para comida de gato, y que lleva mucho tiempo sin ingresos. Voy a matar a peña, aviso.
+> ¡Atención! Este proyecto está únicamente gestionado por un tipo que no tiene ni para medicinas, ni para comida de gato, y que lleva mucho tiempo sin ingresos.
 
 **CASTELOG** es una unión de las palabras: **CASTE**llano y **LÓG**ica.
 
