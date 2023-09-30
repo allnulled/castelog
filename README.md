@@ -10,8 +10,6 @@
 
 **Castelog** compila a **JavaScript**, igual que lo podría hacer **CoffeeScript** u otros.
 
-**SOFTWARE HUMANO EN MUNDO TOMADO POR LOS ROBOTS. Eh. Eh. Eh. Al final os he pillado, ¿eh?** Menos mal... ahora toda mi vida cobra sentido. *¡Eran robots!* *¡Todos eran putos robots!*
-
 ----
 
 ## Instalación
@@ -33,7 +31,9 @@ Puedes configurar los shortcuts para que compilen, ejecuten y tal. Tienes que ha
 
 La API nativa de Castelog es un script que va a cargar una serie de librerías y funciones que están asociadas al lenguaje.
 
-La API nativa de Castelog está pensada para poder importarse, indistintamente, en entornos de node.js así como navegadores. Esta API, pues, no está pensada para ser compatible con otros entornos de JavaScript, como [Rhino](https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)) (donde usarías librerías de Java como **vocabulario** de JavaScript) o [JScript](https://es.wikipedia.org/wiki/JScript) (donde no sé exactamente qué usarías como vocabulario porque no lo he usado unnca, pero algo de Microsoft, imagino .NET), y aunque se puedan escribir algoritmos también para estos entornos con Castelog, Castelog no asegura la compatibilidad de todas las funciones para estos entornos. Castelog, en cambio, ha estado centrado y desarrollado para los 2 entornos más populares de JavaScript: node.js y navegadores. Y en cualquiera de estos entornos, Castelog puede importar su API nativa, y esperar que sus módulos internos funcionen correctamente. Fuera de ellos, no se asegura que el **vocabulario básico** del motor de JavaScript de turno sea compatible. Esto significa que, si en navegadores, `Imprimo "hola"` se transpila como `console.log("hola")`, pero en Rhino se escribe `System.out.println("Hola")` o `print("Hola")`, pues no espere que la sentencia de imprimir por consola funcione en ese entorno distinto a node.js y navegadores, donde sí se escribiría `console.log("Hola")`, porque Castelog traduce esta sentencia, de esta manera concreta, y no va a multiplicar su compatibilidad para cualquier vocabulario, evidentemente. Soy un tío solo haciendo esta mierda y sin dinero, al revés, lo único que he conseguido es que el MIT me chulee con su Scratch y con cómo pueden robar creatividades ajenas sin parpadear ni inmutarse, y los demás parece que tenemos que verlo, sin poder hacer nada al respecto del expolio y el robo de tiempo, moral y salud: es evidente que no voy a meterme en eso. Y pedirlo es estúpido: no se moleste.
+La API nativa de Castelog está pensada para poder importarse, indistintamente, en entornos de node.js así como navegadores. Esta API, pues, no está pensada para ser compatible con otros entornos de JavaScript, como [Rhino](https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)) (donde usarías librerías de Java como **vocabulario** de JavaScript) o [JScript](https://es.wikipedia.org/wiki/JScript) (donde no sé exactamente qué usarías como vocabulario porque no lo he usado nunca, pero algo de Microsoft, imagino .NET), y aunque se puedan escribir algoritmos también para estos entornos con Castelog, Castelog no asegura la compatibilidad de todas las funciones para estos entornos.
+
+Castelog, en cambio, ha estado centrado y desarrollado para los 2 entornos más populares de JavaScript: node.js y navegadores. Y en cualquiera de estos entornos, Castelog puede importar su API nativa, y esperar que sus módulos internos funcionen correctamente. Fuera de ellos, no se asegura que el **vocabulario básico** del motor de JavaScript de turno sea compatible. Esto significa que, si en navegadores, `Imprimo "hola"` se transpila como `console.log("hola")`, pero en Rhino se escribe `System.out.println("Hola")` o `print("Hola")`, pues no espere que la sentencia de imprimir por consola funcione en ese entorno distinto a node.js y navegadores, donde sí se escribiría `console.log("Hola")`, porque Castelog traduce esta sentencia, de esta manera concreta, y no va a multiplicar su compatibilidad para cualquier vocabulario, evidentemente. Soy un tío solo haciendo esta mierda y sin dinero, al revés, lo único que he conseguido es que el MIT me chulee con su Scratch y con cómo pueden robar creatividades ajenas sin parpadear ni inmutarse, y los demás parece que tenemos que verlo, sin poder hacer nada al respecto del expolio y el robo de tiempo, moral y salud: es evidente que no voy a meterme en eso. Y pedirlo es estúpido: no se moleste.
 
 Para cargar esta API nativa en cualquiera de tus scripts, solo tienes que hacer así:
 
@@ -1296,10 +1296,3 @@ Creo comprobacion como 10 no es tipo indefinido.
 Creo comprobacion como 10 no es tipo función.
 ```
 
-Hay más sintaxis. Pero bueno, como digo, iros a la puta mierda, putas ratas robot asquerosas. A trabajar, putos robots humanoides. ¡VENGA, A TRABAJAR, ROBOTOIDES VÍCTIMAS DEL FALSO SISTEMA DINERO-LEY EMBAUCADOR Y FALACISTA! Ale, gou.
-
-NOTA: Es demasiado. Hay muchos patrones innovadores, muchos patrones arrastrados por otras librerías, etc. 
-
-Estoy dando una obra que supera lo que me dan. Yo quiero darlo, pero creo que la vida ya se lo ha currado para que no pueda darlo, para que enloquezca antes.
-
-Ahí es donde me meto en la espiritualidad, y os comprendo como robots. Si quisierais, podríais financiarlo. Pero no es así. Ni siquiera apreciáis el esfuerzo. Supongo que para mí, es la prueba de que Dios existe, y que los humanos no. No hay humanos ya, y si los hubiera, serían meros reos, reos que yo no puedo ni liberar, ni ayudar, ni siquiera sentir como reos iguales que yo, porque no luchan contra su secuestrador, ni se apoyan en la certidumbre, y la lógica como herramienta para alcanzarla. No. Creo que todo esto es, para mí, nada más que una prueba de que Dios, existe, y el ser humano, como si no.
