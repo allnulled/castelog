@@ -1,115 +1,618 @@
 [
   "onCompletion",
   {
-    "_uri": "file:///home/carlos/Escritorio/Nuevo4/democracia-hql/src/www/files/index.1.calo",
+    "_uri": "file:///home/carlos/Escritorio/Nuevo6/nw-samples/sample-1/src/lib/calo/calo.calo",
     "_languageId": "castelog",
-    "_version": 46,
-    "_content": "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Asamblearismo</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"stylesheet\" href=\"\"></lin\n    <style>\n      \n    </style>\n</head>\n<body><div id=\"app\"></div></body>.\n\nimporto api nativa.\n\ncreo PaginaDeInicio como un componente vue2 con nombre \"PaginaDeInicio\" con plantilla {\n  <div class=\"PaginaDeInicio Component win7\">\n    <div class=\"window\">\n      <div class=\"title-bar\">\n        <div class=\"title-bar-text\">\n          <table class=\"\">\n            <tbody>\n              <tr>\n                <td>\n                  <span class=\"\">🏛️</span>\n                </td>\n                <td>\n                  <span class=\"\">Asamblea</span>\n                </td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        <div class=\"title-bar-controls\">\n          <button aria-label=\"Minimize\"></button>\n          <button aria-label=\"Maximize\"></button>\n          <button aria-label=\"Close\"></button>\n        </div>\n      </div>\n      <div class=\"window-body\">\n      x...\n      </div>\n    </div>\n  </div>\n}.\n\ncreo App como una aplicación vue2 con nombre \"App\" con rutas [{\n    propiedad path como \"/\".\n    propiedad name como \"Home\".\n    propiedad component como PaginaDeInicio.\n    propiedad props como {}.\n}] con traducciones {\n    propiedad es como {}.\n    propiedad en como {}.\n    propiedad ca como {}.\n} con plantilla {\n  <div class=\"App Component Castelog-app\">\n    <router-view></router-view>\n  </div>\n} con estilos {\n    html {}\n    body {}\n    .Component {}\n    .App {}\n} con lógica {\n  retorno {\n    método data donde {\n      retorno {\n        \n      }.\n    }.\n    propiedad methods como {}.\n    propiedad watch como {}.\n    método beforeMount donde {}.\n    método mounted donde {}.\n  }.\n} montada en \"#app\".",
+    "_version": 3,
+    "_content": "im",
     "_lineOffsets": [
-      0,
-      32,
-      56,
-      77,
-      95,
-      102,
-      135,
-      163,
-      240,
-      281,
-      293,
-      300,
-      313,
-      321,
-      356,
-      357,
-      377,
-      378,
-      466,
-      512,
-      537,
-      567,
-      604,
-      631,
-      651,
-      670,
-      691,
-      735,
-      757,
-      778,
-      827,
-      849,
-      869,
-      890,
-      909,
-      924,
-      965,
-      1015,
-      1065,
-      1112,
-      1127,
-      1140,
-      1172,
-      1183,
-      1196,
-      1207,
-      1216,
-      1219,
-      1220,
-      1284,
-      1313,
-      1345,
-      1390,
-      1419,
-      1441,
-      1467,
-      1493,
-      1519,
-      1537,
-      1580,
-      1612,
-      1621,
-      1637,
-      1649,
-      1661,
-      1679,
-      1691,
-      1706,
-      1718,
-      1742,
-      1758,
-      1767,
-      1776,
-      1783,
-      1814,
-      1843,
-      1876,
-      1905,
-      1910
+      0
     ]
   },
-  8,
-  40,
-  "Ejecutable como documento HTML5\n    con autor allnulled\n    con nombre index\n    con versión 1\n<head>\n    <title>Asamblearismo</title>\n    <meta charset=\"utf8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"stylesheet\" href=\"\"></lin",
+  0,
+  2,
+  "im",
   [
     {
-      "label": "<",
+      "label": "{ separación }",
       "kind": 1,
+      "insertText": "\n",
       "data": 70,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "{ [\"\\n\",\"\\r\",\"\\t\",\" \"] }",
+      "label": "Ejecutable por",
       "kind": 1,
-      "insertText": "*",
-      "data": 72,
+      "data": 71,
       "detail": "",
       "documentation": ""
     },
     {
-      "label": "</",
+      "label": "Este script funcionó con",
       "kind": 1,
       "data": 74,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Ejecutable ",
+      "kind": 1,
+      "data": 77,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Compilable con",
+      "kind": 1,
+      "data": 80,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Empaquetable con",
+      "kind": 1,
+      "data": 83,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Ejecutable como documento HTML5",
+      "kind": 1,
+      "data": 86,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Sirvo ficheros estáticos",
+      "kind": 1,
+      "data": 90,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Ejecuto",
+      "kind": 1,
+      "data": 93,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Inicio",
+      "kind": 1,
+      "data": 96,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Elimino",
+      "kind": 1,
+      "data": 99,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Genero",
+      "kind": 1,
+      "data": 102,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Importo API nativa",
+      "kind": 1,
+      "data": 111,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Importo jQuery",
+      "kind": 1,
+      "data": 115,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Elimino propiedad",
+      "kind": 1,
+      "data": 119,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Conecto",
+      "kind": 1,
+      "data": 122,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Selecciono",
+      "kind": 1,
+      "data": 128,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Inserto",
+      "kind": 1,
+      "data": 131,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Actualizo",
+      "kind": 1,
+      "data": 134,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "En un diagrama conceptual de",
+      "kind": 1,
+      "data": 140,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino nodo de diagrama con",
+      "kind": 1,
+      "data": 143,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino relación de diagrama con",
+      "kind": 1,
+      "data": 146,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino conjunto de diagrama con nombre como",
+      "kind": 1,
+      "data": 149,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino clase de diagrama con",
+      "kind": 1,
+      "data": 152,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino clasificación de diagrama con",
+      "kind": 1,
+      "data": 155,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino eventos de diagrama con",
+      "kind": 1,
+      "data": 158,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino estrategias de diagrama con",
+      "kind": 1,
+      "data": 161,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de paquete",
+      "kind": 1,
+      "data": 164,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de clase",
+      "kind": 1,
+      "data": 167,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de función",
+      "kind": 1,
+      "data": 170,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de fábrica",
+      "kind": 1,
+      "data": 173,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de hecho",
+      "kind": 1,
+      "data": 176,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de variable",
+      "kind": 1,
+      "data": 179,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de constante",
+      "kind": 1,
+      "data": 182,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de componente UI",
+      "kind": 1,
+      "data": 185,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de aplicación UI",
+      "kind": 1,
+      "data": 188,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino dependencia de objeto",
+      "kind": 1,
+      "data": 191,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Cacheo",
+      "kind": 1,
+      "data": 194,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Leo fichero",
+      "kind": 1,
+      "data": 197,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Escribo fichero",
+      "kind": 1,
+      "data": 200,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Notifico",
+      "kind": 1,
+      "data": 203,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Pregunto",
+      "kind": 1,
+      "data": 206,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Confirmo",
+      "kind": 1,
+      "data": 209,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Reseteo directorio",
+      "kind": 1,
+      "data": 213,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Reseteo",
+      "kind": 1,
+      "data": 216,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "no hago nada",
+      "kind": 1,
+      "data": 219,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "En proceso",
+      "kind": 1,
+      "data": 223,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "en caso que",
+      "kind": 1,
+      "data": 227,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "en caso de que",
+      "kind": 1,
+      "data": 229,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Si",
+      "kind": 1,
+      "data": 236,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Mientras",
+      "kind": 1,
+      "data": 242,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Hasta",
+      "kind": 1,
+      "data": 248,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Creo",
+      "kind": 1,
+      "data": 251,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Desacoplo",
+      "kind": 1,
+      "data": 254,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Asigno",
+      "kind": 1,
+      "data": 257,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Alterno",
+      "kind": 1,
+      "data": 260,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Retorno",
+      "kind": 1,
+      "data": 263,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Hago",
+      "kind": 1,
+      "data": 266,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Compruebo",
+      "kind": 1,
+      "data": 269,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Intento",
+      "kind": 1,
+      "data": 272,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Un intento",
+      "kind": 1,
+      "data": 274,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Defino",
+      "kind": 1,
+      "data": 277,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Redefino",
+      "kind": 1,
+      "data": 280,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Lanzo",
+      "kind": 1,
+      "data": 283,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Incremento",
+      "kind": 1,
+      "data": 286,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Decremento",
+      "kind": 1,
+      "data": 288,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Interrumpo",
+      "kind": 1,
+      "data": 291,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Continúo",
+      "kind": 1,
+      "data": 293,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Itero como objeto",
+      "kind": 1,
+      "data": 299,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Itero como lista",
+      "kind": 1,
+      "data": 301,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Desde",
+      "kind": 1,
+      "data": 307,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Apendizo",
+      "kind": 1,
+      "data": 310,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Prependizo",
+      "kind": 1,
+      "data": 312,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Exporto",
+      "kind": 1,
+      "data": 315,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Importo módulo universal estándar",
+      "kind": 1,
+      "data": 318,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Importo",
+      "kind": 1,
+      "data": 321,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Exporto módulo universal estándar",
+      "kind": 1,
+      "data": 327,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Imprimo",
+      "kind": 1,
+      "data": 330,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Debugo",
+      "kind": 1,
+      "data": 333,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Derivo",
+      "kind": 1,
+      "data": 336,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Ignoro que",
+      "kind": 1,
+      "data": 339,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Siempre que proxificación",
+      "kind": 1,
+      "data": 345,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "Opero con",
+      "kind": 1,
+      "data": 348,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "@SECCIÓN",
+      "kind": 1,
+      "data": 351,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": "@DOCUMENTACIÓN",
+      "kind": 1,
+      "data": 355,
+      "detail": "",
+      "documentation": ""
+    },
+    {
+      "label": ":>",
+      "kind": 1,
+      "data": 359,
       "detail": "",
       "documentation": ""
     }
